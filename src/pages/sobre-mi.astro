@@ -1,0 +1,220 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+
+const metadata = {
+  title: 'Sobre Mí | J. Carlos Salgado - Project Manager Web para Hotelería',
+  description: 'Conoce a J. Carlos Salgado, Project Manager especializado en soluciones web para la industria hotelera, con más de 12 años de experiencia transformando la presencia digital de hoteles.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText
+    title="Sobre Mí"
+    subtitle="Project Manager especializado en soluciones web para la industria hotelera con más de 12 años de experiencia transformando la presencia digital de establecimientos hoteleros."
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'Experiencia en el sector hotelero',
+        description:
+          'Más de 12 años trabajando exclusivamente con hoteles de diferentes tamaños, desde pequeños hoteles boutique hasta grandes cadenas internacionales.',
+      },
+      {
+        title: 'Formación especializada',
+        description:
+          'Certificaciones en Project Management, desarrollo web, SEO, CRO y tecnologías específicas para el sector hotelero.',
+      },
+      {
+        title: 'Conocimiento técnico avanzado',
+        description:
+          'Dominio de lenguajes de programación, frameworks modernos, herramientas de análisis y técnicas avanzadas de optimización web.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/about-me.jpg',
+      alt: 'J. Carlos Salgado - Project Manager especializado en web hotelera',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Mi historia</h3>
+      Mi trayectoria comenzó hace más de 12 años cuando trabajé en mi primer proyecto para un hotel boutique que buscaba aumentar sus reservas directas. Desde entonces, me he especializado exclusivamente en el sector hotelero, desarrollando soluciones digitales que combinan diseño atractivo, experiencia de usuario optimizada y estrategias efectivas de conversión.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Mis valores"
+    subtitle="Principios que guían mi trabajo y relación con los clientes"
+    tagline="Filosofía"
+    items={[
+      {
+        title: 'Compromiso con resultados',
+        description: 'No me conformo con entregar un proyecto; me comprometo a generar resultados medibles y tangibles para tu hotel.',
+        icon: 'tabler:chart-bar',
+      },
+      {
+        title: 'Transparencia total',
+        description: 'Comunicación clara y honesta en cada fase del proyecto, con reportes periódicos sobre avances y resultados.',
+        icon: 'tabler:messages',
+      },
+      {
+        title: 'Excelencia técnica',
+        description: 'Implementación de las mejores prácticas y tecnologías más avanzadas para garantizar soluciones de alta calidad.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'Enfoque personalizado',
+        description: 'Cada hotel es único, por eso desarrollo estrategias adaptadas a las necesidades específicas de cada proyecto.',
+        icon: 'tabler:bulb',
+      },
+      {
+        title: 'Mejora continua',
+        description: 'Constante actualización y formación para implementar las últimas tendencias y técnicas en tus proyectos.',
+        icon: 'tabler:refresh',
+      },
+      {
+        title: 'Colaboración efectiva',
+        description: 'Trabajo en estrecha colaboración con tu equipo para asegurar que los resultados se alineen con tus objetivos.',
+        icon: 'tabler:users',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="Mi recorrido profesional"
+    items={[
+      {
+        title: 'Inicios en desarrollo web',
+        description:
+          'Comencé mi carrera como desarrollador web, adquiriendo sólidos conocimientos técnicos que me permiten entender en profundidad los proyectos.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'Especialización en hotelería',
+        description:
+          'Tras trabajar en diversos sectores, descubrí mi pasión por la industria hotelera y decidí especializarme exclusivamente en este nicho.',
+        icon: 'tabler:building',
+      },
+      {
+        title: 'Formación en Project Management',
+        description:
+          'Me certifiqué como Project Manager para complementar mis habilidades técnicas con una metodología estructurada de gestión de proyectos.',
+        icon: 'tabler:certificate',
+      },
+      {
+        title: 'Desarrollo de metodología propia',
+        description:
+          'Creé mi propio sistema de trabajo específico para proyectos web hoteleros, combinando técnicas ágiles con las particularidades del sector.',
+        icon: 'tabler:notebook',
+      },
+      {
+        title: 'Actualidad',
+        description:
+          'Hoy me dedico a ayudar a hoteles de todo tipo a maximizar su presencia digital y aumentar sus reservas directas mediante soluciones web efectivas.',
+        icon: 'tabler:rocket',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/career.jpg',
+      alt: 'Recorrido profesional de J. Carlos Salgado',
+    }}
+  />
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    stats={[
+      { title: 'Proyectos Completados', amount: '85+' },
+      { title: 'Aumento Promedio en Reservas', amount: '35%' },
+      { title: 'Años de Experiencia', amount: '12' },
+      { title: 'Clientes Satisfechos', amount: '70+' },
+    ]}
+  />
+
+  <!-- Testimonials Widget *********** -->
+
+  <Testimonials
+    title="Lo que dicen mis clientes"
+    testimonials={[
+      {
+        testimonial:
+          'La colaboración con J. Carlos transformó completamente nuestra presencia digital. No solo mejoró el diseño y usabilidad de nuestro sitio, sino que aumentamos un 42% las reservas directas en el primer trimestre.',
+        name: 'María López',
+        job: 'Directora de Hotel Boutique Alameda',
+        image: {
+          src: '~/assets/images/testimonial-1.jpg',
+          alt: 'María López',
+        },
+      },
+      {
+        testimonial:
+          'Trabajar con J. Carlos ha sido una de las mejores decisiones para nuestro hotel. Su conocimiento técnico combinado con la comprensión del sector hotelero marcó una gran diferencia en nuestro proyecto.',
+        name: 'Carlos Martínez',
+        job: 'Gerente de Operaciones en Resort Costa Azul',
+        image: {
+          src: '~/assets/images/testimonial-2.jpg',
+          alt: 'Carlos Martínez',
+        },
+      },
+      {
+        testimonial:
+          'Lo que más valoramos de J. Carlos es su enfoque en resultados. No solo entregó un sitio web hermoso, sino que implementó estrategias específicas que redujeron nuestra dependencia de OTAs en un 30%.',
+        name: 'Ana García',
+        job: 'CEO de Cadena Hoteles Centrales',
+        image: {
+          src: '~/assets/images/testimonial-3.jpg',
+          alt: 'Ana García',
+        },
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactar',
+        href: '/contacto',
+        icon: 'tabler:message',
+      },
+      {
+        text: 'Ver portfolio',
+        href: '/portfolio',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      ¿Listo para impulsar tu hotel a otro nivel?
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Conversemos sobre cómo puedo ayudarte a maximizar tu presencia digital y aumentar tus reservas directas
+    </Fragment>
+  </CallToAction>
+</Layout>
