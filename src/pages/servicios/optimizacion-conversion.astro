@@ -1,0 +1,289 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Optimización de Conversión para Hoteles | J. Carlos Salgado',
+  description: 'Servicio especializado en CRO (Conversion Rate Optimization) para hoteles: aumenta tu tasa de conversión, maximiza reservas directas y mejora tus ingresos.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText
+    title="Optimización de Conversión para Hoteles"
+    subtitle="Convierte más visitantes en huéspedes con estrategias CRO especializadas para la industria hotelera, maximizando reservas directas y mejorando el ROI de tu presencia digital."
+  />
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="características"
+    tagline="Nuestro enfoque"
+    title="¿Qué incluye nuestro servicio de CRO hotelero?"
+    subtitle="Estrategias y técnicas específicas para optimizar la conversión en sitios web de hoteles, con foco en el motor de reservas."
+    items={[
+      {
+        title: 'Análisis de embudo de conversión',
+        description:
+          'Estudio detallado del recorrido del usuario desde la llegada a la web hasta la reserva, identificando puntos de abandono y oportunidades de mejora.',
+        icon: 'tabler:funnel',
+      },
+      {
+        title: 'Optimización del motor de reservas',
+        description:
+          'Mejora de la usabilidad, diseño y rendimiento del motor de reservas para minimizar abandonos y maximizar conversiones.',
+        icon: 'tabler:calendar',
+      },
+      {
+        title: 'Tests A/B y multivariante',
+        description:
+          'Experimentación metodológica para determinar qué variantes de diseño, contenido y funcionalidad generan mejores tasas de conversión.',
+        icon: 'tabler:adjustments',
+      },
+      {
+        title: 'Mapas de calor y análisis de comportamiento',
+        description:
+          'Estudio del comportamiento real de los usuarios en tu web mediante heatmaps, grabaciones de sesiones y eye-tracking.',
+        icon: 'tabler:eye',
+      },
+      {
+        title: 'Optimización de micro-conversiones',
+        description:
+          'Mejora de pasos intermedios clave como visualización de disponibilidad, consulta de habitaciones o registro de email.',
+        icon: 'tabler:transform',
+      },
+      {
+        title: 'Mejora de CTAs',
+        description:
+          'Optimización del diseño, texto y ubicación de los botones de llamada a la acción para maximizar su efectividad.',
+        icon: 'tabler:click',
+      },
+      {
+        title: 'Reducción de fricción',
+        description:
+          'Identificación y eliminación de obstáculos en el proceso de reserva que causan abandonos innecesarios.',
+        icon: 'tabler:discount-check',
+      },
+      {
+        title: 'Personalización basada en datos',
+        description:
+          'Implementación de experiencias personalizadas según comportamiento previo, origen del tráfico y perfil del usuario.',
+        icon: 'tabler:user-circle',
+      },
+      {
+        title: 'Análisis de competencia',
+        description:
+          'Estudio de mejores prácticas en la competencia y OTAs para identificar oportunidades de mejora en tu propio proceso.',
+        icon: 'tabler:users',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    tagline="Impacto"
+    title="El CRO: multiplicador de resultados para tu hotel"
+    items={[
+      {
+        title: 'Más reservas sin más tráfico',
+        description:
+          'Aumenta tus conversiones aprovechando el tráfico que ya tienes, maximizando el ROI de tus estrategias de marketing actuales.',
+      },
+      {
+        title: 'Reducción de costes de adquisición',
+        description:
+          'Al mejorar la conversión, reduces el coste efectivo por reserva y optimizas el retorno de tu inversión en marketing.',
+      },
+      {
+        title: 'Mejora de la experiencia de usuario',
+        description:
+          'Un proceso de reserva optimizado no solo convierte mejor, sino que mejora la percepción de tu marca y genera más recomendaciones.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/hotel-cro.jpg',
+      alt: 'CRO para hoteles',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Pequeños cambios, grandes resultados</h3>
+      La diferencia entre una tasa de conversión del 2% y otra del 4% puede significar duplicar tus ingresos por reservas directas sin necesidad de aumentar tu inversión en marketing.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="Nuestro proceso de optimización de conversión"
+    items={[
+      {
+        title: 'Análisis y diagnóstico',
+        description:
+          'Evaluación exhaustiva de tu situación actual mediante analítica web, mapas de calor, grabaciones de sesiones y auditoría UX/UI.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Investigación de usuario',
+        description:
+          'Estudio del comportamiento, necesidades y puntos de dolor de tus usuarios mediante encuestas, entrevistas y análisis de feedback.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Benchmark competitivo',
+        description:
+          'Análisis de competidores y OTAs para identificar mejores prácticas y oportunidades de diferenciación en el proceso de reserva.',
+        icon: 'tabler:chart-bar',
+      },
+      {
+        title: 'Plan de optimización',
+        description:
+          'Desarrollo de un roadmap de mejoras priorizado según impacto potencial, esfuerzo de implementación y alineación con objetivos.',
+        icon: 'tabler:map',
+      },
+      {
+        title: 'Implementación A/B testing',
+        description:
+          'Diseño y ejecución de experimentos para validar hipótesis de mejora antes de implementarlas permanentemente.',
+        icon: 'tabler:layout-grid',
+      },
+      {
+        title: 'Optimización del motor de reservas',
+        description:
+          'Mejoras específicas en el booking engine para reducir abandonos y aumentar la tasa de finalización de reservas.',
+        icon: 'tabler:calendar-plus',
+      },
+      {
+        title: 'Análisis y refinamiento',
+        description:
+          'Evaluación continua de resultados, con ajustes basados en datos para seguir mejorando la tasa de conversión.',
+        icon: 'tabler:refresh',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/hotel-cro-process.jpg',
+      alt: 'Proceso de CRO para hoteles',
+    }}
+  />
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    title="Resultados que impactan directamente en tus ingresos"
+    subtitle="Datos promedio obtenidos por nuestros clientes hoteleros tras implementar nuestras estrategias de CRO"
+    stats={[
+      { title: 'Aumento en tasa de conversión', amount: '+63%' },
+      { title: 'Reducción en tasa de abandono', amount: '-42%' },
+      { title: 'Incremento en valor medio de reserva', amount: '+22%' },
+      { title: 'ROI promedio de la inversión en CRO', amount: '820%' },
+    ]}
+  />
+
+  <!-- Testimonials Widget *********** -->
+
+  <Testimonials
+    title="Lo que dicen nuestros clientes"
+    testimonials={[
+      {
+        testimonial:
+          'El trabajo de CRO realizado por J. Carlos transformó nuestro motor de reservas. Pasamos de una tasa de conversión del 1.8% al 4.2% en solo tres meses, lo que se tradujo en un aumento significativo de reservas directas e ingresos.',
+        name: 'Carmen Fernández',
+        job: 'Revenue Manager en Hotel Palace',
+        image: {
+          src: '~/assets/images/testimonial-5.jpg',
+          alt: 'Carmen Fernández',
+        },
+      },
+      {
+        testimonial:
+          'Los pequeños cambios implementados en nuestro proceso de reserva tuvieron un impacto enorme. La optimización del formulario redujo los abandonos en un 35% y logramos aumentar el valor medio de las reservas gracias a las técnicas de upselling recomendadas.',
+        name: 'Rafael Torres',
+        job: 'Director General de Cadena Hoteles Vista',
+        image: {
+          src: '~/assets/images/testimonial-6.jpg',
+          alt: 'Rafael Torres',
+        },
+      },
+    ]}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Preguntas frecuentes sobre CRO para hoteles"
+    subtitle="Resuelve tus dudas sobre nuestro servicio de optimización de conversión para la industria hotelera."
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: '¿Cuánto tiempo se necesita para ver resultados con el CRO?',
+        description:
+          'A diferencia del SEO, los resultados del CRO suelen ser más rápidos. Las primeras mejoras pueden verse en semanas, aunque un programa completo de optimización con pruebas A/B suele desarrollarse durante 3-6 meses para obtener resultados significativos y confiables estadísticamente.',
+      },
+      {
+        title: '¿Se puede implementar CRO si mi motor de reservas es externo?',
+        description:
+          'Sí. Aunque algunas restricciones pueden existir dependiendo del proveedor, siempre hay aspectos que pueden optimizarse: desde la navegación previa al motor, hasta los elementos bajo tu control dentro del mismo. Además, podemos trabajar con tu proveedor para implementar mejoras específicas.',
+      },
+      {
+        title: '¿Es necesario hacer cambios radicales en el diseño?',
+        description:
+          'No necesariamente. Muchas veces, los mayores impactos vienen de pequeños cambios estratégicos como el texto de un botón, la simplificación de un formulario o la reorganización de elementos. Nuestro enfoque se basa en datos, no en preferencias subjetivas.',
+      },
+      {
+        title: '¿Qué volumen de tráfico se necesita para realizar tests A/B efectivos?',
+        description:
+          'Para que los tests A/B tengan validez estadística, se requiere cierto volumen de tráfico. Sin embargo, adaptamos nuestra metodología según tu caso: para sitios con menos tráfico, utilizamos técnicas como tests secuenciales, análisis heurístico y estudios de usabilidad que no requieren grandes volúmenes.',
+      },
+      {
+        title: '¿Cómo se mide el éxito de una estrategia de CRO?',
+        description:
+          'El KPI principal es el aumento en la tasa de conversión (porcentaje de visitantes que completan una reserva), pero también monitorizamos métricas secundarias como reducción de abandonos, aumento del valor medio de reserva, mejora en engagement y otras métricas específicas según los objetivos de cada hotel.',
+      },
+      {
+        title: '¿El CRO es una acción puntual o continua?',
+        description:
+          'La optimización de conversión es más efectiva como proceso continuo, ya que el comportamiento de los usuarios evoluciona, surgen nuevas tecnologías y la competencia también mejora. Sin embargo, ofrecemos tanto proyectos puntuales intensivos como programas continuos de optimización según tus necesidades.',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Solicitar análisis de conversión gratuito',
+        href: '/contacto',
+        icon: 'tabler:percentage',
+      },
+      {
+        text: 'Ver casos de éxito',
+        href: '/portfolio',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Multiplica tus reservas directas
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Solicita un análisis gratuito de tu proceso de reserva para descubrir oportunidades de mejora y cómo podemos ayudarte a aumentar significativamente tu tasa de conversión.
+    </Fragment>
+  </CallToAction>
+</Layout>
