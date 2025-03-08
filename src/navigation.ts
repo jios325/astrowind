@@ -3,181 +3,101 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'Homes',
+      text: 'Inicio',
+      href: getPermalink('/'),
+    },
+    {
+      text: 'Sobre Mí',
+      href: getPermalink('/sobre-mi'),
+    },
+    {
+      text: 'Servicios',
       links: [
         {
-          text: 'SaaS',
-          href: getPermalink('/homes/saas'),
+          text: 'Diseño Web Hotelero',
+          href: getPermalink('/servicios/diseno-web-hotelero'),
         },
         {
-          text: 'Startup',
-          href: getPermalink('/homes/startup'),
+          text: 'SEO para Hoteles',
+          href: getPermalink('/servicios/seo-hotelero'),
         },
         {
-          text: 'Mobile App',
-          href: getPermalink('/homes/mobile-app'),
+          text: 'Optimización de Conversión',
+          href: getPermalink('/servicios/optimizacion-conversion'),
         },
         {
-          text: 'Personal',
-          href: getPermalink('/homes/personal'),
+          text: 'Project Management',
+          href: getPermalink('/servicios/project-management'),
         },
       ],
     },
     {
-      text: 'Pages',
-      links: [
-        {
-          text: 'Features (Anchor Link)',
-          href: getPermalink('/#features'),
-        },
-        {
-          text: 'Services',
-          href: getPermalink('/services'),
-        },
-        {
-          text: 'Pricing',
-          href: getPermalink('/pricing'),
-        },
-        {
-          text: 'About us',
-          href: getPermalink('/about'),
-        },
-        {
-          text: 'Contact',
-          href: getPermalink('/contact'),
-        },
-        {
-          text: 'Terms',
-          href: getPermalink('/terms'),
-        },
-        {
-          text: 'Privacy policy',
-          href: getPermalink('/privacy'),
-        },
-      ],
-    },
-    {
-      text: 'Landing',
-      links: [
-        {
-          text: 'Lead Generation',
-          href: getPermalink('/landing/lead-generation'),
-        },
-        {
-          text: 'Long-form Sales',
-          href: getPermalink('/landing/sales'),
-        },
-        {
-          text: 'Click-Through',
-          href: getPermalink('/landing/click-through'),
-        },
-        {
-          text: 'Product Details (or Services)',
-          href: getPermalink('/landing/product'),
-        },
-        {
-          text: 'Coming Soon or Pre-Launch',
-          href: getPermalink('/landing/pre-launch'),
-        },
-        {
-          text: 'Subscription',
-          href: getPermalink('/landing/subscription'),
-        },
-      ],
+      text: 'Portfolio',
+      href: getPermalink('/portfolio'),
     },
     {
       text: 'Blog',
-      links: [
-        {
-          text: 'Blog List',
-          href: getBlogPermalink(),
-        },
-        {
-          text: 'Article',
-          href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
-        },
-        {
-          text: 'Article (with MDX)',
-          href: getPermalink('markdown-elements-demo-post', 'post'),
-        },
-        {
-          text: 'Category Page',
-          href: getPermalink('tutorials', 'category'),
-        },
-        {
-          text: 'Tag Page',
-          href: getPermalink('astro', 'tag'),
-        },
-      ],
+      href: getBlogPermalink(),
     },
     {
-      text: 'Widgets',
-      href: '#',
+      text: 'Contacto',
+      href: getPermalink('/contacto'),
     },
   ],
-  actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
+  actions: [{ text: 'Consulta Gratuita', href: getPermalink('/contacto'), variant: 'primary' }],
 };
 
 export const footerData = {
   links: [
     {
-      title: 'Product',
+      title: 'Servicios',
       links: [
-        { text: 'Features', href: '#' },
-        { text: 'Security', href: '#' },
-        { text: 'Team', href: '#' },
-        { text: 'Enterprise', href: '#' },
-        { text: 'Customer stories', href: '#' },
-        { text: 'Pricing', href: '#' },
-        { text: 'Resources', href: '#' },
+        { text: 'Diseño Web Hotelero', href: getPermalink('/servicios/diseno-web-hotelero') },
+        { text: 'SEO para Hoteles', href: getPermalink('/servicios/seo-hotelero') },
+        { text: 'Optimización de Conversión', href: getPermalink('/servicios/optimizacion-conversion') },
+        { text: 'Project Management', href: getPermalink('/servicios/project-management') },
       ],
     },
     {
-      title: 'Platform',
+      title: 'Recursos',
       links: [
-        { text: 'Developer API', href: '#' },
-        { text: 'Partners', href: '#' },
-        { text: 'Atom', href: '#' },
-        { text: 'Electron', href: '#' },
-        { text: 'AstroWind Desktop', href: '#' },
+        { text: 'Blog', href: getBlogPermalink() },
+        { text: 'Checklist Web Hotelera', href: getPermalink('/recursos/checklist-web-hotelera') },
+        { text: 'Guías SEO', href: getPermalink('/recursos/guias-seo') },
+        { text: 'Casos de Éxito', href: getPermalink('/portfolio') },
       ],
     },
     {
-      title: 'Support',
+      title: 'Empresa',
       links: [
-        { text: 'Docs', href: '#' },
-        { text: 'Community Forum', href: '#' },
-        { text: 'Professional Services', href: '#' },
-        { text: 'Skills', href: '#' },
-        { text: 'Status', href: '#' },
+        { text: 'Sobre Mí', href: getPermalink('/sobre-mi') },
+        { text: 'Metodología', href: getPermalink('/metodologia') },
+        { text: 'Contacto', href: getPermalink('/contacto') },
+        { text: 'FAQ', href: getPermalink('/faq') },
       ],
     },
     {
-      title: 'Company',
+      title: 'Legal',
       links: [
-        { text: 'About', href: '#' },
-        { text: 'Blog', href: '#' },
-        { text: 'Careers', href: '#' },
-        { text: 'Press', href: '#' },
-        { text: 'Inclusion', href: '#' },
-        { text: 'Social Impact', href: '#' },
-        { text: 'Shop', href: '#' },
+        { text: 'Privacidad', href: getPermalink('/privacidad') },
+        { text: 'Términos', href: getPermalink('/terminos') },
+        { text: 'Cookies', href: getPermalink('/cookies') },
       ],
     },
   ],
   secondaryLinks: [
-    { text: 'Terms', href: getPermalink('/terms') },
-    { text: 'Privacy Policy', href: getPermalink('/privacy') },
+    { text: 'Términos', href: getPermalink('/terminos') },
+    { text: 'Política de Privacidad', href: getPermalink('/privacidad') },
   ],
   socialLinks: [
-    { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
-    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
+    { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://linkedin.com/in/tu-perfil' },
+    { ariaLabel: 'GitHub', icon: 'tabler:brand-github', href: 'https://github.com/tu-usuario' },
+    { ariaLabel: 'Twitter', icon: 'tabler:brand-x', href: 'https://twitter.com/tu-usuario' },
+    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://instagram.com/tu-usuario' },
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
   ],
   footNote: `
-    <img class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 rtl:mr-0 rtl:ml-1.5 float-left rtl:float-right rounded-sm" src="https://onwidget.com/favicon/favicon-32x32.png" alt="onWidget logo" loading="lazy"></img>
-    Made by <a class="text-blue-600 underline dark:text-muted" href="https://onwidget.com/"> onWidget</a> · All rights reserved.
+    <span class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 rtl:mr-0 rtl:ml-1.5 float-left rtl:float-right rounded-sm bg-[url(~/assets/images/favicon.png)]"></span>
+    J. Carlos Salgado · Project Manager Web · Todos los derechos reservados.
   `,
 };
