@@ -1,0 +1,289 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Diseño Web para Hoteles | J. Carlos Salgado',
+  description: 'Servicio especializado de diseño y desarrollo web para hoteles enfocado en aumentar reservas directas, mejorar la experiencia de usuario y reducir la dependencia de OTAs.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText
+    title="Diseño Web para Hoteles"
+    subtitle="Diseño y desarrollo web especializado para la industria hotelera, enfocado en aumentar reservas directas y ofrecer una experiencia de usuario excepcional."
+  />
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="características"
+    tagline="Ventajas"
+    title="¿Qué incluye nuestro servicio de diseño web?"
+    subtitle="Nuestras webs para hoteles están diseñadas pensando en la conversión, usabilidad y rendimiento, para maximizar resultados."
+    items={[
+      {
+        title: 'Diseño atractivo y profesional',
+        description:
+          'Interfaz visual moderna y elegante que refleja la identidad y valores de tu hotel, con fotografías e imágenes optimizadas.',
+        icon: 'tabler:palette',
+      },
+      {
+        title: 'Optimización para móviles',
+        description:
+          'Diseño totalmente responsive que garantiza una experiencia perfecta en todos los dispositivos, crucial para viajeros en movimiento.',
+        icon: 'tabler:device-mobile',
+      },
+      {
+        title: 'Motor de reservas optimizado',
+        description:
+          'Integración del motor de reservas con un flujo intuitivo y optimizado para maximizar la tasa de conversión.',
+        icon: 'tabler:calendar',
+      },
+      {
+        title: 'Velocidad de carga rápida',
+        description:
+          'Optimización del rendimiento para asegurar tiempos de carga mínimos, mejorando la experiencia de usuario y el SEO.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'SEO técnico implementado',
+        description:
+          'Estructura optimizada para buscadores, con meta datos, esquemas JSON-LD, URLs amigables y más.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Integración con sistemas hoteleros',
+        description:
+          'Conexión con tu PMS, Channel Manager y otras herramientas de gestión hotelera para una administración centralizada.',
+        icon: 'tabler:plug',
+      },
+      {
+        title: 'Gestión de contenidos fácil',
+        description:
+          'CMS intuitivo que permite actualizar contenidos, imágenes, ofertas y demás información sin conocimientos técnicos.',
+        icon: 'tabler:edit',
+      },
+      {
+        title: 'Análisis y métricas',
+        description:
+          'Implementación de herramientas de analítica para monitorizar el comportamiento de los usuarios y la conversión.',
+        icon: 'tabler:chart-bar',
+      },
+      {
+        title: 'Multiidioma y multidivisa',
+        description:
+          'Soporte para múltiples idiomas y divisas, esencial para hoteles con clientela internacional.',
+        icon: 'tabler:world',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    tagline="Metodología"
+    title="Un enfoque centrado en resultados"
+    items={[
+      {
+        title: 'Análisis de tu hotel y competencia',
+        description:
+          'Estudiamos a fondo tu establecimiento, target, valores y competidores para diseñar una estrategia web efectiva.',
+      },
+      {
+        title: 'Diseño centrado en conversión',
+        description:
+          'Cada elemento de la web está pensado para guiar al usuario hacia la reserva, con llamadas a la acción estratégicas.',
+      },
+      {
+        title: 'Pruebas con usuarios reales',
+        description:
+          'Realizamos tests con potenciales huéspedes para asegurar que la usabilidad y experiencia de usuario son óptimas.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/hotel-web-design.jpg',
+      alt: 'Diseño web para hoteles',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">La web como herramienta de venta</h3>
+      Tu sitio web no es solo una presencia digital, sino una poderosa herramienta de marketing y ventas que debe convertir visitantes en huéspedes. Nuestro enfoque se centra en maximizar esta conversión.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="Nuestro proceso de diseño web para hoteles"
+    items={[
+      {
+        title: 'Descubrimiento y análisis',
+        description:
+          'Evaluación profunda de tu hotel, target, competencia y objetivos de negocio para establecer las bases del proyecto.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Planificación estratégica',
+        description:
+          'Desarrollo de la arquitectura de información, wireframes y planificación técnica para una estructura web optimizada.',
+        icon: 'tabler:sitemap',
+      },
+      {
+        title: 'Diseño visual',
+        description:
+          'Creación de mockups detallados para todas las páginas clave, con especial atención a la experiencia de usuario.',
+        icon: 'tabler:paint',
+      },
+      {
+        title: 'Desarrollo e integración',
+        description:
+          'Programación frontend y backend, integración con motor de reservas y sistemas hoteleros, e implementación SEO.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'Pruebas exhaustivas',
+        description:
+          'Testing en múltiples dispositivos y navegadores, velocidad de carga, usabilidad y rendimiento general.',
+        icon: 'tabler:device-laptop-check',
+      },
+      {
+        title: 'Lanzamiento y formación',
+        description:
+          'Puesta en producción, capacitación a tu equipo y entrega de documentación completa para uso y mantenimiento.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Soporte post-lanzamiento',
+        description:
+          'Monitoreo continuo, análisis de métricas y optimizaciones basadas en datos reales de comportamiento de usuarios.',
+        icon: 'tabler:chart-line',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/hotel-web-process.jpg',
+      alt: 'Proceso de diseño web para hoteles',
+    }}
+  />
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    title="Resultados que hablan por sí solos"
+    subtitle="Algunos datos sobre los resultados promedio que nuestros clientes hoteleros experimentan tras el rediseño de su web"
+    stats={[
+      { title: 'Aumento en reservas directas', amount: '+35%' },
+      { title: 'Mejora en tasa de conversión', amount: '+42%' },
+      { title: 'Reducción de dependencia de OTAs', amount: '-25%' },
+      { title: 'Mejora en posicionamiento SEO', amount: '+46%' },
+    ]}
+  />
+
+  <!-- Testimonials Widget *********** -->
+
+  <Testimonials
+    title="Lo que dicen nuestros clientes"
+    testimonials={[
+      {
+        testimonial:
+          'El rediseño de nuestra web fue transformador. No solo mejoramos nuestra imagen digital, sino que aumentamos un 38% las reservas directas en los primeros tres meses. La metodología de J. Carlos es rigurosa y efectiva.',
+        name: 'María López',
+        job: 'Directora de Hotel Boutique Alameda',
+        image: {
+          src: '~/assets/images/testimonial-1.jpg',
+          alt: 'María López',
+        },
+      },
+      {
+        testimonial:
+          'Queríamos una web que reflejara la calidad de nuestro resort y aumentara las reservas directas. J. Carlos entendió perfectamente nuestras necesidades y entregó un sitio que supera todas nuestras expectativas, con resultados mensurables.',
+        name: 'Carlos Martínez',
+        job: 'Gerente de Operaciones en Resort Costa Azul',
+        image: {
+          src: '~/assets/images/testimonial-2.jpg',
+          alt: 'Carlos Martínez',
+        },
+      },
+    ]}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Preguntas frecuentes sobre diseño web para hoteles"
+    subtitle="Resuelve tus dudas sobre nuestro servicio de diseño web especializado para la industria hotelera."
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: '¿Cuánto tiempo toma desarrollar un sitio web para un hotel?',
+        description:
+          'El tiempo varía según la complejidad, pero generalmente un sitio web hotelero completo toma entre 8 y 12 semanas desde la planificación hasta el lanzamiento. Proyectos con integraciones personalizadas complejas pueden requerir más tiempo.',
+      },
+      {
+        title: '¿Puedo actualizar yo mismo el contenido después?',
+        description:
+          'Absolutamente. Implementamos un CMS intuitivo que permite a tu equipo actualizar contenidos, imágenes, ofertas y demás información sin necesidad de conocimientos técnicos. Además, proporcionamos capacitación completa.',
+      },
+      {
+        title: '¿Se puede integrar con mi motor de reservas actual?',
+        description:
+          'Sí, trabajamos con todos los principales motores de reserva del mercado (Bookassist, D-EDGE, SiteMinder, etc.) y podemos integrar el que ya utilizas o recomendarte el que mejor se adapte a tus necesidades.',
+      },
+      {
+        title: '¿El diseño web incluye optimización para móviles?',
+        description:
+          'Todos nuestros diseños son completamente responsivos por defecto, garantizando una experiencia perfecta en todos los dispositivos, desde móviles y tablets hasta ordenadores de escritorio.',
+      },
+      {
+        title: '¿Qué ocurre con mi web actual durante el desarrollo?',
+        description:
+          'Tu web actual sigue funcionando normalmente durante todo el proceso de desarrollo. Solo cuando el nuevo sitio esté completamente listo, probado y aprobado, se realiza la migración, minimizando cualquier posible interrupción.',
+      },
+      {
+        title: '¿Incluís fotografías profesionales en el servicio?',
+        description:
+          'El servicio base no incluye sesiones fotográficas, pero podemos recomendarte fotógrafos especializados en hotelería o trabajar con material fotográfico que ya poseas. También podemos asesorarte sobre la selección de imágenes de stock si fuera necesario.',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Solicitar presupuesto',
+        href: '/contacto',
+        icon: 'tabler:calendar',
+      },
+      {
+        text: 'Ver portfolio',
+        href: '/portfolio',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Transforma la presencia digital de tu hotel
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Agenda una consultoría gratuita para analizar tu web actual y descubrir cómo podemos mejorarla para aumentar tus reservas directas.
+    </Fragment>
+  </CallToAction>
+</Layout>
