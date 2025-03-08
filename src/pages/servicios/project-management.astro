@@ -1,0 +1,289 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Project Management para Proyectos Web Hoteleros | J. Carlos Salgado',
+  description: 'Gestión profesional y especializada de proyectos digitales para hoteles, asegurando entregas a tiempo, dentro de presupuesto y con máxima calidad.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText
+    title="Project Management Especializado en Web Hotelera"
+    subtitle="Gestión profesional de proyectos digitales para el sector hotelero, asegurando el éxito a través de metodologías eficientes y conocimiento especializado."
+  />
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="características"
+    tagline="Servicios"
+    title="¿Qué incluye nuestro servicio de Project Management?"
+    subtitle="Gestión integral y especializada para todo tipo de proyectos digitales en la industria hotelera."
+    items={[
+      {
+        title: 'Planificación estratégica',
+        description:
+          'Desarrollo de planes detallados alineados con los objetivos de negocio, definiendo alcance, recursos, cronograma y presupuesto.',
+        icon: 'tabler:chart-dots',
+      },
+      {
+        title: 'Coordinación de equipos',
+        description:
+          'Gestión efectiva de equipos multidisciplinares internos y externos, asegurando comunicación fluida y colaboración eficiente.',
+        icon: 'tabler:users-group',
+      },
+      {
+        title: 'Gestión de recursos',
+        description:
+          'Optimización de recursos humanos, técnicos y financieros para maximizar eficiencia y resultados en cada proyecto.',
+        icon: 'tabler:adjustments',
+      },
+      {
+        title: 'Control de calidad',
+        description:
+          'Implementación de procesos rigurosos de QA para garantizar que todos los entregables cumplan con los más altos estándares.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Gestión de riesgos',
+        description:
+          'Identificación proactiva, análisis y mitigación de posibles riesgos antes de que afecten al proyecto.',
+        icon: 'tabler:shield',
+      },
+      {
+        title: 'Seguimiento y reportes',
+        description:
+          'Monitorización constante del progreso con informes regulares y transparentes sobre avances, desafíos y soluciones.',
+        icon: 'tabler:report',
+      },
+      {
+        title: 'Gestión de stakeholders',
+        description:
+          'Comunicación efectiva con todas las partes interesadas, asegurando alineación de expectativas y objetivos.',
+        icon: 'tabler:speakerphone',
+      },
+      {
+        title: 'Integración tecnológica',
+        description:
+          'Coordinación de integraciones entre sistemas hoteleros (PMS, Channel Manager, motor de reservas, etc.) asegurando compatibilidad.',
+        icon: 'tabler:plug',
+      },
+      {
+        title: 'Gestión del cambio',
+        description:
+          'Facilitación de la transición y adopción de nuevas soluciones digitales dentro de la organización hotelera.',
+        icon: 'tabler:refresh',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    tagline="Ventajas"
+    title="¿Por qué necesitas un Project Manager especializado?"
+    items={[
+      {
+        title: 'Conocimiento del sector',
+        description:
+          'Comprensión profunda de las particularidades, necesidades y procesos específicos de la industria hotelera.',
+      },
+      {
+        title: 'Comunicación técnica y de negocio',
+        description:
+          'Capacidad para traducir aspectos técnicos a lenguaje de negocio y viceversa, facilitando la comunicación entre todas las partes.',
+      },
+      {
+        title: 'Previsión de obstáculos específicos',
+        description:
+          'Experiencia para anticipar y resolver desafíos comunes en proyectos digitales hoteleros antes de que afecten al proyecto.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/hotel-pm.jpg',
+      alt: 'Project Management para hoteles',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">El puente entre tecnología y hospitalidad</h3>
+      Los proyectos digitales hoteleros requieren un Project Manager que entienda tanto de tecnología como de las particularidades del sector hotelero, actuando como traductor y facilitador entre ambos mundos.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="Nuestra metodología de gestión de proyectos"
+    items={[
+      {
+        title: 'Descubrimiento y análisis',
+        description:
+          'Comprensión profunda de necesidades, objetivos y contexto del hotel, incluyendo análisis de competencia y usuario.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Planificación estratégica',
+        description:
+          'Desarrollo de roadmap detallado con definición de alcance, recursos, presupuesto, hitos y entregables.',
+        icon: 'tabler:map',
+      },
+      {
+        title: 'Selección y gestión de equipos',
+        description:
+          'Configuración del equipo ideal para cada proyecto, con roles claros, responsabilidades definidas y flujos de comunicación efectivos.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Ejecución y monitorización',
+        description:
+          'Implementación del plan con metodología ágil adaptada, seguimiento constante de avances y gestión proactiva de incidencias.',
+        icon: 'tabler:device-laptop-code',
+      },
+      {
+        title: 'Control de calidad',
+        description:
+          'Procesos rigurosos de testing en cada fase para garantizar funcionalidad perfecta, rendimiento óptimo y experiencia de usuario excepcional.',
+        icon: 'tabler:award',
+      },
+      {
+        title: 'Transición y formación',
+        description:
+          'Implementación de procesos de cambio suaves, con formación detallada para el equipo del hotel y documentación completa.',
+        icon: 'tabler:school',
+      },
+      {
+        title: 'Evaluación y optimización',
+        description:
+          'Análisis post-implementación para medir resultados, identificar áreas de mejora y definir siguientes pasos para optimización.',
+        icon: 'tabler:chart-bar',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/hotel-pm-process.jpg',
+      alt: 'Proceso de Project Management para hoteles',
+    }}
+  />
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    title="Resultados medibles en cada proyecto"
+    subtitle="Datos promedio de nuestros proyectos gestionados para clientes hoteleros"
+    stats={[
+      { title: 'Proyectos entregados a tiempo', amount: '95%' },
+      { title: 'Proyectos dentro de presupuesto', amount: '92%' },
+      { title: 'Retorno de inversión promedio', amount: '320%' },
+      { title: 'Satisfacción del cliente', amount: '4.8/5' },
+    ]}
+  />
+
+  <!-- Testimonials Widget *********** -->
+
+  <Testimonials
+    title="Lo que dicen nuestros clientes"
+    testimonials={[
+      {
+        testimonial:
+          'La gestión de proyecto de J. Carlos marcó toda la diferencia en nuestro rediseño web. Su conocimiento del sector hotelero permitió anticipar nuestras necesidades y su capacidad para coordinar equipos técnicos y de marketing mantuvo el proyecto en tiempo y dentro de presupuesto.',
+        name: 'Isabel Moreno',
+        job: 'Directora de Hotel Seaside Resort',
+        image: {
+          src: '~/assets/images/testimonial-7.jpg',
+          alt: 'Isabel Moreno',
+        },
+      },
+      {
+        testimonial:
+          'Cuando decidimos integrar nuestro PMS con un nuevo motor de reservas, temíamos complicaciones técnicas. J. Carlos gestionó todo el proyecto con una metodología impecable, manteniendo la comunicación clara y resolviebdo cada obstáculo de forma proactiva.',
+        name: 'Miguel Ángel Suárez',
+        job: 'CEO de Cadena Hoteles del Norte',
+        image: {
+          src: '~/assets/images/testimonial-8.jpg',
+          alt: 'Miguel Ángel Suárez',
+        },
+      },
+    ]}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Preguntas frecuentes sobre Project Management"
+    subtitle="Resuelve tus dudas sobre nuestro servicio de gestión de proyectos digitales para el sector hotelero."
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: '¿Qué tipos de proyectos digitales gestionáis para hoteles?',
+        description:
+          'Gestionamos todo tipo de proyectos digitales para el sector hotelero: desarrollo y rediseño de sitios web, implementación de motores de reserva, integraciones con PMS y Channel Managers, estrategias digitales completas, sistemas de marketing automation, implementación de CRM, proyectos de transformación digital, y más.',
+      },
+      {
+        title: '¿Qué diferencia a un Project Manager especializado en hotelería?',
+        description:
+          'Un Project Manager especializado en hotelería comprende las particularidades del sector: estacionalidad, procesos de reserva, necesidades específicas de integración tecnológica, y las expectativas particulares de los huéspedes. Esta especialización permite anticipar desafíos específicos, comunicarse eficazmente con todos los stakeholders y priorizar correctamente según el impacto en el negocio hotelero.',
+      },
+      {
+        title: '¿Qué metodología de gestión de proyectos utilizáis?',
+        description:
+          'Utilizamos una metodología híbrida adaptada específicamente a proyectos digitales hoteleros, combinando elementos de Agile para desarrollo y flexibilidad con componentes de metodologías tradicionales para planificación y previsibilidad. Esto nos permite mantener estructura y visibilidad mientras conservamos la capacidad de adaptación.',
+      },
+      {
+        title: '¿Cómo gestionáis los cambios durante el proyecto?',
+        description:
+          'Contamos con un proceso formal de control de cambios que evalúa el impacto de cualquier modificación en términos de alcance, cronograma y presupuesto. Para cambios menores utilizamos reservas previstas, mientras que para cambios más significativos presentamos opciones claras al cliente para tomar decisiones informadas.',
+      },
+      {
+        title: '¿Qué nivel de implicación se requiere por parte del hotel?',
+        description:
+          'Definimos claramente desde el inicio qué recursos y decisiones necesitaremos del hotel. Normalmente designamos un interlocutor principal que participa en reuniones regulares de seguimiento, y necesitamos implicación en momentos clave como aprobaciones de diseño, testing de funcionalidades y formación. Nuestro objetivo es maximizar resultados minimizando la carga sobre el personal del hotel.',
+      },
+      {
+        title: '¿Cómo medís el éxito de un proyecto?',
+        description:
+          'Definimos métricas de éxito claras al inicio de cada proyecto, típicamente relacionadas con objetivos de negocio (aumento de reservas, mejora de conversión), cumplimiento de plazos y presupuesto, calidad técnica, y satisfacción del cliente. Realizamos evaluaciones formales al final de cada proyecto y seguimiento de resultados post-implementación para verificar el impacto real.',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Consultar sobre tu proyecto',
+        href: '/contacto',
+        icon: 'tabler:message',
+      },
+      {
+        text: 'Ver casos de éxito',
+        href: '/portfolio',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Asegura el éxito de tu próximo proyecto digital
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Contacta para discutir cómo podemos ayudarte a gestionar tu próximo proyecto web o digital para maximizar resultados y minimizar riesgos.
+    </Fragment>
+  </CallToAction>
+</Layout>
