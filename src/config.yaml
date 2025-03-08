@@ -1,6 +1,6 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  name: J. Carlos Salgado
+  site: 'https://jcarlossalgado.com'
   base: '/'
   trailingSlash: false
 
@@ -9,26 +9,26 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: J. Carlos Salgado | Project Manager Especializado en Web Hotelera
+    template: '%s — J. Carlos Salgado'
+  description: "Project Manager especializado en soluciones web para la industria hotelera, combinando gestión de proyectos con conocimiento técnico avanzado para transformar la presencia digital de hoteles."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: J. Carlos Salgado
     images:
       - url: '~/assets/images/default.png'
         width: 1200
         height: 628
     type: website
   twitter:
-    handle: '@onwidget'
-    site: '@onwidget'
+    handle: '@jcarlos_salgado'
+    site: '@jcarlos_salgado'
     cardType: summary_large_image
 
 i18n:
-  language: en
+  language: es
   textDirection: ltr
 
 apps:
@@ -50,7 +50,7 @@ apps:
 
     category:
       isEnabled: true
-      pathname: 'category' # Category main path /category/some-category, you can change this to "group" (/group/some-category)
+      pathname: 'categoria' # Category main path /category/some-category, you can change this to "group" (/group/some-category)
       robots:
         index: true
 
