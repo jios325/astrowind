@@ -1,0 +1,161 @@
+---
+import { SITE, METADATA } from 'astrowind:config';
+
+// Esta es la URL base que se utilizará para enlaces absolutos
+const baseUrl = SITE?.site || 'https://jcarlossalgado.com';
+---
+
+<!-- Schema.org para Persona -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": `${baseUrl}/#person`,
+  "name": "J. Carlos Salgado",
+  "givenName": "J. Carlos",
+  "familyName": "Salgado",
+  "jobTitle": "Project Manager especializado en Web para Hotelería",
+  "description": "Project Manager con especialización en soluciones web para la industria hotelera, combinando gestión de proyectos con conocimiento técnico avanzado.",
+  "url": `${baseUrl}`,
+  "sameAs": [
+    "https://linkedin.com/in/tu-perfil",
+    "https://github.com/tu-usuario",
+    "https://twitter.com/tu-usuario"
+  ],
+  "image": `${baseUrl}/images/j-carlos-salgado.jpg`,
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Tu Ciudad",
+    "addressRegion": "Tu Región",
+    "addressCountry": "España"
+  },
+  "email": "contacto@jcarlossalgado.com",
+  "telephone": "+34600000000",
+  "knowsAbout": ["Project Management", "Desarrollo Web", "SEO Hotelero", "UX/UI para Hotelería"]
+}
+</script>
+
+<!-- Schema.org para Servicios Profesionales -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Servicios Web para Hoteles",
+  "serviceType": "Diseño y Desarrollo Web",
+  "provider": {
+    "@type": "Person",
+    "@id": `${baseUrl}/#person`
+  },
+  "description": "Servicios de diseño web, SEO y optimización de conversión especializados para hoteles, enfocados en maximizar reservas directas y mejorar la experiencia de usuario.",
+  "areaServed": {
+    "@type": "Country",
+    "name": "España"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servicios Web para Hotelería",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Diseño Web Hotelero",
+          "description": "Diseño de sitios web a medida para hoteles con enfoque en conversión"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "SEO Especializado para Hoteles",
+          "description": "Optimización para buscadores específica para el sector hotelero"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Optimización de Conversión",
+          "description": "Optimización de conversión para sistemas de reserva directa"
+        }
+      }
+    ]
+  }
+}
+</script>
+
+<!-- Schema.org para la organización -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "J. Carlos Salgado - Soluciones Web para Hoteles",
+  "url": `${baseUrl}`,
+  "logo": `${baseUrl}/favicon.svg`,
+  "description": "Servicios profesionales de diseño web, SEO y optimización de conversión especializados para la industria hotelera.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Tu Ciudad",
+    "addressRegion": "Tu Región",
+    "addressCountry": "España"
+  },
+  "email": "contacto@jcarlossalgado.com",
+  "telephone": "+34600000000",
+  "priceRange": "€€",
+  "openingHours": "Mo-Fr 09:00-18:00",
+  "founder": {
+    "@type": "Person",
+    "@id": `${baseUrl}/#person`
+  }
+}
+</script>
+
+<!-- Schema.org para FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto tiempo toma desarrollar un sitio web para un hotel?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El tiempo varía según la complejidad, pero generalmente un sitio web hotelero completo toma entre 8 y 12 semanas desde la planificación hasta el lanzamiento. Proyectos más complejos con integraciones de motor de reservas personalizados pueden requerir más tiempo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué resultados puedo esperar tras el rediseño de mi web hotelera?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los clientes típicamente experimentan un aumento del 20-40% en reservas directas, mejora en la tasa de conversión, reducción de la dependencia de OTAs, y mejor posicionamiento en buscadores para términos relevantes de su ubicación y servicios."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué diferencia a un sitio web hotelero efectivo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un sitio web hotelero efectivo combina diseño atractivo, usabilidad intuitiva, velocidad de carga optimizada, motor de reservas eficiente, contenido persuasivo, y estrategia SEO especializada para el sector. El enfoque debe estar en convertir visitantes en huéspedes directos."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Schema.org para breadcrumb (se activará dinámicamente según la página) -->
+<script type="application/ld+json" data-breadcrumb hidden>
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": `${baseUrl}/`
+    }
+  ]
+}
+</script>
