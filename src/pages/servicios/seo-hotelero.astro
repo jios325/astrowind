@@ -1,0 +1,295 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'SEO para Hoteles | J. Carlos Salgado',
+  description: 'Servicios de SEO especializado para hoteles: posicionamiento local, optimización para destino, estrategias para superar a OTAs y competidores directos.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText
+    title="SEO para Hoteles"
+    subtitle="Estrategias especializadas de posicionamiento SEO para la industria hotelera, enfocadas en atraer tráfico cualificado y convertirlo en reservas directas."
+  />
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="características"
+    tagline="Nuestro enfoque"
+    title="¿Qué incluye nuestro servicio de SEO hotelero?"
+    subtitle="Nuestras estrategias SEO están específicamente diseñadas para la industria hotelera, considerando sus particularidades y desafíos únicos."
+    items={[
+      {
+        title: 'SEO Local avanzado',
+        description:
+          'Optimización completa para posicionamiento local, Google Business Profile y mapas, crucial para captar huéspedes que buscan alojamiento en tu destino.',
+        icon: 'tabler:map-pin',
+      },
+      {
+        title: 'SEO de destino',
+        description:
+          'Estrategias para posicionar tu hotel para búsquedas relacionadas con el destino, atractivos turísticos y eventos locales.',
+        icon: 'tabler:building-castle',
+      },
+      {
+        title: 'Keyword research especializado',
+        description:
+          'Investigación exhaustiva de palabras clave específicas del sector hotelero y tu destino particular, con análisis de intención de búsqueda.',
+        icon: 'tabler:zoom-question',
+      },
+      {
+        title: 'Optimización técnica',
+        description:
+          'Mejora de aspectos técnicos como velocidad, estructura, indexabilidad, metadatos y schema markup específico para hoteles.',
+        icon: 'tabler:tools',
+      },
+      {
+        title: 'Estrategia de contenido',
+        description:
+          'Desarrollo de contenido relevante sobre el destino, experiencias, servicios y amenidades, optimizado para SEO.',
+        icon: 'tabler:article',
+      },
+      {
+        title: 'Optimización para superar OTAs',
+        description:
+          'Técnicas específicas para competir y superar a las Online Travel Agencies en resultados de búsqueda relevantes.',
+        icon: 'tabler:award',
+      },
+      {
+        title: 'Link building estratégico',
+        description:
+          'Desarrollo de estrategias para obtener enlaces de calidad desde sitios relevantes para la industria turística y hotelera.',
+        icon: 'tabler:link',
+      },
+      {
+        title: 'Analítica y reportes',
+        description:
+          'Seguimiento detallado de posiciones, tráfico orgánico, conversiones y ROI con informes periódicos.',
+        icon: 'tabler:report-analytics',
+      },
+      {
+        title: 'Optimización continua',
+        description:
+          'Ajustes constantes basados en análisis de datos y cambios en los algoritmos de búsqueda.',
+        icon: 'tabler:refresh',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    tagline="Ventajas"
+    title="¿Por qué necesita tu hotel una estrategia SEO especializada?"
+    items={[
+      {
+        title: 'Competencia contra OTAs',
+        description:
+          'Las agencias online invierten millones en SEO. Necesitas una estrategia especializada para competir efectivamente y captar reservas directas.',
+      },
+      {
+        title: 'Búsquedas con alta intención de compra',
+        description:
+          'Los usuarios que buscan hoteles en Google tienen alta intención de reserva. Aparecer en estos resultados significa oportunidades inmediatas de negocio.',
+      },
+      {
+        title: 'Posicionamiento local crítico',
+        description:
+          'El 76% de las búsquedas locales resultan en una visita a un negocio en 24 horas, haciendo del SEO local una estrategia esencial para hoteles.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/hotel-seo.jpg',
+      alt: 'SEO para hoteles',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Supera a la competencia</h3>
+      Con miles de opciones de alojamiento compitiendo por la atención, una estrategia SEO sólida y específica para tu hotel es esencial para destacar en los resultados de búsqueda y atraer a los viajeros adecuados.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="Nuestro proceso de SEO para hoteles"
+    items={[
+      {
+        title: 'Auditoría SEO completa',
+        description:
+          'Análisis exhaustivo de tu situación actual, identificando fortalezas, debilidades y oportunidades de mejora en tu web y presencia digital.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Investigación de competencia',
+        description:
+          'Análisis de competidores directos y OTAs, identificando sus estrategias y buscando oportunidades para diferenciarte y superarlos.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Estrategia de keywords',
+        description:
+          'Identificación de palabras clave específicas para tu hotel, considerando ubicación, tipo de establecimiento, servicios y público objetivo.',
+        icon: 'tabler:list-details',
+      },
+      {
+        title: 'Optimización on-page',
+        description:
+          'Implementación de mejoras técnicas, estructurales y de contenido en tu web para maximizar su visibilidad en buscadores.',
+        icon: 'tabler:device-laptop',
+      },
+      {
+        title: 'SEO local y de destino',
+        description:
+          'Optimización para búsquedas locales y relacionadas con el destino, incluyendo Google Business Profile, mapas y directorios relevantes.',
+        icon: 'tabler:map-2',
+      },
+      {
+        title: 'Creación de contenido',
+        description:
+          'Desarrollo de contenido valioso sobre el destino, experiencias y servicios, optimizado para palabras clave estratégicas.',
+        icon: 'tabler:writing',
+      },
+      {
+        title: 'Link building',
+        description:
+          'Implementación de estrategias para obtener enlaces de calidad desde sitios de autoridad en turismo y hostelería.',
+        icon: 'tabler:external-link',
+      },
+      {
+        title: 'Análisis y mejora continua',
+        description:
+          'Monitoreo constante, análisis de resultados y ajustes para mantener y mejorar posiciones en buscadores.',
+        icon: 'tabler:chart-line',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/hotel-seo-process.jpg',
+      alt: 'Proceso de SEO para hoteles',
+    }}
+  />
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    title="Resultados que hablan por sí solos"
+    subtitle="Algunos datos sobre los resultados promedio que nuestros clientes hoteleros experimentan tras implementar nuestra estrategia SEO"
+    stats={[
+      { title: 'Aumento en tráfico orgánico', amount: '+75%' },
+      { title: 'Mejora en posiciones locales', amount: 'Top 3' },
+      { title: 'Incremento en reservas directas', amount: '+46%' },
+      { title: 'ROI promedio', amount: '550%' },
+    ]}
+  />
+
+  <!-- Testimonials Widget *********** -->
+
+  <Testimonials
+    title="Lo que dicen nuestros clientes"
+    testimonials={[
+      {
+        testimonial:
+          'La estrategia SEO implementada por J. Carlos transformó nuestra visibilidad online. Pasamos de aparecer en la página 3 a posicionarnos entre los primeros resultados para las principales búsquedas de nuestro destino, aumentando un 62% las reservas directas.',
+        name: 'Antonio Ruiz',
+        job: 'Director de Marketing en Hotel Miramar',
+        image: {
+          src: '~/assets/images/testimonial-3.jpg',
+          alt: 'Antonio Ruiz',
+        },
+      },
+      {
+        testimonial:
+          'Después de años luchando contra las OTAs por visibilidad, finalmente estamos ganando la batalla gracias a la estrategia SEO de J. Carlos. Su enfoque específico para hoteles marcó la diferencia que buscábamos.',
+        name: 'Laura Sánchez',
+        job: 'Propietaria de Hotel Boutique Las Flores',
+        image: {
+          src: '~/assets/images/testimonial-4.jpg',
+          alt: 'Laura Sánchez',
+        },
+      },
+    ]}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Preguntas frecuentes sobre SEO para hoteles"
+    subtitle="Resuelve tus dudas sobre nuestro servicio de posicionamiento SEO para la industria hotelera."
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: '¿En cuánto tiempo veré resultados con el SEO?',
+        description:
+          'El SEO es una estrategia a mediano y largo plazo. Generalmente, los primeros resultados comienzan a notarse entre 3-6 meses tras la implementación, con mejoras progresivas. Factores como la competitividad del destino, la autoridad actual de tu web y el punto de partida influyen en la velocidad de los resultados.',
+      },
+      {
+        title: '¿Es posible superar a las grandes OTAs en resultados de búsqueda?',
+        description:
+          'Aunque las OTAs tienen grandes presupuestos, es posible superarlas en búsquedas específicas y relevantes para tu hotel, especialmente en términos de marca, búsquedas locales muy específicas y términos de long tail relacionados con tu hotel y servicios únicos.',
+      },
+      {
+        title: '¿Qué diferencia el SEO hotelero del SEO general?',
+        description:
+          'El SEO hotelero requiere un enfoque especializado en posicionamiento local, optimización para búsquedas de destino, implementación de Schema.org específico para hoteles, estrategias frente a OTAs, y contenido orientado a las necesidades específicas de información de los viajeros.',
+      },
+      {
+        title: '¿El servicio incluye la gestión de Google Business Profile?',
+        description:
+          'Sí, la optimización completa de Google Business Profile (anteriormente Google My Business) es una parte fundamental de nuestra estrategia SEO para hoteles, ya que impacta directamente en la visibilidad local y en mapas.',
+      },
+      {
+        title: '¿Es necesario crear contenido nuevo constantemente?',
+        description:
+          'La creación regular de contenido relevante y actualizado es importante para el SEO, pero se desarrolla un plan estratégico adaptado a tus recursos y capacidades. Priorizamos la calidad sobre la cantidad, enfocándonos en contenido que realmente aporte valor y posicionamiento.',
+      },
+      {
+        title: '¿Qué informes y métricas proporcionáis?',
+        description:
+          'Proporcionamos informes mensuales detallados que incluyen evolución de posiciones para keywords clave, análisis de tráfico orgánico, comportamiento de usuarios, conversiones, y recomendaciones específicas para continuar mejorando los resultados.',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Solicitar auditoría SEO gratuita',
+        href: '/contacto',
+        icon: 'tabler:search',
+      },
+      {
+        text: 'Ver casos de éxito',
+        href: '/portfolio',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Mejora la visibilidad online de tu hotel
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Solicita una auditoría SEO gratuita para identificar oportunidades de mejora y descubrir cómo podemos ayudarte a aumentar tus reservas directas a través del posicionamiento en buscadores.
+    </Fragment>
+  </CallToAction>
+</Layout>
