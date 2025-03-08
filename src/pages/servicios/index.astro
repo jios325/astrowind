@@ -1,0 +1,228 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+
+const metadata = {
+  title: 'Servicios | J. Carlos Salgado - Soluciones Web para Hoteles',
+  description: 'Servicios especializados en soluciones web para la industria hotelera: diseño web, SEO, optimización de conversión y project management para maximizar reservas directas.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText
+    title="Servicios para la industria hotelera"
+    subtitle="Soluciones web especializadas y adaptadas a las necesidades del sector hotelero, enfocadas en maximizar reservas directas y mejorar la experiencia de usuario."
+  />
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="servicios"
+    tagline="Mi Oferta"
+    title="Servicios web especializados para hotelería"
+    subtitle="Cada servicio está diseñado para atender las necesidades específicas de la industria hotelera, maximizando resultados y ROI."
+    items={[
+      {
+        title: 'Diseño Web para Hoteles',
+        description:
+          'Sitios web atractivos y funcionales optimizados para reservas directas, con experiencia de usuario intuitiva y diseño responsivo.',
+        icon: 'tabler:device-laptop',
+        link: '/servicios/diseno-web-hotelero',
+      },
+      {
+        title: 'SEO para Hoteles',
+        description:
+          'Estrategias de posicionamiento específicas para el sector hotelero, con enfoque local y optimización para búsquedas relevantes.',
+        icon: 'tabler:chart-line',
+        link: '/servicios/seo-hotelero',
+      },
+      {
+        title: 'Optimización de Conversión',
+        description:
+          'Mejora del rendimiento del motor de reservas y aumento de la tasa de conversión para maximizar las reservas directas.',
+        icon: 'tabler:arrows-right-left',
+        link: '/servicios/optimizacion-conversion',
+      },
+      {
+        title: 'Project Management',
+        description:
+          'Gestión integral de proyectos digitales para el sector hotelero, asegurando la entrega puntual y dentro del presupuesto.',
+        icon: 'tabler:list-check',
+        link: '/servicios/project-management',
+      },
+      {
+        title: 'Integración de Sistemas',
+        description:
+          'Implementación y configuración de PMS, Channel Manager y otras herramientas tecnológicas para la gestión hotelera.',
+        icon: 'tabler:plug',
+        link: '/servicios/integracion-sistemas',
+      },
+      {
+        title: 'Mantenimiento y Soporte',
+        description:
+          'Servicio continuo para garantizar que tu presencia digital se mantenga actualizada, segura y con óptimo rendimiento.',
+        icon: 'tabler:refresh',
+        link: '/servicios/mantenimiento-soporte',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    tagline="Enfoque"
+    title="¿Por qué elegir servicios especializados en hotelería?"
+    items={[
+      {
+        title: 'Conocimiento del sector',
+        description:
+          'Comprensión profunda de las particularidades y necesidades específicas de la industria hotelera.',
+      },
+      {
+        title: 'Estrategias adaptadas',
+        description:
+          'Soluciones diseñadas específicamente para los desafíos únicos que enfrentan los hoteles en el entorno digital.',
+      },
+      {
+        title: 'Maximización de reservas directas',
+        description:
+          'Enfoque constante en reducir la dependencia de OTAs y aumentar las reservas a través del sitio oficial.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/hotel-services.jpg',
+      alt: 'Servicios especializados para hoteles',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Especialización que marca la diferencia</h3>
+      Los hoteles tienen necesidades digitales muy específicas que requieren soluciones adaptadas y especializadas. Desde la integración con sistemas de reservas hasta estrategias SEO específicas para destinos, cada aspecto de tu presencia digital debe estar optimizado para el sector hotelero.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="Nuestro proceso de trabajo"
+    items={[
+      {
+        title: 'Análisis inicial',
+        description:
+          'Evaluación exhaustiva de tu situación actual, objetivos y necesidades específicas para establecer la base del proyecto.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Estrategia personalizada',
+        description:
+          'Desarrollo de un plan a medida adaptado a las particularidades de tu hotel y enfocado en tus objetivos de negocio.',
+        icon: 'tabler:bulb',
+      },
+      {
+        title: 'Implementación profesional',
+        description:
+          'Ejecución cuidadosa y detallada de todas las soluciones utilizando metodologías ágiles y mejores prácticas.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'Pruebas y ajustes',
+        description:
+          'Testing exhaustivo de todas las funcionalidades y optimización continua basada en datos reales de rendimiento.',
+        icon: 'tabler:adjustments',
+      },
+      {
+        title: 'Formación y entrega',
+        description:
+          'Capacitación completa a tu equipo y entrega de documentación detallada para garantizar el aprovechamiento máximo.',
+        icon: 'tabler:school',
+      },
+      {
+        title: 'Soporte continuo',
+        description:
+          'Acompañamiento posterior al lanzamiento con análisis periódicos y mejoras continuas para mantener el rendimiento óptimo.',
+        icon: 'tabler:headset',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/process-workflow.jpg',
+      alt: 'Proceso de trabajo para proyectos web hoteleros',
+    }}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Preguntas frecuentes sobre nuestros servicios"
+    subtitle="Resuelve tus dudas sobre cómo pueden ayudarte nuestros servicios web especializados para la industria hotelera."
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: '¿Cuánto tiempo toma un proyecto web completo para un hotel?',
+        description:
+          'El tiempo varía según la complejidad, pero generalmente un sitio web hotelero completo toma entre 8 y 12 semanas desde la planificación hasta el lanzamiento. Proyectos con integraciones personalizadas complejas pueden requerir más tiempo.',
+      },
+      {
+        title: '¿Trabajáis con motores de reserva específicos?',
+        description:
+          'Tenemos experiencia con todos los principales motores de reserva del mercado (Bookassist, D-EDGE, SiteMinder, etc.) y podemos recomendar el que mejor se adapte a tus necesidades o integrar el que ya utilices.',
+      },
+      {
+        title: '¿Qué hace diferentes vuestros servicios de SEO para hoteles?',
+        description:
+          'Nuestro SEO está específicamente adaptado para la industria hotelera, con énfasis en posicionamiento local, optimización para términos relacionados con destinos, y estrategias específicas para competir con OTAs y otros hoteles de la zona.',
+      },
+      {
+        title: '¿Ofrecéis servicios de marketing digital más allá del desarrollo web?',
+        description:
+          'Nos especializamos en la parte técnica y estratégica de la presencia digital, pero trabajamos con partners de confianza para servicios complementarios como gestión de redes sociales, campañas SEM, o creación de contenidos específicos.',
+      },
+      {
+        title: '¿Es posible tener un sitio web optimizado para móviles y que funcione bien con conexiones lentas?',
+        description:
+          'Absolutamente. Todos nuestros desarrollos priorizan la experiencia móvil y la optimización de rendimiento, asegurando que el sitio funcione perfectamente incluso en condiciones de conexión no ideales, crucial para viajeros internacionales.',
+      },
+      {
+        title: '¿Cómo medís el éxito de los proyectos?',
+        description:
+          'Establecemos KPIs claros al inicio del proyecto, como aumento en reservas directas, mejora en la tasa de conversión, reducción de la dependencia de OTAs, y posicionamiento en buscadores. Realizamos seguimiento regular y reportes detallados de estos indicadores.',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Solicitar consulta gratuita',
+        href: '/contacto',
+        icon: 'tabler:calendar',
+      },
+      {
+        text: 'Ver portfolio',
+        href: '/portfolio',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Transforma la presencia digital de tu hotel
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Agenda una consultoría gratuita para analizar tu situación actual y descubrir oportunidades de mejora para tu hotel.
+    </Fragment>
+  </CallToAction>
+</Layout>
