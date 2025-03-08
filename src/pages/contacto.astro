@@ -1,0 +1,122 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import ContactForm from '~/components/widgets/Contact.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Contacto | J. Carlos Salgado - Web para Hotelería',
+  description: 'Contáctame para discutir cómo puedo ayudarte a transformar la presencia digital de tu hotel. Consulta inicial gratuita para analizar tu situación actual.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText
+    title="Contacto"
+    subtitle="¿Listo para transformar la presencia digital de tu hotel? Estoy aquí para ayudarte a maximizar reservas directas y reducir la dependencia de OTAs."
+  />
+
+  <!-- Contact Widget ******************* -->
+
+  <ContactForm
+    title="Conversemos sobre tu proyecto"
+    subtitle="Completa el formulario a continuación o utiliza los datos de contacto. Responderé a tu consulta en menos de 24 horas laborables."
+    inputs={[
+      {
+        type: 'text',
+        name: 'name',
+        label: 'Nombre',
+        placeholder: 'Tu nombre',
+        required: true,
+      },
+      {
+        type: 'email',
+        name: 'email',
+        label: 'Email',
+        placeholder: 'tu-email@ejemplo.com',
+        required: true,
+      },
+      {
+        type: 'tel',
+        name: 'phone',
+        label: 'Teléfono',
+        placeholder: '+34 600 000 000',
+      },
+      {
+        type: 'select',
+        name: 'subject',
+        label: 'Asunto',
+        options: [
+          { value: 'diseño-web', label: 'Diseño Web para Hotel' },
+          { value: 'seo', label: 'SEO para Hotel' },
+          { value: 'optimizacion', label: 'Optimización de Conversión' },
+          { value: 'project-management', label: 'Project Management' },
+          { value: 'integracion', label: 'Integración de Sistemas' },
+          { value: 'mantenimiento', label: 'Mantenimiento y Soporte' },
+          { value: 'otro', label: 'Otro Asunto' },
+        ],
+        required: true,
+      },
+    ]}
+    textarea={{
+      label: 'Mensaje',
+      placeholder: 'Tu mensaje...',
+      rows: 6,
+      required: true,
+    }}
+    disclaimer={{
+      label:
+        'Al enviar este formulario, acepto la política de privacidad y consiento el procesamiento de mis datos personales.',
+    }}
+    description="Los datos proporcionados se utilizarán exclusivamente para responder a tu consulta y no serán compartidos con terceros."
+    button={{ text: 'Enviar Mensaje' }}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Otras formas de contacto"
+    subtitle="Puedes contactarme a través de los siguientes medios"
+    items={[
+      {
+        title: 'Email',
+        description: 'contacto@jcarlossalgado.com',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Teléfono',
+        description: '+34 600 000 000',
+        icon: 'tabler:phone',
+      },
+      {
+        title: 'LinkedIn',
+        description: 'linkedin.com/in/tu-perfil',
+        icon: 'tabler:brand-linkedin',
+      },
+      {
+        title: 'Horario de atención',
+        description: 'Lunes a Viernes: 9:00 - 18:00',
+        icon: 'tabler:clock',
+      },
+    ]}
+  />
+
+  <!-- Google Map Embed (Optional) -->
+  <div class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-8">
+    <div class="text-center">
+      <h3 class="text-2xl font-bold mb-8">Ubicación</h3>
+    </div>
+    <div class="relative h-96 rounded-lg shadow-lg overflow-hidden">
+      <iframe 
+        class="absolute inset-0 w-full h-full"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.986658944577!2d-3.7033430240770013!3d40.41694025650995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422880264afd9b%3A0x1e7c3c158d55332c!2sPuerta%20del%20Sol%2C%20Madrid!5e0!3m2!1ses!2ses!4v1712607359333!5m2!1ses!2ses" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</Layout>
