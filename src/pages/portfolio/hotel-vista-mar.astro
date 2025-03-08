@@ -1,0 +1,367 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Image from '~/components/common/Image.astro';
+
+const metadata = {
+  title: 'Caso de Éxito: Hotel Vista Mar | J. Carlos Salgado',
+  description: 'Transformación digital completa para Hotel Vista Mar que resultó en un aumento del 42% en reservas directas y una reducción del 25% en la dependencia de OTAs.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText
+    title="Caso de Estudio: Hotel Vista Mar"
+    subtitle="Transformación digital completa para un hotel boutique en la costa mediterránea, con resultados extraordinarios en reservas directas y reducción de dependencia de OTAs."
+  >
+    <div class="flex flex-wrap justify-center gap-2 mt-6">
+      <span class="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full">
+        Diseño Web
+      </span>
+      <span class="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full">
+        CRO
+      </span>
+      <span class="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full">
+        SEO
+      </span>
+    </div>
+  </HeroText>
+
+  <!-- Project Overview Section ************** -->
+  
+  <section class="px-4 py-8 sm:px-6 mx-auto lg:px-8 lg:py-12 max-w-6xl">
+    <div class="grid md:grid-cols-2 gap-10 md:gap-16">
+      <div>
+        <Image
+          src="~/assets/images/portfolio-1-full.jpg"
+          class="w-full h-auto rounded-md"
+          alt="Hotel Vista Mar - Antes y Después"
+          aspectRatio="4:3"
+          loading="eager"
+          decoding="sync"
+        />
+      </div>
+      <div>
+        <h2 class="text-2xl font-bold tracking-tight sm:text-3xl mb-4">Resumen del Proyecto</h2>
+        <p class="mb-4">
+          Hotel Vista Mar es un hotel boutique de 35 habitaciones ubicado en la Costa Brava que buscaba reducir su dependencia de OTAs y aumentar sus reservas directas. El hotel contaba con un sitio web desactualizado, un proceso de reservas complicado y una visibilidad limitada en buscadores.
+        </p>
+        <p class="mb-4">
+          La dirección del hotel nos contactó con estos objetivos claros:
+        </p>
+        <ul class="list-disc list-inside space-y-2 mb-4">
+          <li>Crear una presencia digital moderna que reflejara la calidad real del establecimiento</li>
+          <li>Simplificar y optimizar el proceso de reserva para aumentar conversiones</li>
+          <li>Mejorar el posicionamiento en buscadores para términos relevantes</li>
+          <li>Reducir la comisión pagada a OTAs aumentando el porcentaje de reservas directas</li>
+        </ul>
+        <p>
+          Este proyecto integral incluyó rediseño web completo, optimización SEO y una estrategia CRO específica para el motor de reservas.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    title="Resultados conseguidos"
+    subtitle="Métricas clave después de 6 meses de implementación"
+    stats={[
+      { title: 'Aumento en reservas directas', amount: '+42%' },
+      { title: 'Reducción dependencia OTAs', amount: '-25%' },
+      { title: 'Mejora tasa de conversión', amount: '+118%' },
+      { title: 'Aumento tráfico orgánico', amount: '+67%' },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    title="El desafío"
+    items={[
+      {
+        title: 'Web obsoleta y no optimizada',
+        description:
+          'El sitio anterior tenía un diseño de 2015, no era responsive y presentaba problemas de usabilidad y velocidad.',
+      },
+      {
+        title: 'Proceso de reserva complejo',
+        description:
+          'El motor de reservas presentaba un flujo complicado con 6 pasos y elevadas tasas de abandono (87%).',
+      },
+      {
+        title: 'Posicionamiento SEO deficiente',
+        description:
+          'El hotel no aparecía en resultados de búsqueda para términos relevantes relacionados con su ubicación y tipo de establecimiento.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/portfolio-challenge.jpg',
+      alt: 'Desafíos del Hotel Vista Mar',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Situación inicial</h3>
+      El hotel dependía excesivamente de OTAs, con más del 75% de reservas proviniendo de estas plataformas y pagando comisiones de hasta el 22%. Su presencia digital no reflejaba la calidad real del establecimiento.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Features Widget ************** -->
+
+  <Features
+    id="soluciones"
+    tagline="Nuestra Solución"
+    title="Estrategia integral en tres frentes"
+    subtitle="Implementamos un enfoque holístico para resolver los desafíos del Hotel Vista Mar, trabajando simultáneamente en diseño, conversión y posicionamiento."
+    items={[
+      {
+        title: 'Rediseño web completo',
+        description:
+          'Creamos un sitio moderno con diseño responsive, estructura clara centrada en conversión y velocidad de carga optimizada. El sitio refleja la experiencia premium del hotel con fotografías profesionales y contenido persuasivo.',
+        icon: 'tabler:device-laptop',
+      },
+      {
+        title: 'Optimización del motor de reservas',
+        description:
+          'Implementamos un nuevo motor de reservas con flujo simplificado (reducido a 3 pasos), diseño intuitivo, visualización clara de disponibilidad y precios, y elementos de persuasión estratégicos para reducir abandonos.',
+        icon: 'tabler:calendar-plus',
+      },
+      {
+        title: 'Estrategia SEO especializada',
+        description:
+          'Desarrollamos una estrategia SEO completa con focus en posicionamiento local, optimización para términos de destino, creación de contenido de valor sobre la zona, y optimización técnica avanzada.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Programa de incentivos directos',
+        description:
+          'Diseñamos y promocionamos beneficios exclusivos para reservas directas: check-in prioritario, late check-out gratuito, y descuentos en servicios adicionales, comunicados estratégicamente en la web.',
+        icon: 'tabler:discount',
+      },
+      {
+        title: 'Integración con PMS',
+        description:
+          'Implementamos integración completa con el PMS del hotel para garantizar información actualizada de disponibilidad y precios, así como gestión centralizada de reservas.',
+        icon: 'tabler:plug',
+      },
+      {
+        title: 'Estrategia de email marketing',
+        description:
+          'Desarrollamos un flujo de emails para huéspedes anteriores incentivando la reserva directa en futuras estancias, con ofertas personalizadas basadas en su historial.',
+        icon: 'tabler:mail',
+      },
+    ]}
+  />
+
+  <!-- Process Section ****************** -->
+
+  <section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-6xl">
+    <div class="mb-10 md:mx-auto text-center md:mb-12 max-w-3xl">
+      <h2 class="text-4xl font-bold leading-tighter tracking-tighter mb-4 font-heading">
+        Proceso de implementación
+      </h2>
+      <p class="text-xl text-gray-600 dark:text-slate-400">
+        El proyecto se desarrolló en 12 semanas siguiendo una metodología ágil con entregas incrementales y feedback continuo.
+      </p>
+    </div>
+
+    <div class="relative">
+      <!-- Timeline line -->
+      <div class="absolute left-1/2 transform -translate-x-1/2 border-l-2 border-primary h-full"></div>
+      
+      <!-- Timeline items -->
+      <div class="space-y-12">
+        <!-- Phase 1 -->
+        <div class="relative">
+          <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-4">
+            <div class="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center">
+              1
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="md:text-right md:pr-12 pt-4">
+              <h3 class="text-xl font-bold mb-2">Semanas 1-3: Análisis y Planificación</h3>
+              <p class="text-gray-700 dark:text-gray-400">
+                Auditoría completa de la situación inicial, análisis de competencia, investigación de keywords, y desarrollo del plan estratégico detallado.
+              </p>
+            </div>
+            <div class="md:pl-12"></div>
+          </div>
+        </div>
+        
+        <!-- Phase 2 -->
+        <div class="relative">
+          <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-4">
+            <div class="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center">
+              2
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="md:pr-12"></div>
+            <div class="md:pl-12 pt-4">
+              <h3 class="text-xl font-bold mb-2">Semanas 4-6: Diseño y Desarrollo</h3>
+              <p class="text-gray-700 dark:text-gray-400">
+                Creación de wireframes, diseño visual, desarrollo frontend y backend, e implementación del nuevo motor de reservas con primeras optimizaciones.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Phase 3 -->
+        <div class="relative">
+          <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-4">
+            <div class="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center">
+              3
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="md:text-right md:pr-12 pt-4">
+              <h3 class="text-xl font-bold mb-2">Semanas 7-9: Implementación SEO y CRO</h3>
+              <p class="text-gray-700 dark:text-gray-400">
+                Optimización SEO técnica, creación de contenidos, configuración de Google Business Profile, y primeros tests A/B para optimización de conversión.
+              </p>
+            </div>
+            <div class="md:pl-12"></div>
+          </div>
+        </div>
+        
+        <!-- Phase 4 -->
+        <div class="relative">
+          <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-4">
+            <div class="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center">
+              4
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="md:pr-12"></div>
+            <div class="md:pl-12 pt-4">
+              <h3 class="text-xl font-bold mb-2">Semanas 10-12: Testing, Lanzamiento y Formación</h3>
+              <p class="text-gray-700 dark:text-gray-400">
+                Pruebas exhaustivas, ajustes finales, lanzamiento del nuevo sitio, configuración de analytics, y formación al personal del hotel para gestión de contenidos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Before/After Section ************** -->
+  
+  <section class="relative">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-slate-800/40"></div>
+    <div class="relative max-w-6xl mx-auto px-4 sm:px-6 py-16 lg:py-20">
+      <div class="mb-10 md:mx-auto text-center md:mb-12 max-w-3xl">
+        <h2 class="text-4xl font-bold leading-tighter tracking-tighter mb-4 font-heading">
+          Antes y Después
+        </h2>
+        <p class="text-xl text-gray-600 dark:text-slate-400">
+          Comparativa visual de la transformación digital del Hotel Vista Mar
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-10">
+        <div class="bg-white dark:bg-slate-900 rounded-lg shadow-md overflow-hidden">
+          <div class="p-1 bg-red-100 dark:bg-red-900 text-center text-red-800 dark:text-red-200 font-semibold">
+            ANTES
+          </div>
+          <Image
+            src="~/assets/images/portfolio-before.jpg"
+            class="w-full h-auto"
+            alt="Sitio web del Hotel Vista Mar antes"
+            aspectRatio="4:3"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="p-6">
+            <ul class="list-disc list-inside space-y-2">
+              <li>Diseño obsoleto de 2015</li>
+              <li>No responsive</li>
+              <li>Tiempo de carga: 8.2s</li>
+              <li>Tasa de conversión: 0.8%</li>
+              <li>Tasa de rebote: 72%</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="bg-white dark:bg-slate-900 rounded-lg shadow-md overflow-hidden">
+          <div class="p-1 bg-green-100 dark:bg-green-900 text-center text-green-800 dark:text-green-200 font-semibold">
+            DESPUÉS
+          </div>
+          <Image
+            src="~/assets/images/portfolio-after.jpg"
+            class="w-full h-auto"
+            alt="Sitio web del Hotel Vista Mar después"
+            aspectRatio="4:3"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="p-6">
+            <ul class="list-disc list-inside space-y-2">
+              <li>Diseño moderno y atractivo</li>
+              <li>Completamente responsive</li>
+              <li>Tiempo de carga: 1.8s</li>
+              <li>Tasa de conversión: 3.5%</li>
+              <li>Tasa de rebote: 38%</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial Section ************** -->
+  
+  <section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-6xl">
+    <blockquote class="max-w-4xl mx-auto text-center">
+      <div class="mb-6">
+        <svg class="h-12 w-12 text-gray-400 dark:text-gray-600 mx-auto" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
+          <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z"></path>
+        </svg>
+      </div>
+      <p class="text-xl md:text-2xl italic text-gray-700 dark:text-gray-300 font-medium">
+        "Trabajar con J. Carlos ha sido una de las mejores decisiones que hemos tomado. No solo transformó nuestra presencia digital, sino que realmente entendió las necesidades específicas de nuestro hotel. Los resultados han superado nuestras expectativas: más reservas directas, menos dependencia de OTAs y comentarios muy positivos de nuestros huéspedes sobre la nueva web."
+      </p>
+      <div class="mt-6">
+        <div class="font-bold">María Rodríguez</div>
+        <div class="text-gray-600 dark:text-gray-400">Directora de Hotel Vista Mar</div>
+      </div>
+    </blockquote>
+  </section>
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: '¿Quieres resultados similares?',
+        href: '/contacto',
+        icon: 'tabler:message',
+      },
+      {
+        text: 'Ver más casos de éxito',
+        href: '/portfolio',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Transforma la presencia digital de tu hotel
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Contacta conmigo para analizar cómo podemos ayudarte a conseguir resultados similares para tu establecimiento hotelero.
+    </Fragment>
+  </CallToAction>
+</Layout>
