@@ -1,6 +1,6 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  name: J. Carlos Salgado
+  site: 'https://jcarlossalgado.com'
   base: '/'
   trailingSlash: false
 
@@ -9,26 +9,26 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: J. Carlos Salgado
+    template: '%s — J. Carlos Salgado'
+  description: "Project Manager especializado en soluciones web para la industria hotelera, con 12 años de experiencia en transformación digital, SEO, CRO y gestión de proyectos tecnológicos."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: J. Carlos Salgado
     images:
       - url: '~/assets/images/default.png'
         width: 1200
         height: 628
     type: website
   twitter:
-    handle: '@onwidget'
-    site: '@onwidget'
+    handle: '@jcarlossalgado'
+    site: '@jcarlossalgado'
     cardType: summary_large_image
 
 i18n:
-  language: en
+  language: es
   textDirection: ltr
 
 apps:
@@ -50,13 +50,13 @@ apps:
 
     category:
       isEnabled: true
-      pathname: 'category' # Category main path /category/some-category, you can change this to "group" (/group/some-category)
+      pathname: 'categoria' # Category main path /category/some-category, you can change this to "grupo" (/grupo/some-category)
       robots:
         index: true
 
     tag:
       isEnabled: true
-      pathname: 'tag' # Tag main path /tag/some-tag, you can change this to "topics" (/topics/some-category)
+      pathname: 'etiqueta' # Tag main path /tag/some-tag, you can change this to "topics" (/topics/some-category)
       robots:
         index: false
 
