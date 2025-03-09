@@ -1,0 +1,168 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import ContactForm from '~/components/widgets/ContactForm.astro';
+
+const metadata = {
+  title: 'Contacto - J. Carlos Salgado | Project Manager para Hoteles',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+  <Hero>
+    <Fragment slot="title">
+      <span class="text-accent dark:text-white highlight">Contáctame</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Estoy aquí para responder tus preguntas y discutir cómo podemos llevar tus proyectos de hotelería digital al siguiente nivel. Ya sea que estés buscando asesoramiento experto en gestión de proyectos web, una consulta sobre SEO y CRO, o simplemente quieras explorar posibles colaboraciones, no dudes en ponerte en contacto.
+    </Fragment>
+  </Hero>
+
+  <!-- Contact Form Widget *********** -->
+  <ContactForm
+    title="Envíame un Mensaje"
+    description="Completa el formulario a continuación y me pondré en contacto contigo en un plazo máximo de 24 horas laborables."
+    inputs={[
+      {
+        type: 'text',
+        name: 'nombre',
+        label: 'Nombre',
+        placeholder: 'Tu nombre',
+        required: true,
+      },
+      {
+        type: 'email',
+        name: 'email',
+        label: 'Email',
+        placeholder: 'tu-email@ejemplo.com',
+        required: true,
+      },
+      {
+        type: 'select',
+        name: 'asunto',
+        label: 'Asunto',
+        options: [
+          { value: 'diseno-web', label: 'Diseño Web Hotelero' },
+          { value: 'seo', label: 'SEO para Hoteles' },
+          { value: 'cro', label: 'Optimización de Conversión' },
+          { value: 'gestion-proyectos', label: 'Gestión de Proyectos' },
+          { value: 'otro', label: 'Otro Asunto' },
+        ],
+        required: true,
+      },
+    ]}
+    textarea={{
+      label: 'Mensaje',
+      placeholder: 'Tu mensaje aquí...',
+      required: true,
+    }}
+    disclaimer={{
+      label:
+        'Al enviar este formulario, aceptas nuestra <a href="/privacidad" class="text-primary hover:underline">política de privacidad</a>.',
+    }}
+    button={{
+      title: 'Enviar Mensaje',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+  <Features2
+    title="Otras Formas de Contacto"
+    subtitle="Si prefieres comunicarte por otros medios, tienes varias opciones para contactarme."
+    items={[
+      {
+        title: 'Email',
+        description: 'juancarlos@elitekode.com',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'LinkedIn',
+        description: 'Conéctate conmigo en LinkedIn',
+        icon: 'tabler:brand-linkedin',
+        callToAction: {
+          text: 'Visitar Perfil',
+          href: 'https://linkedin.com/in/jcarlossalgado',
+          target: '_blank',
+        },
+      },
+      {
+        title: 'Agendar una Llamada',
+        description: 'Reserva una consulta gratuita de 30 minutos',
+        icon: 'tabler:calendar',
+        callToAction: {
+          text: 'Agendar Ahora',
+          href: '/consulta',
+        },
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- Content Widget **************** -->
+  <Content
+    isReversed
+    title="¿Qué sucede después de contactarme?"
+    items={[
+      {
+        title: '1. Respuesta Inicial',
+        description:
+          'Recibirás una confirmación inmediata y una respuesta personalizada dentro de las próximas 24 horas laborables.',
+      },
+      {
+        title: '2. Consulta Inicial Gratuita',
+        description:
+          'Agendaremos una llamada de 30 minutos para discutir tu proyecto, necesidades y objetivos específicos.',
+      },
+      {
+        title: '3. Propuesta Personalizada',
+        description:
+          'Basado en nuestra conversación, prepararé una propuesta detallada con soluciones adaptadas a tus necesidades.',
+      },
+      {
+        title: '4. Inicio del Proyecto',
+        description:
+          'Una vez aprobada la propuesta, comenzaremos con una reunión de kickoff para definir el plan de acción y cronograma.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Proceso de trabajo',
+    }}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- CallToAction Widget *********** -->
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Ver Portfolio',
+        href: '/portfolio',
+        icon: 'tabler:briefcase',
+      },
+      {
+        text: 'Conocer Servicios',
+        href: '/servicios',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      ¿Prefieres ver mi trabajo antes de contactarme?
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Explora mi portfolio para conocer casos de éxito reales y los resultados obtenidos con otros hoteles
+    </Fragment>
+  </CallToAction>
+</Layout>
