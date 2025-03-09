@@ -86,8 +86,8 @@ export const footerData = {
       links: [
         { text: 'Contacto', href: getPermalink('/contacto') },
         { text: 'Agendar Consulta', href: getPermalink('/consulta') },
-        { text: 'LinkedIn', href: 'https://www.linkedin.com/in/juancarlossalgadoascencio/' },
-        { text: 'GitHub', href: 'https://github.com/jios325' },
+        { text: 'LinkedIn', href: 'https://www.linkedin.com/in/juancarlossalgadoascencio/', target: '_blank' },
+        { text: 'GitHub', href: 'https://github.com/jios325', target: '_blank' },
       ],
     },
   ],
@@ -96,12 +96,13 @@ export const footerData = {
     { text: 'Política de Privacidad', href: getPermalink('/privacidad') },
   ],
   socialLinks: [
-    { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/in/juancarlossalgadoascencio/' },
-    { ariaLabel: 'GitHub', icon: 'tabler:brand-github', href: 'https://github.com/jios325' },
-    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://www.facebook.com/people/J-Carlos-Salgado/61554769997589/' },
-    { ariaLabel: 'TikTok', icon: 'tabler:brand-tiktok', href: 'https://www.tiktok.com/@juancarlossalgado__' },
-    { ariaLabel: 'YouTube', icon: 'tabler:brand-youtube', href: 'https://www.youtube.com/@JuanCarlosSalgado325' },
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/juancarlossalgado__' },
+    { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/in/juancarlossalgadoascencio/', target: '_blank' },
+    { ariaLabel: 'GitHub', icon: 'tabler:brand-github', href: 'https://github.com/jios325', target: '_blank' },
+    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://www.facebook.com/people/J-Carlos-Salgado/61554769997589/', target: '_blank' },
+    { ariaLabel: 'TikTok', icon: 'tabler:brand-tiktok', href: 'https://www.tiktok.com/@juancarlossalgado__', target: '_blank' },
+    { ariaLabel: 'YouTube', icon: 'tabler:brand-youtube', href: 'https://www.youtube.com/@JuanCarlosSalgado325', target: '_blank' },
+    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/juancarlossalgado__', target: '_blank' },
+    { ariaLabel: 'Linktree', icon: 'tabler:tree', href: 'https://linktr.ee/juancarlossalgado', target: '_blank' },
   ],
   footNote: `
     © ${new Date().getFullYear()} J. Carlos Salgado · Todos los derechos reservados.
