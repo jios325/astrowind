@@ -1,0 +1,178 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Sobre Mí - J. Carlos Salgado | Project Manager especializado en Soluciones Web para Hotelería',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+  <Hero
+    image={{ src: '~/assets/images/hero-image.png', alt: 'J. Carlos Salgado - Perfil Profesional' }}
+  >
+    <Fragment slot="title">
+      Innovación en Proyectos <span class="text-accent dark:text-white highlight">Web Hoteleros</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="font-semibold">Con más de una década de experiencia en Project Management</span>, me especializo en llevar la presencia digital de hoteles al siguiente nivel. Destaco por mi habilidad para gestionar equipos y proyectos complejos, integrando soluciones web desde el concepto hasta su ejecución. Mi pasión por la tecnología y la innovación se refleja en cada proyecto, donde aplico estrategias de SEO y CRO para garantizar el éxito y la eficiencia.
+    </Fragment>
+  </Hero>
+
+  <!-- Content Widget **************** -->
+  <Content
+    isReversed
+    tagline="Mi Historia"
+    title="De Entusiasta Tecnológico a Líder en Soluciones Web Hoteleras"
+    items={[
+      {
+        title: 'Formación Técnica Sólida',
+        description:
+          'Mi carrera comenzó con una formación en Ingeniería en Sistemas, donde desarrollé bases sólidas en programación y arquitectura web que me permiten comunicarme eficazmente con equipos técnicos.',
+      },
+      {
+        title: 'Expertise en Hotelería Digital',
+        description:
+          'A lo largo de 12 años he trabajado con más de 50 propiedades hoteleras, desde pequeños hoteles boutique hasta cadenas internacionales, desarrollando un conocimiento profundo de las necesidades específicas del sector.',
+      },
+      {
+        title: 'Enfoque en Resultados Medibles',
+        description:
+          'Mi filosofía profesional se basa en la obtención de resultados tangibles: aumento de reservas directas, mejora en la experiencia de usuario y optimización de procesos operativos.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80',
+      alt: 'J. Carlos Salgado - Trayectoria Profesional',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Mi Filosofía Profesional</h3>
+      <p>Como Project Manager, mi filosofía se basa en tres pilares fundamentales:</p>
+      <ul class="list-disc list-inside mt-4 space-y-2">
+        <li><span class="font-semibold">Liderazgo con visión:</span> Guiar equipos multidisciplinarios con objetivos claros y estrategias definidas</li>
+        <li><span class="font-semibold">Adaptabilidad ante el cambio:</span> Mantener agilidad frente a las evoluciones tecnológicas y del mercado</li>
+        <li><span class="font-semibold">Enfoque implacable en resultados:</span> Priorizar las métricas que realmente importan al negocio hotelero</li>
+      </ul>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+  <Content
+    tagline="Habilidades y Expertise"
+    title="Combinando Gestión de Proyectos con Conocimiento Técnico Avanzado"
+    items={[
+      {
+        title: 'Gestión de Proyectos Web',
+        description:
+          'Experiencia liderando proyectos desde la conceptualización hasta la implementación, con metodologías ágiles adaptadas a las necesidades del sector hotelero.',
+      },
+      {
+        title: 'SEO y CRO Especializado',
+        description:
+          'Expertise en optimización para motores de búsqueda con enfoque en keywords relacionadas con viajes y hospitalidad, combinado con optimización de conversión para sistemas de reserva.',
+      },
+      {
+        title: 'DevOps y Arquitectura Técnica',
+        description:
+          'Conocimiento avanzado en infraestructura, configuración de servidores y sistemas de integración para garantizar rendimiento, seguridad y escalabilidad.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'J. Carlos Salgado - Habilidades Técnicas',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Competencias Técnicas Diferenciadas</h3>
+      <p>
+        Lo que me distingue en el mercado es mi capacidad para combinar una sólida gestión de proyectos con conocimiento técnico profundo, permitiéndome servir de puente entre equipos técnicos y stakeholders del negocio hotelero.
+      </p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+  <Steps
+    title="Mi Recorrido Profesional"
+    items={[
+      {
+        title: '2012-2014: <span class="font-medium">Inicios en Desarrollo Web</span>',
+        description:
+          'Comencé como desarrollador frontend especializado en sitios web para el sector de hospitalidad, adquiriendo conocimientos técnicos fundamentales y comprensión profunda del código.',
+        icon: 'tabler:code',
+      },
+      {
+        title: '2014-2017: <span class="font-medium">Especialización en UX/UI Hotelero</span>',
+        description:
+          'Evolución hacia el diseño de experiencia de usuario, con enfoque en optimización de procesos de reserva y experiencias digitales adaptadas al customer journey del viajero.',
+        icon: 'tabler:device-laptop',
+      },
+      {
+        title: '2017-2020: <span class="font-medium">Lead Developer y SEO</span>',
+        description:
+          'Liderazgo de equipos de desarrollo y especialización en estrategias SEO para hoteles, logrando resultados sobresalientes en visibilidad y posicionamiento para clientes del sector.',
+        icon: 'tabler:chart-line',
+      },
+      {
+        title: '2020-Actualidad: <span class="font-medium">Project Manager Especializado</span>',
+        description:
+          'Consolidación como Project Manager enfocado en transformación digital hotelera, gestionando proyectos integrales que combinan tecnología, estrategia y resultados de negocio.',
+        icon: 'tabler:users',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1606857521015-7f9fcf423740?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1160&q=80',
+      alt: 'J. Carlos Salgado - Trayectoria Profesional',
+    }}
+  />
+
+  <!-- Stats Widget ****************** -->
+  <Stats
+    title="Resultados que Respaldan mi Experiencia"
+    subtitle="Números que reflejan el impacto de mi trabajo en proyectos del sector hotelero durante los últimos años"
+    stats={[
+      { title: 'Aumento Promedio en Reservas Directas', amount: '+35%' },
+      { title: 'Mejora en Velocidad de Carga', amount: '68%' },
+      { title: 'Reducción en Tasa de Rebote', amount: '-42%' },
+      { title: 'ROI Medio en Proyectos', amount: '340%' },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contáctame',
+        href: '/contacto',
+        icon: 'tabler:mail',
+      },
+      {
+        text: 'Ver Portfolio',
+        href: '/portfolio',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      ¿Listo para transformar la presencia digital de tu hotel?
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Conversemos sobre cómo puedo ayudarte a aumentar tus reservas directas y optimizar tu estrategia web
+    </Fragment>
+  </CallToAction>
+</Layout>
