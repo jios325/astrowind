@@ -1,0 +1,220 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Servicios - J. Carlos Salgado | Soluciones Web para Hoteles',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+  <Hero>
+    <Fragment slot="title">
+      Servicios Especializados para <span class="text-accent dark:text-white highlight">Transformación Digital Hotelera</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Ofrezco servicios integrales diseñados específicamente para hoteles que buscan maximizar su presencia digital, aumentar reservas directas y reducir la dependencia de intermediarios. Cada solución está adaptada a las necesidades particulares del sector hotelero, con enfoque en resultados medibles y retorno de inversión.
+    </Fragment>
+  </Hero>
+
+  <!-- Features Widget *************** -->
+  <Features
+    id="servicios"
+    tagline="Servicios Principales"
+    title="Soluciones Web Integrales para Hoteles"
+    subtitle="Combinando conocimiento técnico con expertise en el sector, ofrezco servicios end-to-end para hoteles que buscan destacar en el entorno digital."
+    items={[
+      {
+        title: 'Diseño Web Hotelero',
+        description:
+          'Creación de sitios web a medida optimizados para convertir visitas en reservas directas, con enfoque en experiencia de usuario, velocidad de carga y diseño que refleja la esencia de tu propiedad.',
+        icon: 'tabler:device-laptop',
+        link: {
+          text: 'Descubrir más',
+          href: '/servicios/diseno-web-hotelero',
+        },
+      },
+      {
+        title: 'SEO para Hoteles',
+        description:
+          'Estrategias de posicionamiento específicas para el sector hotelero, enfocadas en captar búsquedas de alta intención de reserva, posicionamiento local y optimización para destinos turísticos.',
+        icon: 'tabler:search',
+        link: {
+          text: 'Descubrir más',
+          href: '/servicios/seo-hotelero',
+        },
+      },
+      {
+        title: 'Optimización de Conversión (CRO)',
+        description:
+          'Mejora de ratios de conversión en motores de reserva mediante análisis de datos, pruebas A/B y optimización continua para transformar el tráfico existente en reservas confirmadas.',
+        icon: 'tabler:arrows-right-left',
+        link: {
+          text: 'Descubrir más',
+          href: '/servicios/optimizacion-conversion',
+        },
+      },
+      {
+        title: 'Gestión de Proyectos Web',
+        description:
+          'Coordinación integral de equipos multidisciplinarios para entregar proyectos web hoteleros en tiempo y presupuesto, manteniendo comunicación clara y alineación con objetivos de negocio.',
+        icon: 'tabler:list-check',
+        link: {
+          text: 'Descubrir más',
+          href: '/servicios/project-management',
+        },
+      },
+      {
+        title: 'Infraestructura Tecnológica',
+        description:
+          'Configuración e implementación de servidores, integraciones API con PMS y Channel Managers, y arquitectura técnica optimizada para el rendimiento, seguridad y escalabilidad.',
+        icon: 'tabler:server',
+        link: {
+          text: 'Consultar',
+          href: '/contacto',
+        },
+      },
+      {
+        title: 'Formación y Consultoría',
+        description:
+          'Capacitación a equipos hoteleros sobre tecnologías web, estrategias digitales y mejores prácticas en transformación digital, adaptando el contenido al nivel técnico y necesidades específicas.',
+        icon: 'tabler:bulb',
+        link: {
+          text: 'Consultar',
+          href: '/contacto',
+        },
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+  <Content
+    isReversed
+    tagline="Metodología de Trabajo"
+    title="Un Enfoque Estratégico para Transformación Digital Hotelera"
+    items={[
+      {
+        title: '1. Diagnóstico y Análisis',
+        description:
+          'Evaluación profunda de tu situación actual, competencia, oportunidades y desafíos específicos para tu propiedad hotelera.',
+      },
+      {
+        title: '2. Estrategia Personalizada',
+        description:
+          'Desarrollo de un plan a medida con objetivos claros, KPIs definidos y roadmap de implementación adaptado a tus necesidades y recursos.',
+      },
+      {
+        title: '3. Implementación Profesional',
+        description:
+          'Ejecución meticulosa por equipos especializados, con comunicación constante y adaptación ágil a los requerimientos emergentes.',
+      },
+      {
+        title: '4. Optimización Continua',
+        description:
+          'Análisis de resultados, ajustes basados en datos y mejora constante para maximizar el retorno de inversión de forma sostenible.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Metodología de Trabajo',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Beneficios de mi Enfoque</h3>
+      <p>Mi metodología aporta múltiples ventajas a los proyectos hoteleros:</p>
+      <ul class="list-disc list-inside mt-4 space-y-2">
+        <li><span class="font-semibold">Personalización completa</span> - Soluciones adaptadas a tu propiedad específica</li>
+        <li><span class="font-semibold">Agilidad y flexibilidad</span> - Capacidad de adaptación a cambios del mercado</li>
+        <li><span class="font-semibold">Visión integrada</span> - Consideración holística de todas las áreas de negocio</li>
+        <li><span class="font-semibold">Enfoque en métricas</span> - Seguimiento de KPIs relevantes para tu hotel</li>
+      </ul>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Stats Widget ****************** -->
+  <Stats
+    title="Resultados que Hablan por Sí Mismos"
+    subtitle="Datos reales obtenidos de proyectos completados con hoteles en los últimos 3 años"
+    stats={[
+      { title: 'Aumento en Reservas Directas', amount: '+35%' },
+      { title: 'Mejora en Conversion Rate', amount: '+62%' },
+      { title: 'Reducción Dependencia OTAs', amount: '-28%' },
+      { title: 'ROI Promedio', amount: '340%' },
+    ]}
+  />
+
+  <!-- FAQs Widget ******************* -->
+  <FAQs
+    title="Preguntas Frecuentes"
+    subtitle="Resuelve tus dudas sobre mis servicios especializados para el sector hotelero"
+    tagline="FAQ"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: '¿Qué diferencia tus servicios de otras agencias digitales?',
+        description:
+          'Mi enfoque se distingue por tres factores clave: especialización exclusiva en el sector hotelero con más de 12 años de experiencia, combinación de habilidades técnicas y de gestión de proyectos, y metodología orientada a resultados medibles como el aumento de reservas directas y reducción de dependencia de OTAs.',
+      },
+      {
+        title: '¿Cuánto tiempo toma implementar un proyecto web hotelero completo?',
+        description:
+          'Un proyecto típico de rediseño web con optimización completa toma entre 8 y 12 semanas, dependiendo de la complejidad y alcance. Los proyectos se dividen en fases claras: diagnóstico (1-2 semanas), estrategia y diseño (2-3 semanas), desarrollo e implementación (4-6 semanas) y optimización inicial (1 semana).',
+      },
+      {
+        title: '¿Trabajas con hoteles de todos los tamaños?',
+        description:
+          'Sí, adapto mis servicios tanto para pequeños hoteles boutique como para cadenas hoteleras. El enfoque varía según las necesidades y recursos específicos, pero la metodología orientada a resultados se mantiene. He trabajado con propiedades desde 10 hasta 500+ habitaciones con resultados exitosos.',
+      },
+      {
+        title: '¿Cómo garantizas resultados en tus proyectos?',
+        description:
+          'Establezco KPIs claros al inicio del proyecto y realizo seguimiento constante. Mi enfoque está basado en datos y evidencia, con mediciones regulares de rendimiento. Además, ofrezco programas de optimización continua post-lanzamiento para asegurar que los resultados no solo se alcancen sino que se mantengan y mejoren con el tiempo.',
+      },
+      {
+        title: '¿Qué sistemas de reservas y PMS integras en tus soluciones?',
+        description:
+          'Tengo experiencia integrando los principales sistemas utilizados en la industria, incluyendo Cloudbeds, SiteMinder, Mews, Oracle Opera, Booking Engine, TravelClick, D-Edge, entre otros. Las integraciones se realizan considerando tanto la experiencia de usuario como la eficiencia operativa.',
+      },
+      {
+        title: '¿Ofreces mantenimiento y soporte continuo?',
+        description:
+          'Sí, además de los proyectos de implementación, ofrezco planes de mantenimiento y optimización continua que incluyen actualizaciones técnicas, análisis de rendimiento, ajustes basados en datos y soporte para resolución de problemas, garantizando que tu inversión siga generando resultados a largo plazo.',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Consulta Gratuita',
+        href: '/contacto',
+        icon: 'tabler:calendar',
+      },
+      {
+        text: 'Ver Portfolio',
+        href: '/portfolio',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      ¿Listo para aumentar tus reservas directas?
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Agenda una consulta sin compromiso para analizar tu situación actual y recibir recomendaciones personalizadas para tu hotel
+    </Fragment>
+  </CallToAction>
+</Layout>
