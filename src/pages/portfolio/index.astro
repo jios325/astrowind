@@ -1,0 +1,214 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Portfolio - J. Carlos Salgado | Proyectos Web para Hoteles',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+  <Hero>
+    <Fragment slot="title">
+      Portfolio: Proyectos de <span class="text-accent dark:text-white highlight">Transformación Web Hotelera</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Explora una selección de proyectos que demuestran mi enfoque en la mejora de la presencia digital y el aumento de reservas directas para hoteles. Cada caso de estudio incluye el desafío inicial, la estrategia implementada y los resultados medibles obtenidos.
+    </Fragment>
+  </Hero>
+
+  <!-- Stats Widget ****************** -->
+  <Stats
+    title="Resultados destacados de mis proyectos"
+    subtitle="Métricas reales de proyectos completados en los últimos años"
+    stats={[
+      { title: 'Proyectos Completados', amount: '120+' },
+      { title: 'Aumento Promedio en Reservas', amount: '+35%' },
+      { title: 'Reducción de Dependencia OTAs', amount: '28%' },
+      { title: 'Tasa de Conversión Mejorada', amount: '+62%' },
+    ]}
+  />
+
+  <!-- Features Widget *************** -->
+  <Features
+    id="proyectos"
+    tagline="Casos de Éxito"
+    title="Proyectos Destacados"
+    subtitle="Una selección de mis proyectos más relevantes para la industria hotelera"
+    items={[
+      {
+        title: 'Hotel Vista Mar Barcelona',
+        description:
+          'Rediseño completo del sitio web con enfoque en conversión, implementación de estrategia SEO local y optimización del motor de reservas. Resultados: +47% en reservas directas en 6 meses.',
+        icon: 'tabler:building',
+        link: {
+          text: 'Ver Caso de Estudio',
+          href: '/portfolio/hotel-vista-mar',
+        },
+      },
+      {
+        title: 'Cadena Hoteles Costa',
+        description:
+          'Estrategia SEO integral para 5 propiedades, migración técnica y unificación de plataformas. Resultados: +165% en tráfico orgánico y +38% en reservas directas.',
+        icon: 'tabler:buildings',
+        link: {
+          text: 'Ver Caso de Estudio',
+          href: '/portfolio/cadena-hoteles-costa',
+        },
+      },
+      {
+        title: 'Resort Oasis Tropical',
+        description:
+          'Implementación de estrategia CRO en motor de reservas, rediseño de landing pages y optimización de embudo de conversión. Resultados: incremento del 74% en tasa de conversión.',
+        icon: 'tabler:palm-tree',
+        link: {
+          text: 'Ver Caso de Estudio',
+          href: '/portfolio/resort-oasis-tropical',
+        },
+      },
+      {
+        title: 'Hotel Boutique Central',
+        description:
+          'Diseño web desde cero con enfoque en storytelling visual, estrategia de contenidos y SEO local. Resultados: posicionamiento en top 3 para keywords clave y +52% reservas directas.',
+        icon: 'tabler:home',
+        link: {
+          text: 'Ver Caso de Estudio',
+          href: '/portfolio/hotel-boutique-central',
+        },
+      },
+      {
+        title: 'Hoteles Premium Collection',
+        description:
+          'Optimización técnica, implementación de microservicios y mejora de infraestructura para una colección de hoteles de lujo. Resultados: reducción de 65% en tiempo de carga y +42% en conversión.',
+        icon: 'tabler:star',
+        link: {
+          text: 'Ver Caso de Estudio',
+          href: '/portfolio/hoteles-premium-collection',
+        },
+      },
+      {
+        title: 'Hostales Urban City',
+        description:
+          'Estrategia digital para una red de hostales urbanos, con enfoque en público joven y optimización para móviles. Resultados: +87% en reservas desde dispositivos móviles.',
+        icon: 'tabler:building-community',
+        link: {
+          text: 'Ver Caso de Estudio',
+          href: '/portfolio/hostales-urban-city',
+        },
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+  <Content
+    isReversed
+    tagline="Caso Destacado"
+    title="Hotel Vista Mar Barcelona - Transformación Digital Completa"
+    items={[
+      {
+        title: 'El Desafío',
+        description:
+          'Hotel Vista Mar Barcelona enfrentaba una excesiva dependencia de OTAs, con solo un 15% de reservas directas y un sitio web desactualizado con baja tasa de conversión.',
+      },
+      {
+        title: 'La Solución',
+        description:
+          'Implementamos una estrategia integral que incluyó rediseño web centrado en conversión, SEO local optimizado para Barcelona, sistema de reservas mejorado y estrategia de contenidos.',
+      },
+      {
+        title: 'Los Resultados',
+        description:
+          'En 6 meses, las reservas directas aumentaron un 47%, la visibilidad en búsquedas locales mejoró en un 78% y la tasa de conversión del sitio pasó del 1.2% al 3.8%.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Hotel Vista Mar Barcelona',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">El Impacto</h3>
+      <p>
+        La transformación no solo mejoró los números, sino que cambió la cultura digital del hotel. El equipo ahora cuenta con herramientas y conocimientos para gestionar su presencia online de manera efectiva, y el ROI del proyecto superó el 380% en el primer año.
+      </p>
+      <div class="mt-4">
+        <a href="/portfolio/hotel-vista-mar" class="text-primary hover:underline inline-flex items-center">
+          Ver caso de estudio completo
+          <svg class="w-5 h-5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+  <Steps
+    title="Mi Metodología de Proyecto"
+    items={[
+      {
+        title: 'Fase 1: <span class="font-medium">Diagnóstico y Análisis</span>',
+        description:
+          'Evaluación exhaustiva de la situación actual, benchmarking competitivo y análisis de oportunidades específicas para cada propiedad hotelera.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Fase 2: <span class="font-medium">Estrategia y Planificación</span>',
+        description:
+          'Desarrollo de estrategia personalizada, definición de KPIs y creación de roadmap detallado con entregables y objetivos claros.',
+        icon: 'tabler:map',
+      },
+      {
+        title: 'Fase 3: <span class="font-medium">Implementación y Desarrollo</span>',
+        description:
+          'Ejecución de la estrategia con equipos especializados, gestión de proyectos ágil y comunicación constante durante todo el proceso.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'Fase 4: <span class="font-medium">Optimización y Mejora Continua</span>',
+        description:
+          'Análisis de resultados, ajustes basados en datos y optimización constante para maximizar el rendimiento y el ROI.',
+        icon: 'tabler:chart-line',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1531973486364-5fa64260d75b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1158&q=80',
+      alt: 'Metodología de proyecto',
+    }}
+  />
+
+  <!-- CallToAction Widget *********** -->
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactar',
+        href: '/contacto',
+        icon: 'tabler:mail',
+      },
+      {
+        text: 'Ver Servicios',
+        href: '/servicios',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      ¿Listo para transformar la presencia digital de tu hotel?
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Conversemos sobre tu proyecto y descubre cómo mi experiencia puede ayudarte a aumentar reservas directas y optimizar tu estrategia web
+    </Fragment>
+  </CallToAction>
+</Layout>
