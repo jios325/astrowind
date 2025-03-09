@@ -86,7 +86,7 @@ export const footerData = {
       links: [
         { text: 'Contacto', href: getPermalink('/contacto') },
         { text: 'Agendar Consulta', href: getPermalink('/consulta') },
-        { text: 'LinkedIn', href: 'https://linkedin.com/in/jcarlossalgado' },
+        { text: 'LinkedIn', href: 'https://www.linkedin.com/in/juancarlossalgadoascencio/' },
         { text: 'GitHub', href: 'https://github.com/jios325' },
       ],
     },
@@ -96,10 +96,12 @@ export const footerData = {
     { text: 'Política de Privacidad', href: getPermalink('/privacidad') },
   ],
   socialLinks: [
-    { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://linkedin.com/in/jcarlossalgado' },
+    { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/in/juancarlossalgadoascencio/' },
     { ariaLabel: 'GitHub', icon: 'tabler:brand-github', href: 'https://github.com/jios325' },
-    { ariaLabel: 'Twitter', icon: 'tabler:brand-x', href: 'https://twitter.com/jcarlossalgado' },
-    { ariaLabel: 'YouTube', icon: 'tabler:brand-youtube', href: 'https://youtube.com/jcarlossalgado' },
+    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://www.facebook.com/people/J-Carlos-Salgado/61554769997589/' },
+    { ariaLabel: 'TikTok', icon: 'tabler:brand-tiktok', href: 'https://www.tiktok.com/@juancarlossalgado__' },
+    { ariaLabel: 'YouTube', icon: 'tabler:brand-youtube', href: 'https://www.youtube.com/@JuanCarlosSalgado325' },
+    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/juancarlossalgado__' },
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
   ],
   footNote: `
