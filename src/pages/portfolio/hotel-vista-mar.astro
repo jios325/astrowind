@@ -1,0 +1,252 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Features from '~/components/widgets/Features.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Caso de Estudio: Hotel Vista Mar Barcelona - J. Carlos Salgado',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+  <Hero>
+    <Fragment slot="title">
+      Caso de Estudio: <span class="text-accent dark:text-white highlight">Hotel Vista Mar Barcelona</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Transformación digital completa que incrementó las reservas directas en un 47% en solo 6 meses, reduciendo la dependencia de OTAs y mejorando la experiencia del usuario.
+    </Fragment>
+  </Hero>
+
+  <!-- Content Widget **************** -->
+  <Content
+    isReversed
+    tagline="El Desafío"
+    title="Una Propiedad de Playa con Alto Potencial Digital Desaprovechado"
+    items={[
+      {
+        title: 'Dependencia Excesiva de OTAs',
+        description:
+          'Solo un 15% de las reservas llegaban a través del canal directo, generando altos costes en comisiones y limitando el control sobre la experiencia del cliente.',
+      },
+      {
+        title: 'Sitio Web Obsoleto',
+        description:
+          'Diseño anticuado, no responsive y con una tasa de conversión de solo 0.8%, muy por debajo del estándar del sector (2.5%).',
+      },
+      {
+        title: 'Baja Visibilidad en Búsquedas Locales',
+        description:
+          'Posicionamiento SEO deficiente para keywords relevantes relacionadas con "hoteles en Barcelona playa" y términos similares de alta intención de reserva.',
+      },
+      {
+        title: 'Sistema de Reservas Ineficiente',
+        description:
+          'Alto porcentaje de abandonos (68%) en el proceso de reserva debido a una experiencia confusa y poco adaptada a dispositivos móviles.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Hotel Vista Mar Barcelona',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Contexto del Proyecto</h3>
+      <p>
+        Hotel Vista Mar es un establecimiento de 4 estrellas con 86 habitaciones ubicado en primera línea de playa en Barcelona. A pesar de su excelente ubicación y servicios de calidad, su presencia digital no reflejaba adecuadamente su propuesta de valor, lo que resultaba en una excesiva dependencia de intermediarios y escaso aprovechamiento del canal directo.
+      </p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+  <Steps
+    title="La Estrategia: Un Enfoque Integral en 4 Fases"
+    items={[
+      {
+        title: 'Fase 1: <span class="font-medium">Análisis y Diagnóstico</span>',
+        description:
+          'Auditoría técnica completa del sitio web, análisis de competencia, investigación de palabras clave específicas para el sector hotelero en Barcelona y estudio del comportamiento de usuarios mediante mapas de calor y grabaciones de sesiones.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Fase 2: <span class="font-medium">Rediseño Web Centrado en Conversión</span>',
+        description:
+          'Desarrollo de nuevo sitio web con diseño responsive, narrativa visual potente, arquitectura de información optimizada para la conversión y velocidad de carga mejorada (de 6.8s a 1.9s en móviles).',
+        icon: 'tabler:device-laptop',
+      },
+      {
+        title: 'Fase 3: <span class="font-medium">Estrategia SEO Localizada</span>',
+        description:
+          'Implementación de estrategia SEO con enfoque en búsquedas locales relevantes, creación de contenido específico sobre experiencias en Barcelona, optimización de Google My Business y desarrollo de schema.org especializado para hoteles.',
+        icon: 'tabler:chart-line',
+      },
+      {
+        title: 'Fase 4: <span class="font-medium">Optimización del Sistema de Reservas</span>',
+        description:
+          'Integración y personalización de motor de reservas optimizado para conversión, simplificación del proceso de check-out (de 6 a 3 pasos), implementación de mensajes de urgencia y escasez éticos basados en datos reales.',
+        icon: 'tabler:calendar',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80',
+      alt: 'Estrategia implementada Hotel Vista Mar',
+    }}
+  />
+
+  <!-- Features Widget *************** -->
+  <Features
+    tagline="Implementación Tecnológica"
+    title="Soluciones Técnicas Implementadas"
+    subtitle="Tecnologías y herramientas utilizadas para materializar la estrategia digital"
+    items={[
+      {
+        title: 'Plataforma Web',
+        description:
+          'Sistema basado en Next.js con Tailwind CSS para garantizar velocidad, SEO técnico avanzado y experiencia de usuario fluida en todos los dispositivos.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'Motor de Reservas',
+        description:
+          'Integración personalizada con D-Edge Booking Engine, adaptado visualmente a la identidad del hotel y optimizado para maximizar conversiones.',
+        icon: 'tabler:calendar',
+      },
+      {
+        title: 'Infraestructura Cloud',
+        description:
+          'Despliegue en AWS con arquitectura serverless, CDN global y optimizaciones específicas para mejorar la velocidad de carga en mercados clave.',
+        icon: 'tabler:cloud',
+      },
+      {
+        title: 'Analítica Avanzada',
+        description:
+          'Implementación de Google Analytics 4 con eventos personalizados, mapas de calor con Hotjar y sistema de alertas para monitorización constante.',
+        icon: 'tabler:chart-pie',
+      },
+      {
+        title: 'Integración PMS',
+        description:
+          'Conexión bidireccional con Opera PMS para sincronización de disponibilidad, precios y reservas en tiempo real, eliminando la gestión manual.',
+        icon: 'tabler:database',
+      },
+      {
+        title: 'Marketing Automation',
+        description:
+          'Sistema de emails automatizados pre y post estancia con Brevo, integrado con segmentación basada en comportamiento y preferencias.',
+        icon: 'tabler:mail',
+      },
+    ]}
+  />
+
+  <!-- Stats Widget ****************** -->
+  <Stats
+    title="Resultados Cuantificables Después de 6 Meses"
+    subtitle="Métricas clave que demuestran el éxito del proyecto"
+    stats={[
+      { title: 'Aumento en Reservas Directas', amount: '+47%' },
+      { title: 'Mejora en Tasa de Conversión', amount: '0.8% → 3.8%' },
+      { title: 'Incremento en Tráfico Orgánico', amount: '+78%' },
+      { title: 'Reducción Tasa de Rebote', amount: '-42%' },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+  <Content
+    tagline="Impacto en el Negocio"
+    title="Beneficios Más Allá de las Métricas"
+    items={[
+      {
+        title: 'Mayor Control sobre la Experiencia del Cliente',
+        description:
+          'Capacidad para personalizar la comunicación pre y post estancia, incrementando satisfacción y fidelización.',
+      },
+      {
+        title: 'Reducción de Costes en Comisiones',
+        description:
+          'Ahorro estimado de €127,500 anuales en comisiones a OTAs gracias al incremento de reservas directas.',
+      },
+      {
+        title: 'Mejor Gestión de Datos de Clientes',
+        description:
+          'Creación de base de datos propia para marketing directo, con incremento del 34% en tasa de apertura de emails.',
+      },
+      {
+        title: 'Formación del Equipo Interno',
+        description:
+          'Capacitación del personal para gestionar y optimizar la presencia digital de forma continua.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80',
+      alt: 'Equipo de Hotel Vista Mar',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">ROI Excepcional</h3>
+      <p>
+        La inversión en el proyecto se recuperó completamente en solo 5 meses, con un ROI del primer año del 380%. Este resultado excepcional demuestra el valor de una estrategia digital integral bien ejecutada para el sector hotelero.
+      </p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+  <Content
+    isReversed
+    tagline="Testimonio del Cliente"
+    title="La Opinión de Hotel Vista Mar"
+    items={[]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
+      alt: 'Director Hotel Vista Mar',
+    }}
+  >
+    <Fragment slot="content">
+      <blockquote class="italic text-xl md:text-2xl text-gray-700 dark:text-slate-300 mb-6">
+        "La colaboración con J. Carlos ha transformado completamente nuestra presencia digital. No solo hemos logrado resultados excepcionales en términos de reservas directas, sino que ahora contamos con un activo digital que realmente refleja la calidad de nuestra propiedad. Su enfoque metódico, combinado con un profundo conocimiento técnico y del sector hotelero, ha sido clave para el éxito del proyecto."
+      </blockquote>
+      <p class="font-semibold">— María González, Directora General de Hotel Vista Mar Barcelona</p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- CallToAction Widget *********** -->
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Consulta Gratuita',
+        href: '/contacto',
+        icon: 'tabler:calendar',
+      },
+      {
+        text: 'Ver Más Proyectos',
+        href: '/portfolio',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      ¿Quieres resultados similares para tu hotel?
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Agenda una consulta sin compromiso y analicemos cómo podemos transformar la presencia digital de tu propiedad
+    </Fragment>
+  </CallToAction>
+</Layout>
