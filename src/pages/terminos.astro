@@ -1,0 +1,145 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Términos y Condiciones - J. Carlos Salgado',
+  description: 'Términos y condiciones del servicio de consultoría y desarrollo web para hoteles. Información legal actualizada 2025.',
+};
+
+const termsSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage", 
+  "name": "Términos y Condiciones",
+  "description": "Términos y condiciones legales para servicios de consultoría hotelera y desarrollo web",
+  "url": "https://jcarlossalgado.com/terminos",
+  "mainEntity": {
+    "@type": "DigitalDocument",
+    "name": "Términos y Condiciones de Servicio",
+    "dateModified": "2025-01-01",
+    "inLanguage": "es"
+  }
+};
+---
+
+<Layout metadata={metadata} schema={termsSchema}>
+  <!-- Hero Widget ******************* -->
+  <Hero>
+    <Fragment slot="title">
+      Términos y <span class="text-accent dark:text-white highlight">Condiciones</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="font-semibold">Condiciones legales de uso</span> de los servicios de consultoría hotelera y desarrollo web. Última actualización: enero 2025.
+    </Fragment>
+  </Hero>
+
+  <!-- Content Widget **************** -->
+  <Content
+    tagline="Información Legal"
+    title="Términos Generales del Servicio"
+  >
+    <Fragment slot="content">
+      <div class="prose prose-lg max-w-none dark:prose-invert">
+        <h3 class="text-xl font-bold mb-4">1. Definiciones y Aceptación</h3>
+        <p>
+          Los presentes términos y condiciones regulan el uso de los servicios de consultoría hotelera, desarrollo web, SEO y transformación digital proporcionados por J. Carlos Salgado (en adelante "el Consultor") a clientes del sector hotelero (en adelante "el Cliente").
+        </p>
+        <p>
+          Al contratar cualquier servicio, el Cliente acepta expresamente estos términos y se compromete a cumplir con las obligaciones aquí establecidas.
+        </p>
+
+        <h3 class="text-xl font-bold mb-4 mt-8">2. Servicios Ofrecidos</h3>
+        <p>El Consultor ofrece los siguientes servicios especializados para hoteles:</p>
+        <ul class="list-disc list-inside space-y-2 ml-4">
+          <li>Consultoría estratégica hotelera y transformación digital</li>
+          <li>Desarrollo de sitios web hoteleros con integración de IA</li>
+          <li>Optimización SEO específica para hoteles</li>
+          <li>Optimización de conversión (CRO) para motores de reserva</li>
+          <li>Gestión de proyectos tecnológicos</li>
+          <li>Formación y capacitación en tecnologías hoteleras</li>
+        </ul>
+
+        <h3 class="text-xl font-bold mb-4 mt-8">3. Obligaciones del Cliente</h3>
+        <p>El Cliente se compromete a:</p>
+        <ul class="list-disc list-inside space-y-2 ml-4">
+          <li>Proporcionar información veraz y actualizada sobre su hotel</li>
+          <li>Facilitar acceso a sistemas, credenciales y recursos necesarios</li>
+          <li>Designar un punto de contacto para comunicación del proyecto</li>
+          <li>Realizar pagos según los términos acordados</li>
+          <li>Revisar y aprobar deliverables en los tiempos establecidos</li>
+          <li>Mantener confidencialidad de metodologías y conocimientos compartidos</li>
+        </ul>
+
+        <h3 class="text-xl font-bold mb-4 mt-8">4. Condiciones de Pago</h3>
+        <p>
+          Los honorarios se establecen según el alcance del proyecto y se facturan de acuerdo al cronograma definido en cada propuesta comercial. Los pagos deben realizarse dentro de los 15 días posteriores a la emisión de la factura.
+        </p>
+        <p>
+          En caso de retraso en el pago superior a 30 días, el Consultor se reserva el derecho de suspender los servicios hasta regularizar la situación.
+        </p>
+
+        <h3 class="text-xl font-bold mb-4 mt-8">5. Propiedad Intelectual</h3>
+        <p>
+          El código, diseños y desarrollos creados específicamente para el Cliente son propiedad del mismo una vez completado el pago total del proyecto. Las metodologías, frameworks y herramientas propietarias del Consultor permanecen bajo su propiedad exclusiva.
+        </p>
+
+        <h3 class="text-xl font-bold mb-4 mt-8">6. Garantías y Limitaciones</h3>
+        <p>
+          El Consultor garantiza la calidad profesional de sus servicios y ofrece soporte para corrección de errores durante 90 días posteriores a la entrega final. No garantiza resultados específicos de marketing o ventas, ya que estos dependen de múltiples factores externos.
+        </p>
+
+        <h3 class="text-xl font-bold mb-4 mt-8">7. Confidencialidad</h3>
+        <p>
+          Toda información comercial, técnica y estratégica del Cliente será tratada con estricta confidencialidad. Esta obligación permanece vigente incluso después de finalizar la relación comercial.
+        </p>
+
+        <h3 class="text-xl font-bold mb-4 mt-8">8. Modificaciones y Cancelaciones</h3>
+        <p>
+          Los cambios significativos en el alcance del proyecto pueden generar costos adicionales. Las cancelaciones deben notificarse por escrito con al menos 15 días de antelación. El trabajo ya realizado será facturado proporcionalmente.
+        </p>
+
+        <h3 class="text-xl font-bold mb-4 mt-8">9. Fuerza Mayor</h3>
+        <p>
+          Ninguna de las partes será responsable por el incumplimiento de sus obligaciones debido a eventos de fuerza mayor, incluyendo desastres naturales, pandemias, cambios regulatorios significativos o fallas masivas de infraestructura tecnológica.
+        </p>
+
+        <h3 class="text-xl font-bold mb-4 mt-8">10. Jurisdicción y Legislación Aplicable</h3>
+        <p>
+          Estos términos se rigen por las leyes vigentes y cualquier disputa será resuelta mediante arbitraje comercial o en los tribunales competentes según el país de residencia del Cliente.
+        </p>
+
+        <p class="text-sm text-gray-600 dark:text-gray-400 mt-8">
+          <strong>Última actualización:</strong> Enero 2025<br>
+          <strong>Contacto legal:</strong> Para consultas sobre estos términos, contacta a través de <a href="/contacto" class="text-blue-600 hover:underline">nuestro formulario de contacto</a>.
+        </p>
+      </div>
+    </Fragment>
+  </Content>
+
+  <!-- CallToAction Widget *********** -->
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactar',
+        href: '/contacto',
+        icon: 'tabler:message',
+      },
+      {
+        text: 'Ver Servicios',
+        href: '/servicios',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      ¿Tienes dudas sobre nuestros términos?
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Estoy disponible para aclarar cualquier aspecto legal o contractual relacionado con los servicios de consultoría hotelera
+    </Fragment>
+  </CallToAction>
+</Layout>

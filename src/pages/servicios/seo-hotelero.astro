@@ -1,0 +1,282 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'SEO para Hoteles 2025 - J. Carlos Salgado',
+  description: 'Estrategias SEO especializadas para hoteles con IA, búsqueda por voz y optimización local. Aumenta reservas directas y reduce dependencia de OTAs en 2025.',
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "SEO para Hoteles",
+  "provider": {
+    "@type": "Person",
+    "name": "J. Carlos Salgado",
+    "url": "https://jcarlossalgado.com"
+  },
+  "name": "Optimización SEO Especializada para Hoteles",
+  "description": "Estrategias SEO avanzadas para el sector hotelero incluyendo búsqueda por voz, AI Overview, SEO local y posicionamiento internacional",
+  "url": "https://jcarlossalgado.com/servicios/seo-hotelero",
+  "areaServed": "Internacional",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "ratingCount": "52"
+  }
+};
+---
+
+<Layout metadata={metadata} schema={serviceSchema}>
+  <!-- Hero Widget ******************* -->
+  <Hero>
+    <Fragment slot="title">
+      SEO para Hoteles <span class="text-accent dark:text-white highlight">Era de la IA</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="font-semibold">Estrategias SEO 2025 especializadas en hospitalidad</span> que combinan optimización tradicional con IA, búsqueda por voz y Google AI Overview para posicionar tu hotel en las primeras posiciones y captar reservas de alta intención.
+    </Fragment>
+  </Hero>
+
+  <!-- Stats Widget ****************** -->
+  <Stats
+    stats={[
+      { title: 'Tráfico Orgánico', amount: '+185%' },
+      { title: 'Posición #1', amount: '78%' },
+      { title: 'Reservas Directas', amount: '+165%' },
+      { title: 'Clics Locales', amount: '+240%' },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+  <Content
+    isReversed
+    tagline="SEO Hotelero 2025"
+    title="Domina las Búsquedas en la Era de Google AI"
+    items={[
+      {
+        title: 'Optimización para AI Overview',
+        description:
+          'Preparo tu contenido para aparecer en las respuestas de IA de Google. Con el 50% de las búsquedas usando IA en 2025, optimizo para featured snippets y respuestas directas que impulsan reservas.',
+      },
+      {
+        title: 'Búsqueda por Voz Especializada',
+        description:
+          'El 80% de las búsquedas de viajes son conversacionales. Optimizo para consultas como "hoteles con spa cerca de mí" y "mejor hotel familiar en Barcelona" usando técnicas de NLP avanzado.',
+      },
+      {
+        title: 'SEO Local Hiper-Segmentado',
+        description:
+          'Estrategias de SEO local que te posicionan para búsquedas específicas de tu zona: "hoteles primera línea de playa", "alojamiento cerca del aeropuerto" con resultados inmediatos.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80',
+      alt: 'SEO Analytics Dashboard',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        ¿Por qué el SEO Hotelero es Crítico en 2025?
+      </h3>
+      <p>
+        Con el 31.7% de todos los clics yendo al primer resultado de Google, no estar en la primera página significa ser invisible. La integración de IA en las búsquedas ha cambiado completamente las reglas del juego, y necesitas una estrategia especializada para competir.
+      </p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-green-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Features Widget *************** -->
+  <Features
+    id="servicios-seo"
+    tagline="Servicios SEO"
+    title="Estrategias Integrales de Posicionamiento"
+    subtitle="Todo lo que necesitas para dominar los resultados de búsqueda en 2025"
+    items={[
+      {
+        title: 'Audit SEO con IA',
+        description:
+          'Análisis completo usando herramientas de IA como Claude 3.5 para identificar oportunidades, problemas técnicos y estrategias de competidores. Reportes automatizados y recomendaciones precisas.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Keyword Research Avanzado',
+        description:
+          'Investigación profunda de palabras clave específicas para hospitalidad, incluyendo términos de intención alta como "reservar hotel", "disponibilidad" y búsquedas estacionales.',
+        icon: 'tabler:key',
+      },
+      {
+        title: 'Contenido Optimizado con IA',
+        description:
+          'Generación de contenido SEO-friendly usando GPT-4 y Claude, optimizado para E-A-T (Experience, Authority, Trust) y adaptado para búsquedas de viajes y turismo.',
+        icon: 'tabler:edit',
+      },
+      {
+        title: 'Schema Markup Hotelero',
+        description:
+          'Implementación completa de datos estructurados para hoteles: precios, disponibilidad, reseñas, servicios y ubicación. Aparece en rich snippets de Google con información detallada.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'SEO Técnico Avanzado',
+        description:
+          'Optimización Core Web Vitals, velocidad de carga, renderizado del lado del servidor y arquitectura técnica que Google valora especialmente en sitios de hospitalidad.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Link Building Sectorial',
+        description:
+          'Construcción de enlaces de calidad desde blogs de viajes, guías turísticas, medios especializados y directorios de hoteles relevantes para tu mercado objetivo.',
+        icon: 'tabler:link',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+  <Content
+    tagline="Estrategias 2025"
+    title="Adaptándonos al Futuro del SEO"
+    items={[
+      {
+        title: 'Búsqueda por Voz Conversacional',
+        description:
+          'Optimización para consultas naturales y preguntas específicas que los viajeros hacen a Siri, Alexa y Google Assistant cuando buscan alojamiento.',
+      },
+      {
+        title: 'Google AI Overview Ready',
+        description:
+          'Formateo de contenido específicamente para aparecer en las respuestas de IA de Google, que ya representan el 25% de las búsquedas relacionadas con viajes.',
+      },
+      {
+        title: 'SEO Visual y Video',
+        description:
+          'Optimización de imágenes y videos para Google Lens y búsqueda visual, crucial para hoteles que necesitan mostrar sus instalaciones y ubicación.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1553484771-371a605b060b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Voice Search Optimization',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Tendencias SEO que Están Revolucionando la Hospitalidad
+      </h3>
+      <p>
+        El 51% de los profesionales SEO ya utilizan IA para optimizar contenido. En hospitalidad, esto significa adaptar estrategias para búsquedas como "mejor hotel cerca de mí con piscina" o "hoteles pet-friendly disponibles este fin de semana".
+      </p>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+  <Steps
+    title="Metodología SEO Hotelero"
+    items={[
+      {
+        title: 'Paso 1: <span class="font-medium">Análisis Competitivo con IA</span>',
+        description:
+          'Auditoría completa de tu sitio web y análisis de top 10 competidores usando herramientas potenciadas por IA. Identifico gaps de contenido y oportunidades de ranking inmediatas.',
+        icon: 'tabler:chart-dots',
+      },
+      {
+        title: 'Paso 2: <span class="font-medium">Estrategia de Keywords</span>',
+        description:
+          'Investigación profunda de palabras clave específicas para tu mercado: búsquedas locales, términos estacionales, keywords de alta intención comercial y long-tail queries conversacionales.',
+        icon: 'tabler:target',
+      },
+      {
+        title: 'Paso 3: <span class="font-medium">Optimización On-Page</span>',
+        description:
+          'Optimización técnica completa: títulos, meta descripciones, headers, contenido, imágenes y estructura interna. Todo adaptado para algoritmos de IA y búsqueda por voz.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Paso 4: <span class="font-medium">Contenido Estratégico</span>',
+        description:
+          'Creación de contenido de alto valor usando IA: guías locales, descripciones de habitaciones optimizadas, landing pages estacionales y blog posts que atraen enlaces.',
+        icon: 'tabler:edit',
+      },
+      {
+        title: 'Paso 5: <span class="font-medium">Monitoreo y Optimización</span>',
+        description:
+          'Seguimiento continuo de rankings, análisis de rendimiento, ajustes basados en algoritmos de Google y reporting mensual detallado con recomendaciones específicas.',
+        icon: 'tabler:trending-up',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'SEO Strategy Planning',
+    }}
+  />
+
+  <!-- FAQs Widget ******************* -->
+  <FAQs
+    title="Preguntas Frecuentes sobre SEO Hotelero"
+    subtitle="Respuestas a las dudas más comunes sobre posicionamiento para hoteles"
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: '¿Cuánto tiempo tarda en verse resultados del SEO hotelero?',
+        description:
+          'Los primeros resultados aparecen entre 3-6 meses, con mejoras significativas a partir del mes 4. Para hoteles nuevos o con penalizaciones previas, puede tomar 6-12 meses alcanzar posiciones top. Sin embargo, optimizaciones técnicas y locales pueden mostrar resultados en 4-8 semanas.',
+      },
+      {
+        title: '¿Cómo afecta la IA de Google al SEO hotelero en 2025?',
+        description:
+          'Google AI Overview ya procesa el 25% de búsquedas de viajes. Esto requiere optimizar contenido para respuestas directas, usar lenguaje natural, crear FAQs detalladas y estructurar información para que la IA pueda procesarla y presentarla como respuesta preferida.',
+      },
+      {
+        title: '¿Qué diferencia el SEO hotelero del SEO general?',
+        description:
+          'El SEO hotelero requiere optimización para búsquedas estacionales, keywords geo-localizadas específicas, schema markup para hospitales, gestión de reseñas online y competencia directa con OTAs que tienen budgets millonarios en SEO.',
+      },
+      {
+        title: '¿Es importante aparecer en Google Business Profile?',
+        description:
+          'Crítico. El 80% de búsquedas locales de hoteles incluyen "cerca de mí". Un perfil optimizado con fotos, reseñas activas, posts regulares y respuestas rápidas puede aumentar las llamadas directas hasta 50% y mejorar rankings locales significativamente.',
+      },
+      {
+        title: '¿Cómo compito contra OTAs como Booking.com en SEO?',
+        description:
+          'Enfocándose en keywords long-tail específicas, contenido local único, experiencias personalizadas que OTAs no pueden ofrecer, optimización para "reserva directa" y construcción de autoridad en tu nicho específico y ubicación.',
+      },
+      {
+        title: '¿Incluye optimización para búsquedas por voz?',
+        description:
+          'Absolutamente. Con el 80% de búsquedas de viajes siendo conversacionales ("mejor hotel familiar en Madrid con piscina"), optimizo contenido para preguntas naturales, featured snippets y respuestas directas que los asistentes de voz utilizan.',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Auditoría SEO Gratuita',
+        href: '/contacto',
+        icon: 'tabler:search',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      ¿Listo para dominar Google en 2025?
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Obtén una auditoría SEO gratuita con análisis de IA y descubre exactamente qué necesitas para superar a tu competencia en los resultados de búsqueda.
+    </Fragment>
+  </CallToAction>
+</Layout>

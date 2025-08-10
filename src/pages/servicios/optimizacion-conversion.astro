@@ -1,0 +1,277 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'CRO para Hoteles con IA - Optimización de Conversión 2025',
+  description: 'Servicios de CRO especializado para hoteles con IA, personalización dinámica y testing autónomo. Transforma visitantes en reservas directas en 2025.',
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Optimización de Conversión CRO",
+  "name": "CRO Especializado para Hoteles con IA",
+  "description": "Mejora de ratios de conversión en motores de reserva mediante análisis de datos, pruebas A/B y sistemas autónomos con IA",
+  "provider": {
+    "@type": "Person",
+    "name": "J. Carlos Salgado",
+    "url": "https://jcarlossalgado.com"
+  },
+  "url": "https://jcarlossalgado.com/servicios/optimizacion-conversion",
+  "areaServed": "Internacional"
+};
+---
+
+<Layout metadata={metadata} schema={serviceSchema}>
+  <!-- Hero Widget ******************* -->
+  <Hero>
+    <Fragment slot="title">
+      CRO Hotelero con <span class="text-accent dark:text-white highlight">IA Autónoma</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="font-semibold">Optimización de Conversión de nueva generación</span> que utiliza IA avanzada, personalización dinámica y sistemas CRO autónomos para transformar cada visitante en una reserva directa, reduciendo costos de adquisición hasta un 50%.
+    </Fragment>
+  </Hero>
+
+  <!-- Stats Widget ****************** -->
+  <Stats
+    stats={[
+      { title: 'Conversión Promedio', amount: '+74%' },
+      { title: 'Abandono Carrito', amount: '-45%' },
+      { title: 'Valor Reserva', amount: '+28%' },
+      { title: 'Tiempo Testing', amount: '-80%' },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+  <Content
+    isReversed
+    tagline="CRO con IA 2025"
+    title="Sistemas Autónomos que Optimizan Mientras Duermes"
+    items={[
+      {
+        title: 'Personalización Dinámica en Tiempo Real',
+        description:
+          'IA que analiza el comportamiento del usuario instantáneamente y adapta contenido, ofertas y experiencia de reserva para cada visitante, aumentando conversiones hasta un 20%.',
+      },
+      {
+        title: 'Testing Multivariante Autónomo',
+        description:
+          'Sistemas CRO que crean, ejecutan e implementan automáticamente variaciones ganadora sin intervención humana. Multi-armed bandit testing que optimiza continuamente en tiempo real.',
+      },
+      {
+        title: 'Micro-Conversiones Inteligentes',
+        description:
+          'Seguimiento holístico de cada interacción: tiempo en página, scroll depth, clicks en galería, consulta de precios. Cada micro-conversión alimenta la optimización general.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'CRO Analytics Dashboard',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        El CRO Hotelero Ha Evolucionado
+      </h3>
+      <p>
+        Los sistemas CRO autónomos han llegado en 2025, revolucionando cómo los hoteles optimizan conversiones. Estas tecnologías identifican oportunidades, crean variaciones, ejecutan tests e implementan cambios ganadores con mínima intervención humana.
+      </p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-purple-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Features Widget *************** -->
+  <Features
+    id="servicios-cro"
+    tagline="Servicios CRO"
+    title="Optimización de Conversión Integral"
+    subtitle="Metodología holística que abarca cada punto de contacto en el customer journey"
+    items={[
+      {
+        title: 'Análisis de Embudo de Conversión',
+        description:
+          'Identificación precisa de puntos de fuga en el proceso de reserva usando heatmaps, grabaciones de sesiones y análisis de comportamiento potenciado por IA para detectar fricciones ocultas.',
+        icon: 'tabler:chart-dots',
+      },
+      {
+        title: 'A/B Testing Inteligente',
+        description:
+          'Testing estadísticamente significativo con IA que predice comportamientos, segmenta audiencias automáticamente y ajusta tráfico dinámicamente hacia variaciones ganadoras.',
+        icon: 'tabler:chart-line',
+      },
+      {
+        title: 'Personalización por Segmentos',
+        description:
+          'IA que categoriza visitantes en tiempo real ("parejas luna de miel", "viajeros de negocios", "familias") y adapta ofertas, contenido y pricing dinámicamente para cada segmento.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Optimización Mobile-First',
+        description:
+          'CRO específico para dispositivos móviles donde ocurre el 70% de reservas hoteleras. Optimización de formularios, velocidad, gestos táctiles y checkout simplificado.',
+        icon: 'tabler:device-mobile',
+      },
+      {
+        title: 'Pricing Dinámico Inteligente',
+        description:
+          'Algoritmos de IA que ajustan precios en tiempo real basado en demanda, competencia, comportamiento del usuario y probabilidad de conversión para maximizar revenue.',
+        icon: 'tabler:currency-euro',
+      },
+      {
+        title: 'Urgencia y Escasez Ética',
+        description:
+          'Implementación responsable de elementos de urgencia: disponibilidad real, demanda genuina y ofertas limitadas en tiempo que crean motivación sin manipular.',
+        icon: 'tabler:clock',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+  <Content
+    tagline="Tecnologías Avanzadas"
+    title="IA que Transforma Comportamiento en Conversiones"
+    items={[
+      {
+        title: 'Predictive Analytics',
+        description:
+          'Machine learning que predice la probabilidad de conversión de cada visitante y ajusta la experiencia para maximizar la posibilidad de reserva.',
+      },
+      {
+        title: 'Dynamic Content Optimization',
+        description:
+          'Contenido que se adapta automáticamente: descripción de habitaciones, imágenes destacadas, testimonios y ofertas basado en el perfil e intereses del visitante.',
+      },
+      {
+        title: 'Chatbots CRO-Optimizados',
+        description:
+          'Asistentes virtuales entrenados específicamente para guiar hacia la conversión, resolver objeciones comunes y ofrecer incentivos personalizados en el momento perfecto.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2426&q=80',
+      alt: 'AI Personalization Engine',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Personalización que Convierte
+      </h3>
+      <p>
+        La personalización potenciada por IA puede aumentar las tasas de conversión hasta un 20% y reducir los costos de adquisición de clientes hasta un 50%. Cada visitante recibe una experiencia única optimizada para su perfil específico.
+      </p>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+  <Steps
+    title="Metodología CRO Hotelero 360°"
+    items={[
+      {
+        title: 'Paso 1: <span class="font-medium">Auditoría de Conversión Profunda</span>',
+        description:
+          'Análisis completo del funnel actual usando herramientas avanzadas: heatmaps, grabaciones de sesiones, análisis de formularios y identificación de puntos de abandono con precisión estadística.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Paso 2: <span class="font-medium">Segmentación Inteligente</span>',
+        description:
+          'Identificación de audiencias clave usando IA: análisis de comportamiento, origen del tráfico, intención de búsqueda y creación de buyer personas específicos para tu hotel.',
+        icon: 'tabler:target',
+      },
+      {
+        title: 'Paso 3: <span class="font-medium">Diseño de Experimentos</span>',
+        description:
+          'Planificación estratégica de tests: hipótesis basadas en datos, priorización por impacto potencial y diseño estadísticamente válido para obtener resultados confiables rápidamente.',
+        icon: 'tabler:flask',
+      },
+      {
+        title: 'Paso 4: <span class="font-medium">Implementación y Testing</span>',
+        description:
+          'Ejecución de experimentos con herramientas enterprise: Google Optimize, Optimizely, VWO o sistemas propietarios. Monitoreo 24/7 y ajustes en tiempo real basados en significancia estadística.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Paso 5: <span class="font-medium">Optimización Continua</span>',
+        description:
+          'Análisis de resultados, implementación de ganadores y generación de nuevo roadmap de experimentos. Proceso iterativo que garantiza mejora constante en conversiones.',
+        icon: 'tabler:refresh',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1553484771-371a605b060b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'CRO Testing Process',
+    }}
+  />
+
+  <!-- FAQs Widget ******************* -->
+  <FAQs
+    title="Preguntas Frecuentes sobre CRO Hotelero"
+    subtitle="Todo lo que necesitas saber sobre optimización de conversión para hoteles"
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: '¿Qué tasa de conversión es buena para un hotel?',
+        description:
+          'La tasa promedio de conversión hotelera está entre 2-4%. Hoteles boutique y de lujo pueden alcanzar 5-8%, mientras que cadenas grandes suelen estar en 1.5-3%. Con CRO optimizado, es posible alcanzar tasas de 6-12% dependiendo del mercado y tipo de propiedad.',
+      },
+      {
+        title: '¿Cuánto tiempo toma ver resultados de CRO?',
+        description:
+          'Los primeros insights aparecen en 2-4 semanas con herramientas de análisis. A/B tests significativos requieren 4-8 semanas dependiendo del tráfico. Mejoras sustanciales en conversión se ven típicamente en 2-3 meses de optimización continua.',
+      },
+      {
+        title: '¿Cómo funciona la personalización con IA en la práctica?',
+        description:
+          'La IA analiza datos en tiempo real: ubicación, dispositivo, fuente de tráfico, comportamiento de navegación y historial. Basado en estos datos, personaliza ofertas, contenido, precios y experiencia de reserva para cada visitante específicamente.',
+      },
+      {
+        title: '¿Qué elementos se pueden testear en un sitio hotelero?',
+        description:
+          'Todo: headlines, imágenes, precios, formularios de reserva, colores de botones, ofertas especiales, descripciones de habitaciones, testimonios, políticas de cancelación, métodos de pago y estructura de navegación.',
+      },
+      {
+        title: '¿Es seguro hacer A/B testing en mi sitio de hotel?',
+        description:
+          'Completamente. Los tests profesionales aseguran que solo un porcentaje controlado de usuarios vea cada variación, manteniendo la experiencia estable para la mayoría. Usamos herramientas enterprise con protocolos de seguridad estrictos.',
+      },
+      {
+        title: '¿Cómo mides el ROI del CRO?',
+        description:
+          'Medimos incremento en conversiones, aumento en valor promedio de reserva, reducción en costo de adquisición de cliente y aumento en lifetime value. Un proyecto CRO típico genera ROI de 300-800% en el primer año.',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Auditoría CRO Gratuita',
+        href: '/contacto',
+        icon: 'tabler:chart-line',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      ¿Listo para multiplicar tus conversiones?
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Descubre exactamente cuántas reservas estás perdiendo y cómo recuperarlas con una auditoría CRO gratuita personalizada para tu hotel.
+    </Fragment>
+  </CallToAction>
+</Layout>

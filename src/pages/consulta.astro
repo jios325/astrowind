@@ -1,0 +1,302 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import ContactForm from '~/components/widgets/ContactForm.astro';
+import Stats from '~/components/widgets/Stats.astro';
+
+const metadata = {
+  title: 'Agendar Consulta Estratégica Hotelera - J. Carlos Salgado',
+  description: 'Agenda una consulta estratégica personalizada para tu hotel. Análisis gratuito de 30 minutos con recommendations específicas para transformar tu negocio hotelero.',
+};
+
+const consultationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Consulta Estratégica Hotelera",
+  "name": "Consulta Estratégica Gratuita para Hoteles",
+  "description": "Análisis personalizado de 30 minutos para hoteles con identificación de oportunidades de crecimiento y roadmap específico",
+  "provider": {
+    "@type": "Person",
+    "name": "J. Carlos Salgado",
+    "url": "https://jcarlossalgado.com"
+  },
+  "url": "https://jcarlossalgado.com/consulta",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "name": "Consulta Estratégica Gratuita",
+    "description": "30 minutos de análisis personalizado sin compromiso",
+    "availability": "InStock"
+  },
+  "areaServed": "Internacional",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Incluye en la Consulta",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Audit Rápido Digital"
+        }
+      },
+      {
+        "@type": "Offer", 
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Benchmarking Competitivo"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service", 
+          "name": "Roadmap Personalizado"
+        }
+      }
+    ]
+  }
+};
+---
+
+<Layout metadata={metadata} schema={consultationSchema}>
+  <!-- Hero Widget ******************* -->
+  <Hero>
+    <Fragment slot="title">
+      Consulta Estratégica <span class="text-accent dark:text-white highlight">Gratuita</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="font-semibold">30 minutos que pueden transformar tu hotel.</span> Análisis personalizado de tu situación actual, identificación de oportunidades de crecimiento y roadmap específico para maximizar tus reservas directas y rentabilidad.
+    </Fragment>
+  </Hero>
+
+  <!-- Stats Widget ****************** -->
+  <Stats
+    stats={[
+      { title: 'Consultas Realizadas', amount: '350+' },
+      { title: 'Satisfacción', amount: '4.9/5' },
+      { title: 'ROI Promedio Post-Consulta', amount: '280%' },
+      { title: 'Tiempo Promedio', amount: '45min' },
+    ]}
+  />
+
+  <!-- Features Widget *************** -->
+  <Features
+    id="que-incluye"
+    tagline="Qué Incluye la Consulta"
+    title="Análisis Integral de tu Hotel"
+    subtitle="En 30-45 minutos analizamos tu situación actual y definimos un plan de acción específico para tu propiedad"
+    items={[
+      {
+        title: 'Audit Rápido Digital',
+        description:
+          'Análisis en vivo de tu sitio web, presencia online, posicionamiento SEO y performance de reservas directas vs OTAs con recomendaciones inmediatas.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Benchmarking Competitivo',
+        description:
+          'Comparación instantánea con tus competidores directos: pricing, tecnologías, estrategias digitales y oportunidades de diferenciación.',
+        icon: 'tabler:chart-line',
+      },
+      {
+        title: 'Gap Analysis Tecnológico',
+        description:
+          'Identificación de brechas tecnológicas que están limitando tu crecimiento y evaluación de sistemas que tu hotel necesita prioritariamente.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Roadmap Personalizado',
+        description:
+          'Plan de acción específico con iniciativas priorizadas, timelines realistas, inversiones estimadas y ROI proyectado para los próximos 6-12 meses.',
+        icon: 'tabler:target',
+      },
+      {
+        title: 'Quick Wins Identificadas',
+        description:
+          'Recomendaciones que puedes implementar inmediatamente (0-30 días) para obtener resultados rápidos en conversiones o eficiencia operativa.',
+        icon: 'tabler:bolt',
+      },
+      {
+        title: 'Recursos Personalizados',
+        description:
+          'Acceso exclusivo a templates, herramientas y guías específicas para tu tipo de hotel, tamaño y mercado objetivo.',
+        icon: 'tabler:gift',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+  <Content
+    isReversed
+    tagline="Perfil Ideal"
+    title="¿Es esta consulta adecuada para tu hotel?"
+    items={[
+      {
+        title: 'Hoteles Independientes',
+        description:
+          'Propiedades de 10-200 habitaciones que buscan reducir dependencia de OTAs, optimizar revenue y competir efectivamente contra cadenas.',
+      },
+      {
+        title: 'Cadenas Regionales',
+        description:
+          'Grupos hoteleros con 2-20 propiedades que necesitan estandarizar procesos, implementar tecnología escalable y maximizar sinergias.',
+      },
+      {
+        title: 'Hoteles en Transición',
+        description:
+          'Propiedades enfrentando cambios: nueva administración, renovaciones, expansión de mercado o recuperación post-crisis.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Hotel Strategic Consultation',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Consulta Sin Compromiso
+      </h3>
+      <p>
+        Esta consulta es completamente gratuita y sin ningún compromiso. Mi objetivo es proporcionarte valor inmediato y ayudarte a tomar decisiones informadas sobre el futuro de tu hotel, independientemente de si decides trabajar conmigo.
+      </p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-green-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+  <Steps
+    title="Cómo Funciona la Consulta"
+    items={[
+      {
+        title: 'Paso 1: <span class="font-medium">Agenda tu Consulta</span>',
+        description:
+          'Completa el formulario con información básica sobre tu hotel. Te contactaré en 24 horas para confirmar fecha y hora que mejor te convengan.',
+        icon: 'tabler:calendar',
+      },
+      {
+        title: 'Paso 2: <span class="font-medium">Preparación Previa</span>',
+        description:
+          'Te envío un breve cuestionario (5 minutos) para entender tu situación actual, objetivos y principales desafíos. Esto maximiza el valor de nuestra sesión.',
+        icon: 'tabler:edit',
+      },
+      {
+        title: 'Paso 3: <span class="font-medium">Sesión Estratégica</span>',
+        description:
+          'Videollamada de 30-45 minutos donde analizamos tu hotel en tiempo real, identificamos oportunidades y diseñamos un plan de acción específico.',
+        icon: 'tabler:video',
+      },
+      {
+        title: 'Paso 4: <span class="font-medium">Reporte Personalizado</span>',
+        description:
+          'Dentro de 48 horas recives un reporte escrito con el resumen de la sesión, recomendaciones priorizadas y próximos pasos sugeridos.',
+        icon: 'tabler:file',
+      },
+      {
+        title: 'Paso 5: <span class="font-medium">Seguimiento (Opcional)</span>',
+        description:
+          'Si decides avanzar, te ayudo a implementar las recomendaciones o puedes usar el plan de acción de forma independiente. La decisión es completamente tuya.',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Consultation Process',
+    }}
+  />
+
+  <!-- Contact Form Widget *********** -->
+  <ContactForm
+    id="formulario-consulta"
+    title="Agenda tu Consulta Estratégica Gratuita"
+    subtitle="Completa este formulario y te contacto en las próximas 24 horas"
+    description="Toda la información es confidencial y nunca será compartida con terceros."
+    inputs={[
+      {
+        type: 'text',
+        name: 'nombre',
+        label: 'Nombre completo',
+        required: true,
+      },
+      {
+        type: 'email',
+        name: 'email',
+        label: 'Email',
+        required: true,
+      },
+      {
+        type: 'tel',
+        name: 'telefono',
+        label: 'Teléfono (opcional)',
+        required: false,
+      },
+      {
+        type: 'text',
+        name: 'hotel',
+        label: 'Nombre del hotel',
+        required: true,
+      },
+      {
+        type: 'select',
+        name: 'tipo',
+        label: 'Tipo de propiedad',
+        required: true,
+        options: [
+          { value: 'independiente', label: 'Hotel independiente' },
+          { value: 'cadena', label: 'Cadena/Grupo hotelero' },
+          { value: 'boutique', label: 'Hotel boutique' },
+          { value: 'resort', label: 'Resort' },
+          { value: 'hostal', label: 'Hostal/Hostel' },
+          { value: 'otro', label: 'Otro' },
+        ],
+      },
+      {
+        type: 'select',
+        name: 'habitaciones',
+        label: 'Número de habitaciones',
+        required: true,
+        options: [
+          { value: '1-20', label: '1-20 habitaciones' },
+          { value: '21-50', label: '21-50 habitaciones' },
+          { value: '51-100', label: '51-100 habitaciones' },
+          { value: '101-200', label: '101-200 habitaciones' },
+          { value: '200+', label: 'Más de 200 habitaciones' },
+        ],
+      },
+      {
+        type: 'select',
+        name: 'prioridad',
+        label: 'Principal área de interés',
+        required: true,
+        options: [
+          { value: 'reservas-directas', label: 'Aumentar reservas directas' },
+          { value: 'seo-digital', label: 'SEO y marketing digital' },
+          { value: 'tecnologia', label: 'Implementación tecnológica' },
+          { value: 'revenue', label: 'Optimización de revenue' },
+          { value: 'operaciones', label: 'Eficiencia operativa' },
+          { value: 'transformacion', label: 'Transformación digital integral' },
+        ],
+      },
+    ]}
+    textarea={{
+      label: 'Describe brevemente tu situación actual y objetivos',
+      placeholder: 'Ej: Tenemos muy pocas reservas directas, dependemos mucho de Booking.com y queremos implementar un nuevo sitio web...',
+      rows: 4,
+    }}
+    disclaimer={{
+      label: 'Al enviar este formulario, aceptas que te contacte para agendar la consulta. <a class="text-blue-600 hover:underline" href="/privacidad">Política de privacidad</a>.',
+    }}
+    button={{
+      title: 'Solicitar Consulta Gratuita',
+      type: 'submit',
+    }}
+  />
+</Layout>

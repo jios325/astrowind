@@ -1,0 +1,218 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Política de Privacidad - J. Carlos Salgado',
+  description: 'Política de privacidad y protección de datos para servicios de consultoría hotelera. Cumplimiento GDPR y normativas 2025.',
+};
+
+const privacySchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Política de Privacidad",
+  "description": "Política de privacidad y tratamiento de datos personales conforme a GDPR y normativas internacionales",
+  "url": "https://jcarlossalgado.com/privacidad",
+  "mainEntity": {
+    "@type": "DigitalDocument",
+    "name": "Política de Privacidad y Protección de Datos",
+    "dateModified": "2025-01-01",
+    "inLanguage": "es"
+  }
+};
+---
+
+<Layout metadata={metadata} schema={privacySchema}>
+  <!-- Hero Widget ******************* -->
+  <Hero>
+    <Fragment slot="title">
+      Política de <span class="text-accent dark:text-white highlight">Privacidad</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="font-semibold">Protección y tratamiento de datos personales</span> en nuestros servicios de consultoría hotelera. Cumplimiento total con GDPR y normativas internacionales de privacidad.
+    </Fragment>
+  </Hero>
+
+  <!-- Features Widget *************** -->
+  <Features
+    id="compromisos"
+    tagline="Nuestros Compromisos"
+    title="Tu Privacidad es Nuestra Prioridad"
+    subtitle="Garantizamos el más alto nivel de protección para toda la información que compartas con nosotros"
+    items={[
+      {
+        title: 'Transparencia Total',
+        description:
+          'Te informamos claramente qué datos recopilamos, cómo los usamos y con quién los compartimos. Sin sorpresas ni cláusulas ocultas.',
+        icon: 'tabler:eye',
+      },
+      {
+        title: 'Seguridad Avanzada',
+        description:
+          'Utilizamos encriptación de nivel bancario, almacenamiento seguro en la nube y acceso restringido para proteger tu información.',
+        icon: 'tabler:shield',
+      },
+      {
+        title: 'Control de Datos',
+        description:
+          'Tienes derecho a acceder, corregir, exportar o eliminar tus datos personales en cualquier momento sin restricciones.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Cumplimiento Legal',
+        description:
+          'Adherimos estrictamente a GDPR, CCPA y otras normativas de privacidad internacionales vigentes en 2025.',
+        icon: 'tabler:certificate',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+  <Content
+    tagline="Información Detallada"
+    title="Cómo Tratamos tu Información Personal"
+  >
+    <Fragment slot="content">
+      <div class="prose prose-lg max-w-none dark:prose-invert">
+        <h3 class="text-xl font-bold mb-4">1. Información que Recopilamos</h3>
+        
+        <h4 class="font-semibold mb-2">Datos de Contacto y Profesionales:</h4>
+        <ul class="list-disc list-inside space-y-1 ml-4">
+          <li>Nombre completo y datos de contacto (email, teléfono)</li>
+          <li>Información del hotel (nombre, ubicación, tipo de propiedad)</li>
+          <li>Cargo y responsabilidades en la organización</li>
+          <li>Preferencias de comunicación e idioma</li>
+        </ul>
+
+        <h4 class="font-semibold mb-2 mt-4">Datos Técnicos y de Proyecto:</h4>
+        <ul class="list-disc list-inside space-y-1 ml-4">
+          <li>Información sobre sistemas existentes (PMS, Channel Managers)</li>
+          <li>Métricas de rendimiento del sitio web y canales digitales</li>
+          <li>Objetivos de negocio y KPIs específicos</li>
+          <li>Historial de interacciones y consultas</li>
+        </ul>
+
+        <h4 class="font-semibold mb-2 mt-4">Datos de Navegación:</h4>
+        <ul class="list-disc list-inside space-y-1 ml-4">
+          <li>Cookies técnicas para funcionamiento del sitio</li>
+          <li>Analytics anonimizados para mejorar la experiencia</li>
+          <li>Logs de seguridad para proteger contra amenazas</li>
+        </ul>
+
+        <h3 class="text-xl font-bold mb-4 mt-8">2. Cómo Utilizamos tu Información</h3>
+        <p>Utilizamos tus datos personales exclusivamente para:</p>
+        <ul class="list-disc list-inside space-y-2 ml-4">
+          <li><strong>Prestación de Servicios:</strong> Desarrollo de proyectos, consultoría estratégica y soporte técnico</li>
+          <li><strong>Comunicación:</strong> Responder consultas, enviar propuestas y actualizaciones del proyecto</li>
+          <li><strong>Mejora Continua:</strong> Optimizar metodologías y calidad del servicio basado en feedback</li>
+          <li><strong>Cumplimiento Legal:</strong> Obligaciones fiscales, contables y regulatorias</li>
+          <li><strong>Marketing Consentido:</strong> Solo si autorizas explícitamente recibir newsletter o contenido relevante</li>
+        </ul>
+
+        <h3 class="text-xl font-bold mb-4 mt-8">3. Base Legal para el Tratamiento</h3>
+        <p>El tratamiento de datos se basa en:</p>
+        <ul class="list-disc list-inside space-y-2 ml-4">
+          <li><strong>Ejecución Contractual:</strong> Para cumplir con servicios contratados</li>
+          <li><strong>Consentimiento:</strong> Para comunicaciones de marketing y cookies no esenciales</li>
+          <li><strong>Interés Legítimo:</strong> Para seguridad, prevención de fraude y mejora del servicio</li>
+          <li><strong>Obligación Legal:</strong> Para cumplimiento de normativas fiscales y comerciales</li>
+        </ul>
+
+        <h3 class="text-xl font-bold mb-4 mt-8">4. Compartir Información con Terceros</h3>
+        <p>Nunca vendemos datos personales. Compartimos información limitada solo con:</p>
+        <ul class="list-disc list-inside space-y-2 ml-4">
+          <li><strong>Proveedores de Servicios:</strong> Hosting, email, analytics (bajo acuerdos de confidencialidad)</li>
+          <li><strong>Colaboradores del Proyecto:</strong> Desarrolladores, diseñadores (solo datos necesarios para el proyecto)</li>
+          <li><strong>Autoridades:</strong> Solo cuando sea legalmente requerido</li>
+        </ul>
+
+        <h3 class="text-xl font-bold mb-4 mt-8">5. Transferencias Internacionales</h3>
+        <p>
+          Si utilizamos servicios en la nube que pueden transferir datos fuera de tu región, garantizamos que todos los proveedores cumplen con estándares de privacidad equivalentes y tienen certificaciones adecuadas de protección de datos.
+        </p>
+
+        <h3 class="text-xl font-bold mb-4 mt-8">6. Retención de Datos</h3>
+        <p>Conservamos datos personales solo el tiempo necesario:</p>
+        <ul class="list-disc list-inside space-y-2 ml-4">
+          <li><strong>Datos de Proyecto:</strong> Durante la duración del proyecto + 5 años para soporte</li>
+          <li><strong>Datos Fiscales:</strong> Según obligaciones legales (generalmente 7 años)</li>
+          <li><strong>Marketing:</strong> Hasta que retires el consentimiento</li>
+          <li><strong>Datos Técnicos:</strong> Anonimizados después de 2 años</li>
+        </ul>
+
+        <h3 class="text-xl font-bold mb-4 mt-8">7. Tus Derechos</h3>
+        <p>Bajo GDPR y normativas similares, tienes derecho a:</p>
+        <ul class="list-disc list-inside space-y-2 ml-4">
+          <li><strong>Acceso:</strong> Solicitar copia de todos tus datos personales</li>
+          <li><strong>Rectificación:</strong> Corregir información incorrecta o incompleta</li>
+          <li><strong>Eliminación:</strong> Borrar datos cuando no sean necesarios</li>
+          <li><strong>Portabilidad:</strong> Exportar datos en formato legible</li>
+          <li><strong>Restricción:</strong> Limitar ciertos usos de tu información</li>
+          <li><strong>Oposición:</strong> Rechazar tratamientos basados en interés legítimo</li>
+        </ul>
+
+        <h3 class="text-xl font-bold mb-4 mt-8">8. Medidas de Seguridad</h3>
+        <p>Implementamos múltiples capas de protección:</p>
+        <ul class="list-disc list-inside space-y-2 ml-4">
+          <li>Encriptación SSL/TLS para todas las transmisiones</li>
+          <li>Almacenamiento en servidores certificados SOC2 y ISO 27001</li>
+          <li>Acceso basado en roles y autenticación de dos factores</li>
+          <li>Auditorías regulares de seguridad y penetration testing</li>
+          <li>Backup encriptado y planes de recuperación ante desastres</li>
+        </ul>
+
+        <h3 class="text-xl font-bold mb-4 mt-8">9. Cookies y Tecnologías Similares</h3>
+        <p>Utilizamos cookies para:</p>
+        <ul class="list-disc list-inside space-y-2 ml-4">
+          <li><strong>Esenciales:</strong> Funcionamiento básico del sitio (no requieren consentimiento)</li>
+          <li><strong>Analytics:</strong> Entender uso del sitio web (Google Analytics anonimizado)</li>
+          <li><strong>Funcionales:</strong> Recordar preferencias de idioma y configuración</li>
+        </ul>
+
+        <h3 class="text-xl font-bold mb-4 mt-8">10. Contacto y Ejercicio de Derechos</h3>
+        <p>
+          Para ejercer cualquier derecho, realizar consultas o reportar inquietudes sobre privacidad, contacta a través de:
+        </p>
+        <ul class="list-disc list-inside space-y-2 ml-4">
+          <li><strong>Email:</strong> <a href="/contacto" class="text-blue-600 hover:underline">Formulario de contacto</a></li>
+          <li><strong>Respuesta:</strong> Máximo 30 días según normativas vigentes</li>
+          <li><strong>Autoridad de Control:</strong> Derecho a presentar quejas ante autoridades de protección de datos</li>
+        </ul>
+
+        <p class="text-sm text-gray-600 dark:text-gray-400 mt-8">
+          <strong>Última actualización:</strong> Enero 2025<br>
+          <strong>Versión:</strong> 2.1<br>
+          Esta política puede actualizarse para reflejar cambios en nuestras prácticas o normativas legales. Te notificaremos de cambios significativos.
+        </p>
+      </div>
+    </Fragment>
+  </Content>
+
+  <!-- CallToAction Widget *********** -->
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Ejercer Derechos de Privacidad',
+        href: '/contacto',
+        icon: 'tabler:shield',
+      },
+      {
+        text: 'Ver Términos',
+        href: '/terminos',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      ¿Preguntas sobre tu privacidad?
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Estamos comprometidos con la transparencia total. Contacta para cualquier consulta sobre el tratamiento de tus datos personales
+    </Fragment>
+  </CallToAction>
+</Layout>

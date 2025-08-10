@@ -1,0 +1,252 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Stats from '~/components/widgets/Stats.astro';
+
+const metadata = {
+  title: 'Recursos Gratuitos para Hoteles - J. Carlos Salgado',
+  description: 'Recursos gratuitos, guías, herramientas y análisis para hoteles. Tendencias 2025, mejores prácticas de hospitalidad y transformación digital.',
+};
+
+const resourceSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Recursos Gratuitos para Hoteles",
+  "description": "Centro de recursos especializados para la industria hotelera con guías, herramientas y análisis actualizados",
+  "url": "https://jcarlossalgado.com/recursos",
+  "mainEntity": {
+    "@type": "ItemList",
+    "name": "Recursos Hoteleros",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "CreativeWork",
+          "name": "Guías SEO Hotelero 2025"
+        }
+      },
+      {
+        "@type": "ListItem", 
+        "position": 2,
+        "item": {
+          "@type": "CreativeWork",
+          "name": "Templates de CRO"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3, 
+        "item": {
+          "@type": "CreativeWork",
+          "name": "Roadmaps Tecnológicos"
+        }
+      }
+    ]
+  }
+};
+---
+
+<Layout metadata={metadata} schema={resourceSchema}>
+  <!-- Hero Widget ******************* -->
+  <Hero>
+    <Fragment slot="title">
+      Recursos Gratuitos para <span class="text-accent dark:text-white highlight">Hoteles 2025</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="font-semibold">Guías especializadas, herramientas</span> y recursos actualizados para impulsar tu hotel con las últimas tendencias en tecnología hotelera, IA, transformación digital y mejores prácticas de la industria.
+    </Fragment>
+  </Hero>
+
+  <!-- Stats Widget ****************** -->
+  <Stats
+    stats={[
+      { title: 'Recursos Disponibles', amount: '50+' },
+      { title: 'Descargas Mensuales', amount: '2.5K+' },
+      { title: 'Hoteles Beneficiados', amount: '150+' },
+      { title: 'Actualización', amount: 'Semanal' },
+    ]}
+  />
+
+  <!-- Features Widget *************** -->
+  <Features
+    id="recursos-principales"
+    tagline="Recursos Destacados"
+    title="Herramientas y Guías para el Éxito Hotelero"
+    subtitle="Todo lo que necesitas para mantenerte actualizado con las últimas tendencias y mejores prácticas de la industria hotelera"
+    items={[
+      {
+        title: 'Guías SEO Hotelero 2025',
+        description:
+          'Estrategias actualizadas para optimización de motores de búsqueda específicas para hoteles, incluyendo búsqueda por voz, AI Overview y SEO local avanzado.',
+        icon: 'tabler:search',
+        callToAction: {
+          text: 'Acceder →',
+          href: '/categoria/seo-hotelero',
+        },
+      },
+      {
+        title: 'Templates de CRO',
+        description:
+          'Plantillas, checklists y frameworks para optimización de conversión hotelera, incluyendo análisis de embudo y testing A/B especializado.',
+        icon: 'tabler:chart-line',
+        callToAction: {
+          text: 'Descargar →',
+          href: '/categoria/cro-hoteles',
+        },
+      },
+      {
+        title: 'Roadmaps Tecnológicos',
+        description:
+          'Guías paso a paso para implementar transformación digital, sistemas PMS, IA y tecnologías contactless en hoteles de diferentes tamaños.',
+        icon: 'tabler:robot',
+        callToAction: {
+          text: 'Ver Guías →',
+          href: '/categoria/transformacion-digital',
+        },
+      },
+      {
+        title: 'KPIs y Métricas Hoteleras',
+        description:
+          'Dashboards prediseñados, calculadoras de ROI y herramientas de análisis para medir performance hotelero y tomar decisiones basadas en datos.',
+        icon: 'tabler:chart-dots',
+        callToAction: {
+          text: 'Herramientas →',
+          href: '/herramientas',
+        },
+      },
+      {
+        title: 'Casos de Estudio',
+        description:
+          'Análisis detallados de transformaciones hoteleras exitosas, con métricas reales, estrategias implementadas y lecciones aprendidas.',
+        icon: 'tabler:book',
+        callToAction: {
+          text: 'Ver Casos →',
+          href: '/portfolio',
+        },
+      },
+      {
+        title: 'Tendencias 2025',
+        description:
+          'Informes actualizados sobre las últimas tendencias en hospitalidad, tecnología hotelera, comportamiento de huéspedes y innovaciones del sector.',
+        icon: 'tabler:trending-up',
+        callToAction: {
+          text: 'Leer Tendencias →',
+          href: '/blog',
+        },
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+  <Content
+    isReversed
+    tagline="Recursos Especializados"
+    title="Centro de Conocimiento Hotelero"
+    items={[
+      {
+        title: 'State of Hotel Guest Tech 2025',
+        description:
+          'Reporte anual sobre tecnologías de huéspedes, tendencias de comportamiento y predicciones para la industria hotelera basado en datos de 2.5M+ hoteleros.',
+      },
+      {
+        title: 'Guía de Transformación Digital',
+        description:
+          'Roadmap completo para evolucionar hacia hotel inteligente: desde infraestructura hasta experiencia del huésped, con casos prácticos implementables.',
+      },
+      {
+        title: 'Benchmark Competitivo',
+        description:
+          'Análisis comparativo de performance hotelero, pricing strategies, tecnologías adoptadas y mejores prácticas por tipo de propiedad y ubicación.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Hotel Resources Dashboard',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Información Actualizada Semanalmente
+      </h3>
+      <p>
+        Con la industria hotelera evolucionando constantemente, mantengo estos recursos actualizados con las últimas tendencias, tecnologías y mejores prácticas validadas por mi experiencia en más de 120 proyectos hoteleros.
+      </p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+  <Content
+    tagline="Herramientas Gratuitas"
+    title="Calculadoras y Templates Listos para Usar"
+    items={[
+      {
+        title: 'Calculadora de ROI Hotelero',
+        description:
+          'Herramienta interactiva para calcular retorno de inversión en proyectos tecnológicos, marketing digital y optimización de operaciones.',
+      },
+      {
+        title: 'Audit SEO Automatizado',
+        description:
+          'Análisis gratuito de tu sitio web hotelero con recomendaciones específicas para mejorar posicionamiento y captar más reservas directas.',
+      },
+      {
+        title: 'Templates de Project Charter',
+        description:
+          'Plantillas profesionales para iniciar proyectos de transformación digital, implementación de sistemas y renovaciones tecnológicas.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2426&q=80',
+      alt: 'Hotel Tools and Calculators',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Herramientas Basadas en IA
+      </h3>
+      <p>
+        Todas las herramientas integran análisis con IA para proporcionarte insights más precisos y recomendaciones personalizadas según las características específicas de tu hotel.
+      </p>
+    </Fragment>
+  </Content>
+
+  <!-- BlogLatestPosts Widget ******* -->
+  <BlogLatestPosts
+    title="Últimos Artículos y Recursos"
+    information={`Mantente actualizado con los últimos insights, casos de estudio y tendencias de la industria hotelera. Nuevo contenido cada semana.`}
+  />
+
+  <!-- CallToAction Widget *********** -->
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Newsletter Hotelero',
+        href: '/contacto',
+        icon: 'tabler:mail',
+      },
+      {
+        text: 'Consulta Personalizada',
+        href: '/consulta',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      ¿Quieres recibir recursos exclusivos?
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Únete al newsletter semanal para hoteles y recibe análisis exclusivos, herramientas premium y primeras noticias sobre tendencias que impactarán tu negocio.
+    </Fragment>
+  </CallToAction>
+</Layout>

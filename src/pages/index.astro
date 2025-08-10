@@ -14,9 +14,63 @@ const metadata = {
   title: 'J. Carlos Salgado — Project Manager Especializado en Soluciones Web para la Industria Hotelera',
   ignoreTitleTemplate: true,
 };
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "J. Carlos Salgado - Consultoría Hotelera Digital",
+  "alternateName": "JC Salgado Hotel Consulting",
+  "url": "https://jcarlossalgado.com",
+  "logo": "https://jcarlossalgado.com/favicon.svg",
+  "description": "Consultoría especializada en transformación digital hotelera, desarrollo web, SEO y optimización de conversiones para hoteles",
+  "founder": {
+    "@type": "Person",
+    "name": "Juan Carlos Salgado Ascencio",
+    "jobTitle": "Project Manager & Consultor Hotelero Senior",
+    "url": "https://jcarlossalgado.com/sobre-mi"
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": "Internacional"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servicios de Consultoría Hotelera",
+    "itemListElement": [
+      {
+        "@type": "Service",
+        "name": "Diseño Web Hotelero",
+        "url": "https://jcarlossalgado.com/servicios/diseno-web-hotelero"
+      },
+      {
+        "@type": "Service",
+        "name": "SEO para Hoteles",
+        "url": "https://jcarlossalgado.com/servicios/seo-hotelero"
+      },
+      {
+        "@type": "Service",
+        "name": "Optimización de Conversión",
+        "url": "https://jcarlossalgado.com/servicios/optimizacion-conversion"
+      }
+    ]
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/juancarlossalgadoascencio/",
+    "https://github.com/jios325",
+    "https://www.facebook.com/people/J-Carlos-Salgado/61554769997589/",
+    "https://www.instagram.com/juancarlossalgado__",
+    "https://www.youtube.com/@JuanCarlosSalgado325"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "sales",
+    "availableLanguage": ["Spanish", "English"],
+    "url": "https://jcarlossalgado.com/contacto"
+  }
+};
 ---
 
-<Layout metadata={metadata}>
+<Layout metadata={metadata} schema={organizationSchema}>
   <!-- Hero Widget ******************* -->
 
   <Hero

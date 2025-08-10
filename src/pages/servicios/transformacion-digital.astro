@@ -1,0 +1,277 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Transformación Digital Hotelera 2025 - J. Carlos Salgado',
+  description: 'Transformación digital integral para hoteles con IA, automatización, tecnología contactless y sistemas inteligentes. Evolución completa hacia el hotel del futuro.',
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Transformación Digital Hotelera",
+  "name": "Transformación Digital Integral para Hoteles",
+  "description": "Evolución completa hacia el hotel inteligente con IA, automatización, tecnología contactless y sistemas digitales avanzados",
+  "provider": {
+    "@type": "Person",
+    "name": "J. Carlos Salgado",
+    "url": "https://jcarlossalgado.com"
+  },
+  "url": "https://jcarlossalgado.com/servicios/transformacion-digital",
+  "areaServed": "Internacional"
+};
+---
+
+<Layout metadata={metadata} schema={serviceSchema}>
+  <!-- Hero Widget ******************* -->
+  <Hero>
+    <Fragment slot="title">
+      Transformación Digital <span class="text-accent dark:text-white highlight">Hotelera 2025</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="font-semibold">Evolución completa hacia el hotel inteligente</span> con IA avanzada, automatización integral, tecnologías contactless y sistemas IoT que revolutionan la experiencia del huésped y optimizan operaciones para maximizar rentabilidad.
+    </Fragment>
+  </Hero>
+
+  <!-- Stats Widget ****************** -->
+  <Stats
+    stats={[
+      { title: 'Eficiencia Operativa', amount: '+65%' },
+      { title: 'Satisfacción Huésped', amount: '4.8/5' },
+      { title: 'Reducción Costos', amount: '-35%' },
+      { title: 'ROI Promedio', amount: '340%' },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+  <Content
+    isReversed
+    tagline="Hotel del Futuro"
+    title="Transformación Integral para la Nueva Era Hotelera"
+    items={[
+      {
+        title: 'IA Omnipresente y Transparente',
+        description:
+          'Integración de Claude 3.5, GPT-4 y sistemas de machine learning en cada touchpoint: desde chatbots inteligentes hasta pricing dinámico y recomendaciones personalizadas que aumentan revenue por huésped.',
+      },
+      {
+        title: 'Automatización End-to-End',
+        description:
+          'Procesos completamente automatizados: housekeeping inteligente, gestión de inventarios predictiva, check-in/out sin contacto y sistemas de climatización que se adaptan automáticamente a la ocupación.',
+      },
+      {
+        title: 'Experiencia Contactless Completa',
+        description:
+          'El 73% de huéspedes prefiere hoteles con tecnología de autoservicio. Implemento soluciones integrales: llaves móviles, pagos sin contacto, concierge virtual 24/7 y personalización basada en preferencias.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Smart Hotel Technology',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        El Salto Evolutivo que tu Hotel Necesita
+      </h3>
+      <p>
+        La transformación digital no es opcional en 2025. McKinsey confirma que la personalización puede aumentar revenue un 10-15% en hospitalidad. Te guío en la evolución completa hacia un hotel inteligente y rentable.
+      </p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-teal-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Features Widget *************** -->
+  <Features
+    id="areas-transformacion"
+    tagline="Áreas de Transformación"
+    title="Ecosistema Digital Integral"
+    subtitle="Modernización completa de cada aspecto de tu operación hotelera"
+    items={[
+      {
+        title: 'Guest Experience Platform',
+        description:
+          'Plataforma unificada que conecta pre-llegada, estancia y post-partida. Personalización con IA, recomendaciones inteligentes y automatización de servicios que aumenta satisfacción y loyalty.',
+        icon: 'tabler:star',
+      },
+      {
+        title: 'Revenue Management con IA',
+        description:
+          'Sistemas de pricing dinámico que analizan 200+ variables en tiempo real: demanda, competencia, eventos locales, weather, para optimizar ADR y RevPAR automáticamente las 24 horas.',
+        icon: 'tabler:trending-up',
+      },
+      {
+        title: 'Operaciones Automatizadas',
+        description:
+          'Automatización de housekeeping con sensores IoT, gestión predictiva de inventarios, mantenimiento proactivo basado en datos y scheduling inteligente que reduce costos operativos 35%.',
+        icon: 'tabler:robot',
+      },
+      {
+        title: 'Smart Room Technology',
+        description:
+          'Habitaciones inteligentes con control por voz, climatización adaptiva, sensores de ocupación para gestión energética y personalización automática de ambiente según preferencias del huésped.',
+        icon: 'tabler:home',
+      },
+      {
+        title: 'Business Intelligence Avanzado',
+        description:
+          'Dashboards ejecutivos con KPIs en tiempo real, análisis predictivo de tendencias, forecasting de demanda con IA y reportes automatizados que impulsan decisiones estratégicas informadas.',
+        icon: 'tabler:chart-dots',
+      },
+      {
+        title: 'Integración de Ecosistemas',
+        description:
+          'Conectividad total entre PMS, CRM, Channel Managers, sistemas de pago, herramientas de marketing y plataformas de IA para crear un ecosistema tecnológico unificado y eficiente.',
+        icon: 'tabler:share',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+  <Content
+    tagline="Tecnologías 2025"
+    title="Innovaciones que Están Redefiniendo la Hospitalidad"
+    items={[
+      {
+        title: 'Contactless Everything',
+        description:
+          'Check-in/out sin contacto, llaves móviles, pagos tap-to-pay, menús digitales y servicios de concierge virtual que responden al 68% de huéspedes que prefieren soluciones contactless.',
+      },
+      {
+        title: 'Personalización Hiper-Inteligente',
+        description:
+          'IA que aprende de cada interacción para personalizar temperatura, iluminación, entretenimiento, servicios del hotel y recomendaciones locales creando experiencias verdaderamente únicas.',
+      },
+      {
+        title: 'Sostenibilidad Inteligente',
+        description:
+          'Sistemas que optimizan consumo energético automáticamente, gestión de residuos con IA, reporting de sostenibilidad en tiempo real y certificaciones ambientales automatizadas.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Hotel Digital Innovation',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Tendencias que Definen 2025
+      </h3>
+      <p>
+        El 58% de huéspedes siente que la IA mejora su experiencia de reserva y estancia. La integración de tecnología en hospitalidad no solo mejora la experiencia del cliente, sino que es esencial para mantener competitividad.
+      </p>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+  <Steps
+    title="Roadmap de Transformación Digital"
+    items={[
+      {
+        title: 'Fase 1: <span class="font-medium">Assessment y Estrategia</span>',
+        description:
+          'Auditoría tecnológica completa, análisis de gaps digitales, benchmarking competitivo y definición de roadmap personalizado con ROI proyectado y timeline realista para tu transformación.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Fase 2: <span class="font-medium">Infraestructura Inteligente</span>',
+        description:
+          'Modernización de sistemas core: PMS, conectividad, cloud migration, ciberseguridad avanzada e implementación de IoT. Base sólida para soportar todas las innovaciones futuras.',
+        icon: 'tabler:server',
+      },
+      {
+        title: 'Fase 3: <span class="font-medium">Automatización Operativa</span>',
+        description:
+          'Implementación de sistemas automatizados: housekeeping inteligente, revenue management dinámico, customer service con IA y procesos back-office optimizados con machine learning.',
+        icon: 'tabler:robot',
+      },
+      {
+        title: 'Fase 4: <span class="font-medium">Guest Experience Revolution</span>',
+        description:
+          'Despliegue de tecnologías contactless, personalización con IA, smart rooms, mobile apps nativas y sistemas de feedback en tiempo real que transforman la experiencia del huésped.',
+        icon: 'tabler:star',
+      },
+      {
+        title: 'Fase 5: <span class="font-medium">Optimización Continua</span>',
+        description:
+          'Monitoreo de KPIs, análisis predictivo, ajustes basados en datos y evolución constante. La transformación digital es un proceso continuo que requiere adaptación permanente.',
+        icon: 'tabler:refresh',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1518152006812-edab29b069ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Digital Transformation Roadmap',
+    }}
+  />
+
+  <!-- FAQs Widget ******************* -->
+  <FAQs
+    title="Preguntas Frecuentes sobre Transformación Digital"
+    subtitle="Respuestas a las dudas más comunes sobre la evolución hacia el hotel inteligente"
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: '¿Cuánto tiempo toma una transformación digital completa?',
+        description:
+          'Depende del punto de partida y alcance. Transformaciones básicas toman 6-12 meses. Evoluciones integrales hacia "smart hotel" requieren 12-18 meses con implementación por fases para mantener operaciones sin interrupciones.',
+      },
+      {
+        title: '¿Es necesario cerrar el hotel durante la implementación?',
+        description:
+          'No. Diseño la transformación en fases para mantener operaciones continuas. Trabajamos por áreas, horarios off-peak y con redundancia de sistemas. Los huéspedes experimentan mejoras graduales sin interrupciones.',
+      },
+      {
+        title: '¿Cómo se capacita al personal en las nuevas tecnologías?',
+        description:
+          'Incluyo programa integral de training: capacitación personalizada por roles, documentación interactiva, simuladores de práctica, mentoring durante adopción y soporte 24/7 durante los primeros meses de implementación.',
+      },
+      {
+        title: '¿Qué pasa con los datos de los huéspedes y la privacidad?',
+        description:
+          'Implemento protocolos GDPR-compliant desde el diseño. Cifrado end-to-end, acceso con roles específicos, auditorías de seguridad regulares y políticas claras de privacidad. La protección de datos es prioritaria en toda la transformación.',
+      },
+      {
+        title: '¿El ROI justifica la inversión en transformación digital?',
+        description:
+          'Absolutamente. Hoteles digitalizados ven aumentos promedio: 15% en revenue, 35% reducción costos operativos, 25% mejora en satisfacción del huésped. ROI típico es 300-500% en 24 meses, con payback period de 12-18 meses.',
+      },
+      {
+        title: '¿Cómo me mantengo actualizado después de la transformación?',
+        description:
+          'Incluyo plan de evolución continua: monitoreo de nuevas tecnologías, actualizaciones regulares de software, análisis trimestral de performance y roadmap anual para mantener tu hotel a la vanguardia tecnológica.',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Assessment Digital Gratuito',
+        href: '/contacto',
+        icon: 'tabler:rocket',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      ¿Listo para liderar la revolución hotelera?
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Obtén un análisis gratuito de tu situación actual y descubre el roadmap personalizado para transformar tu hotel en una referencia tecnológica de la industria.
+    </Fragment>
+  </CallToAction>
+</Layout>

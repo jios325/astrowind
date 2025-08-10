@@ -9,9 +9,41 @@ import Contact from '~/components/widgets/Contact.astro';
 const metadata = {
   title: 'Contacto - J. Carlos Salgado | Project Manager para Hoteles',
 };
+
+const contactSchema = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contacto - J. Carlos Salgado",
+  "url": "https://jcarlossalgado.com/contacto",
+  "mainEntity": {
+    "@type": "ProfessionalService",
+    "name": "J. Carlos Salgado - Consultoría Hotelera",
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "availableLanguage": ["Spanish", "English"],
+        "areaServed": "Internacional",
+        "serviceArea": {
+          "@type": "Place",
+          "name": "Internacional"
+        }
+      },
+      {
+        "@type": "ContactPoint", 
+        "contactType": "customer support",
+        "availableLanguage": ["Spanish", "English"]
+      }
+    ],
+    "sameAs": [
+      "https://www.linkedin.com/in/juancarlossalgadoascencio/",
+      "https://github.com/jios325"
+    ]
+  }
+};
 ---
 
-<Layout metadata={metadata}>
+<Layout metadata={metadata} schema={contactSchema}>
   <!-- Hero Widget ******************* -->
   <Hero>
     <Fragment slot="title">

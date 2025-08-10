@@ -1,0 +1,273 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Diseño Web Hotelero con IA - J. Carlos Salgado',
+  description: 'Desarrollo de sitios web hoteleros de alto rendimiento con integración de IA (Claude, GPT-4) para maximizar conversiones y reservas directas en 2025.',
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Diseño Web Hotelero con IA",
+  "provider": {
+    "@type": "Person",
+    "name": "J. Carlos Salgado",
+    "url": "https://jcarlossalgado.com"
+  },
+  "name": "Diseño y Desarrollo Web para Hoteles",
+  "description": "Desarrollo de sitios web hoteleros de última generación con integración de IA (Claude 3.5, GPT-4), optimización de conversiones y motores de reserva directa",
+  "url": "https://jcarlossalgado.com/servicios/diseno-web-hotelero",
+  "areaServed": "Internacional",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Características del Servicio",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Motor de Reservas Integrado"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Chatbot IA Multilingüe"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Optimización SEO Avanzada"
+        }
+      }
+    ]
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "ratingCount": "47"
+  }
+};
+---
+
+<Layout metadata={metadata} schema={serviceSchema}>
+  <!-- Hero Widget ******************* -->
+  <Hero>
+    <Fragment slot="title">
+      Diseño Web Hotelero con <span class="text-accent dark:text-white highlight">Inteligencia Artificial</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="font-semibold">Transformo la presencia digital de tu hotel</span> con sitios web de última generación que combinan diseño elegante, tecnología de vanguardia e integración de IA (Claude 3.5, GPT-4) para maximizar las reservas directas y reducir la dependencia de OTAs en 2025.
+    </Fragment>
+  </Hero>
+
+  <!-- Stats Widget ****************** -->
+  <Stats
+    stats={[
+      { title: 'Conversión Promedio', amount: '4.8%' },
+      { title: 'Tiempo de Carga', amount: '<2s' },
+      { title: 'Score Mobile', amount: '98/100' },
+      { title: 'ROI Promedio', amount: '380%' },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+  <Content
+    isReversed
+    tagline="Tecnología de Vanguardia"
+    title="Sitios Web que Convierten Visitas en Reservas"
+    items={[
+      {
+        title: 'Diseño Centrado en Conversión',
+        description:
+          'Cada elemento está estratégicamente diseñado para guiar al usuario hacia la reserva, con CTAs optimizados, navegación intuitiva y eliminación de fricciones en el proceso de booking.',
+      },
+      {
+        title: 'Integración de IA Avanzada',
+        description:
+          'Implementación de Claude 3.5 y GPT-4 para chatbots inteligentes, personalización de contenido en tiempo real y asistentes virtuales que aumentan las conversiones hasta un 40%.',
+      },
+      {
+        title: 'Optimización Mobile-First',
+        description:
+          'Con el 70% de las reservas realizándose desde móviles, desarrollo sitios ultra-rápidos y responsive que ofrecen una experiencia perfecta en cualquier dispositivo.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2426&q=80',
+      alt: 'Diseño Web Hotelero Dashboard',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Tecnología que Marca la Diferencia
+      </h3>
+      <p>
+        En 2025, un sitio web hotelero no es solo una vitrina digital. Es tu vendedor 24/7, tu recepcionista virtual y tu mejor herramienta de marketing. Utilizo las últimas tecnologías incluyendo frameworks modernos como Astro, Next.js y arquitecturas serverless para garantizar rendimiento excepcional.
+      </p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Features Widget *************** -->
+  <Features
+    id="caracteristicas"
+    tagline="Características Clave"
+    title="Lo que Incluye tu Nuevo Sitio Web"
+    subtitle="Cada proyecto incluye todas las funcionalidades esenciales para competir en el mercado hotelero digital de 2025"
+    items={[
+      {
+        title: 'Motor de Reservas Integrado',
+        description:
+          'Sistema de reservas directo con disponibilidad en tiempo real, precios dinámicos y proceso de checkout optimizado que reduce el abandono del carrito en un 45%.',
+        icon: 'tabler:calendar',
+      },
+      {
+        title: 'Chatbot IA Multilingüe',
+        description:
+          'Asistente virtual potenciado por Claude 3.5 que atiende consultas 24/7 en múltiples idiomas, gestiona pre-reservas y aumenta la satisfacción del cliente.',
+        icon: 'tabler:message',
+      },
+      {
+        title: 'Galería Visual Inmersiva',
+        description:
+          'Tours virtuales 360°, galerías de alta resolución con lazy loading y videos optimizados que muestran tu propiedad de forma espectacular sin afectar la velocidad.',
+        icon: 'tabler:photo',
+      },
+      {
+        title: 'SEO Técnico Avanzado',
+        description:
+          'Implementación completa de Schema Markup para hoteles, optimización Core Web Vitals y estructura preparada para búsquedas por voz y AI Overview de Google.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Personalización con IA',
+        description:
+          'Contenido dinámico que se adapta según el comportamiento del usuario, ofertas personalizadas y recomendaciones inteligentes que aumentan el valor promedio de reserva.',
+        icon: 'tabler:brain',
+      },
+      {
+        title: 'Analytics y Reporting',
+        description:
+          'Dashboard personalizado con métricas clave, análisis de conversión, mapas de calor y reportes automatizados para tomar decisiones basadas en datos.',
+        icon: 'tabler:chart-line',
+      },
+    ]}
+  />
+
+  <!-- Steps Widget ****************** -->
+  <Steps
+    title="Mi Proceso de Desarrollo"
+    items={[
+      {
+        title: 'Paso 1: <span class="font-medium">Análisis y Estrategia</span>',
+        description:
+          'Auditoría de tu sitio actual, análisis de competencia, investigación de tu audiencia objetivo y definición de KPIs. Utilizo herramientas de IA para identificar oportunidades y tendencias del mercado.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Paso 2: <span class="font-medium">Diseño UX/UI con IA</span>',
+        description:
+          'Creación de wireframes y prototipos interactivos. Uso IA generativa para crear múltiples conceptos de diseño y testing A/B automatizado para validar las mejores opciones.',
+        icon: 'tabler:palette',
+      },
+      {
+        title: 'Paso 3: <span class="font-medium">Desarrollo Ágil</span>',
+        description:
+          'Programación con las últimas tecnologías, integración de sistemas PMS/Channel Manager, implementación de IA y optimización de rendimiento. Desarrollo iterativo con entregas semanales.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'Paso 4: <span class="font-medium">Testing y Optimización</span>',
+        description:
+          'Pruebas exhaustivas en múltiples dispositivos, optimización de velocidad, testing de conversión y ajustes finales. Uso de IA para detectar y corregir problemas automáticamente.',
+        icon: 'tabler:bug',
+      },
+      {
+        title: 'Paso 5: <span class="font-medium">Lanzamiento y Soporte</span>',
+        description:
+          'Migración sin interrupciones, configuración de CDN, monitoreo 24/7 y soporte continuo. Incluyo 3 meses de mantenimiento y optimización post-lanzamiento.',
+        icon: 'tabler:rocket',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Proceso de desarrollo web',
+    }}
+  />
+
+  <!-- FAQs Widget ******************* -->
+  <FAQs
+    title="Preguntas Frecuentes"
+    subtitle="Todo lo que necesitas saber sobre el desarrollo de tu nuevo sitio web hotelero"
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: '¿Cuánto tiempo toma desarrollar un sitio web hotelero completo?',
+        description:
+          'El tiempo promedio es de 8-12 semanas para un sitio completo con todas las integraciones. Proyectos más simples pueden estar listos en 4-6 semanas, mientras que plataformas complejas para cadenas hoteleras pueden requerir 3-4 meses.',
+      },
+      {
+        title: '¿Qué sistemas de gestión hotelera (PMS) pueden integrarse?',
+        description:
+          'Trabajo con todos los principales PMS del mercado: Opera, Cloudbeds, Mews, Clock PMS, Little Hotelier, entre otros. También integro Channel Managers como SiteMinder, Booking.com Connectivity y Expedia Partner Central.',
+      },
+      {
+        title: '¿Cómo funciona la integración de IA en mi sitio web?',
+        description:
+          'Implemento soluciones de IA como chatbots inteligentes usando Claude 3.5 o GPT-4, personalización de contenido en tiempo real, traducción automática, generación de descripciones SEO y análisis predictivo de comportamiento de usuarios para optimizar conversiones.',
+      },
+      {
+        title: '¿El sitio web será compatible con dispositivos móviles?',
+        description:
+          'Absolutamente. Todos los sitios se desarrollan con enfoque Mobile-First, garantizando una experiencia perfecta en smartphones y tablets. Esto incluye optimización de velocidad, diseño responsive y funcionalidades táctiles optimizadas.',
+      },
+      {
+        title: '¿Incluye mantenimiento y actualizaciones?',
+        description:
+          'Sí, todos los proyectos incluyen 3 meses de mantenimiento gratuito que cubre actualizaciones de seguridad, pequeños ajustes y soporte técnico. Después ofrezco planes de mantenimiento mensual adaptados a tus necesidades.',
+      },
+      {
+        title: '¿Puedo gestionar el contenido sin conocimientos técnicos?',
+        description:
+          'Por supuesto. Implemento sistemas de gestión de contenido (CMS) intuitivos y proporciono formación completa a tu equipo. Además, la IA integrada puede ayudarte a generar y optimizar contenido automáticamente.',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Solicitar Consulta Gratuita',
+        href: '/contacto',
+        icon: 'tabler:message',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      ¿Listo para transformar tu presencia digital?
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Descubre cómo un sitio web optimizado con IA puede multiplicar tus reservas directas y reducir comisiones de OTAs. Consulta gratuita de 30 minutos sin compromiso.
+    </Fragment>
+  </CallToAction>
+</Layout>

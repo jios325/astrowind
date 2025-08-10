@@ -1,0 +1,277 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Project Management Hotelero con IA - J. Carlos Salgado',
+  description: 'Gestión de proyectos tecnológicos hoteleros con metodologías ágiles e IA. Implementación de sistemas PMS, integración de tecnologías y liderazgo de equipos multidisciplinarios.',
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Project Management Hotelero",
+  "name": "Gestión de Proyectos Tecnológicos Hoteleros",
+  "description": "Liderazgo y coordinación de proyectos tecnológicos hoteleros con metodologías ágiles e inteligencia artificial",
+  "provider": {
+    "@type": "Person",
+    "name": "J. Carlos Salgado",
+    "url": "https://jcarlossalgado.com"
+  },
+  "url": "https://jcarlossalgado.com/servicios/project-management",
+  "areaServed": "Internacional"
+};
+---
+
+<Layout metadata={metadata} schema={serviceSchema}>
+  <!-- Hero Widget ******************* -->
+  <Hero>
+    <Fragment slot="title">
+      Project Management <span class="text-accent dark:text-white highlight">Hotelero con IA</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="font-semibold">Liderazgo de proyectos tecnológicos complejos</span> para la industria hotelera usando metodologías ágiles potenciadas por IA, gestión de equipos multidisciplinarios y entrega garantizada en tiempo y presupuesto.
+    </Fragment>
+  </Hero>
+
+  <!-- Stats Widget ****************** -->
+  <Stats
+    stats={[
+      { title: 'Proyectos Entregados', amount: '120+' },
+      { title: 'On-Time Delivery', amount: '96%' },
+      { title: 'Presupuesto Promedio', amount: '±3%' },
+      { title: 'Satisfacción Cliente', amount: '4.9/5' },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+  <Content
+    isReversed
+    tagline="PM con IA 2025"
+    title="Gestión de Proyectos en la Era de la Inteligencia Artificial"
+    items={[
+      {
+        title: 'Metodologías Ágiles Adaptadas',
+        description:
+          'Framework Scrum personalizado para hospitalidad con sprints de 2 semanas, feedback continuo y adaptación rápida a cambios del mercado hotelero. Resultados incrementales y valor constante.',
+      },
+      {
+        title: 'IA para Gestión Predictiva',
+        description:
+          'Herramientas de IA que predicen riesgos, optimizan recursos, automatizan tareas repetitivas y proporcionan insights en tiempo real para toma de decisiones informadas durante todo el proyecto.',
+      },
+      {
+        title: 'Integración de Ecosistemas',
+        description:
+          'Especialización en conectar sistemas hoteleros complejos: PMS, Channel Managers, CRM, Revenue Management y herramientas de marketing en plataformas unificadas y eficientes.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Project Management Dashboard',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Project Management Hotelero Especializado
+      </h3>
+      <p>
+        En 2025, el 56% de hoteleros priorizan inversiones tecnológicas inteligentes. Mi expertise combina gestión tradicional de proyectos con metodologías ágiles e IA para garantizar implementaciones exitosas que transforman operaciones hoteleras.
+      </p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-orange-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Features Widget *************** -->
+  <Features
+    id="servicios-pm"
+    tagline="Servicios de PM"
+    title="Gestión Integral de Proyectos Hoteleros"
+    subtitle="Metodología probada que garantiza éxito en implementaciones tecnológicas complejas"
+    items={[
+      {
+        title: 'Planificación Estratégica con IA',
+        description:
+          'Análisis predictivo para identificar riesgos, optimización de cronogramas con machine learning y planificación de recursos basada en datos históricos y tendencias de la industria hotelera.',
+        icon: 'tabler:target',
+      },
+      {
+        title: 'Gestión Ágil de Equipos',
+        description:
+          'Liderazgo de equipos multidisciplinarios (desarrolladores, diseñadores, hoteleros) usando Scrum adaptado para hospitalidad, con ceremonias específicas y herramientas colaborativas avanzadas.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Implementación de Sistemas PMS',
+        description:
+          'Migración y configuración de Property Management Systems (Opera, Mews, Cloudbeds) con integración completa a Channel Managers, sistemas de pago y herramientas de marketing.',
+        icon: 'tabler:building',
+      },
+      {
+        title: 'Integración de Plataformas',
+        description:
+          'Conectividad entre sistemas dispares: CRM, Revenue Management, Business Intelligence, chatbots de IA y herramientas de automatización para crear ecosistemas unificados.',
+        icon: 'tabler:plug',
+      },
+      {
+        title: 'Control de Calidad Total',
+        description:
+          'Testing exhaustivo en múltiples fases: funcional, de integración, performance y usuario final. Protocolos de QA específicos para hospitales que garantizan operaciones sin interrupciones.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Gestión de Stakeholders',
+        description:
+          'Comunicación efectiva con dirección, equipos operativos, proveedores tecnológicos y usuarios finales. Reporting transparente y alineación constante de expectativas.',
+        icon: 'tabler:chart-bar',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+  <Content
+    tagline="Especialización Hotelera"
+    title="Proyectos que Transforman Operaciones"
+    items={[
+      {
+        title: 'Revenue Management Inteligente',
+        description:
+          'Implementación de sistemas de pricing dinámico con IA que optimizan tarifas en tiempo real, integrados con PMS y Channel Managers para maximizar ADR y RevPAR.',
+      },
+      {
+        title: 'Customer Experience Platforms',
+        description:
+          'Desarrollo e integración de plataformas omnicanal que unifican touchpoints: web, móvil, redes sociales, chatbots y comunicación en-hotel para experiencias seamless.',
+      },
+      {
+        title: 'Business Intelligence Hotelero',
+        description:
+          'Implementación de dashboards ejecutivos con KPIs hoteleros específicos, análisis predictivo y reportes automatizados que impulsan decisiones basadas en datos.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Hotel Technology Integration',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Tecnologías que Impulsan Resultados
+      </h3>
+      <p>
+        El 73% de hoteleros cree que la IA tendrá un impacto transformacional en la industria. Gestiono proyectos que no solo implementan tecnología, sino que revolucionan cómo tu hotel opera y compete.
+      </p>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+  <Steps
+    title="Metodología de Gestión de Proyectos"
+    items={[
+      {
+        title: 'Fase 1: <span class="font-medium">Discovery e Inicialización</span>',
+        description:
+          'Análisis exhaustivo de necesidades, audit tecnológico actual, definición de objetivos SMART y creación del business case con ROI proyectado. Formación del equipo y kick-off estratégico.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Fase 2: <span class="font-medium">Planificación Ágil</span>',
+        description:
+          'Creación de product backlog, definición de sprints, planificación de releases y establecimiento de métricas de éxito. Uso de herramientas como Jira, Asana y Microsoft Project potenciadas con IA.',
+        icon: 'tabler:calendar',
+      },
+      {
+        title: 'Fase 3: <span class="font-medium">Ejecución Iterativa</span>',
+        description:
+          'Desarrollo en sprints de 2 semanas con entregas incrementales, daily standups, sprint reviews y retrospectivas. Adaptación continua basada en feedback y cambios del mercado hotelero.',
+        icon: 'tabler:repeat',
+      },
+      {
+        title: 'Fase 4: <span class="font-medium">Testing y Validación</span>',
+        description:
+          'Pruebas exhaustivas en ambiente controlado, UAT con usuarios reales, performance testing bajo carga y validación de integraciones. Preparación para go-live sin interrupciones operativas.',
+        icon: 'tabler:bug',
+      },
+      {
+        title: 'Fase 5: <span class="font-medium">Despliegue y Soporte</span>',
+        description:
+          'Implementación en producción, migración de datos, training del personal y monitoreo 24/7 post-lanzamiento. Soporte técnico y optimización continua durante período de estabilización.',
+        icon: 'tabler:settings',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Agile Project Management',
+    }}
+  />
+
+  <!-- FAQs Widget ******************* -->
+  <FAQs
+    title="Preguntas Frecuentes sobre Project Management"
+    subtitle="Respuestas a las consultas más comunes sobre gestión de proyectos hoteleros"
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: '¿Cuánto dura típicamente un proyecto de implementación hotelera?',
+        description:
+          'Depende de la complejidad. Proyectos simples (nuevo website) toman 2-3 meses. Implementaciones PMS completas requieren 4-6 meses. Transformaciones digitales integrales pueden tomar 8-12 meses con entregas incrementales cada 2 semanas.',
+      },
+      {
+        title: '¿Cómo garantizas que el proyecto se entregue a tiempo?',
+        description:
+          'Uso metodologías ágiles con entregas incrementales, monitoreo predictivo con IA para identificar riesgos temprano, buffer de tiempo calculado estadísticamente y comunicación semanal transparente con todos los stakeholders.',
+      },
+      {
+        title: '¿Qué pasa si surgen cambios durante el proyecto?',
+        description:
+          'Las metodologías ágiles están diseñadas para adaptarse. Tengo un proceso formal de change management que evalúa impacto, costo y timeline. Los cambios menores se absorben en sprints, los mayores se negocian con transparencia total.',
+      },
+      {
+        title: '¿Trabajas con equipos remotos o solo presenciales?',
+        description:
+          'Ambos. Tengo experiencia liderando equipos híbridos y remotos usando herramientas colaborativas avanzadas. Para proyectos hoteleros, combino trabajo remoto para desarrollo con presencia on-site para implementación y training.',
+      },
+      {
+        title: '¿Qué tecnologías y herramientas utilizas para gestión?',
+        description:
+          'Stack completo: Jira/Asana para gestión ágil, Slack/Teams para comunicación, GitHub/GitLab para desarrollo, Figma para diseño colaborativo, y herramientas de IA como Claude 3.5 para documentación y análisis predictivo.',
+      },
+      {
+        title: '¿Incluyes training del personal hotelero en el proyecto?',
+        description:
+          'Absolutamente. El training es crítico para el éxito. Incluyo sesiones de capacitación personalizadas para diferentes roles, documentación técnica adaptada al nivel de usuarios y soporte post-implementación durante el período de adopción.',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Consulta de Proyecto',
+        href: '/contacto',
+        icon: 'tabler:user-check',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      ¿Tienes un proyecto tecnológico hotelero en mente?
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Conversemos sobre cómo puedo liderar tu próximo proyecto de transformación digital con garantía de éxito, tiempo y presupuesto controlados.
+    </Fragment>
+  </CallToAction>
+</Layout>

@@ -9,9 +9,43 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 const metadata = {
   title: 'Sobre Mí - J. Carlos Salgado | Project Manager especializado en Soluciones Web para Hotelería',
 };
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Juan Carlos Salgado Ascencio",
+  "alternateName": "J. Carlos Salgado",
+  "jobTitle": "Project Manager & Consultor Digital Especializado en Hotelería",
+  "url": "https://jcarlossalgado.com",
+  "image": "https://jcarlossalgado.com/assets/images/hero-image.png",
+  "description": "Project Manager con 12 años de experiencia especializado en transformación digital hotelera, desarrollo web, SEO y optimización de conversiones",
+  "knowsAbout": [
+    "Project Management",
+    "Desarrollo Web Hotelero", 
+    "SEO para Hoteles",
+    "Optimización de Conversión",
+    "Transformación Digital",
+    "Inteligencia Artificial aplicada a Hotelería"
+  ],
+  "hasOccupation": {
+    "@type": "Occupation",
+    "name": "Consultor Digital Hotelero",
+    "occupationLocation": {
+      "@type": "Place",
+      "name": "Internacional"
+    },
+    "skills": "Project Management, Web Development, SEO, CRO, Digital Transformation"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/juancarlossalgadoascencio/",
+    "https://github.com/jios325",
+    "https://www.instagram.com/juancarlossalgado__",
+    "https://www.youtube.com/@JuanCarlosSalgado325"
+  ]
+};
 ---
 
-<Layout metadata={metadata}>
+<Layout metadata={metadata} schema={personSchema}>
   <!-- Hero Widget ******************* -->
   <Hero
     image={{ src: '~/assets/images/hero-image.png', alt: 'J. Carlos Salgado - Perfil Profesional' }}

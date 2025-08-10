@@ -10,9 +10,44 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 const metadata = {
   title: 'Portfolio - J. Carlos Salgado | Proyectos Web para Hoteles',
 };
+
+const portfolioSchema = {
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "Portfolio de Proyectos Hoteleros",
+  "description": "Muestra de proyectos de transformación digital hotelera, desarrollo web y optimización de conversiones completados",
+  "url": "https://jcarlossalgado.com/portfolio",
+  "creator": {
+    "@type": "Person",
+    "name": "J. Carlos Salgado",
+    "url": "https://jcarlossalgado.com"
+  },
+  "genre": "Web Development Portfolio",
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Hotel Web Development"
+    },
+    {
+      "@type": "Thing", 
+      "name": "Digital Transformation"
+    },
+    {
+      "@type": "Thing",
+      "name": "SEO Optimization"
+    }
+  ],
+  "hasPart": [
+    {
+      "@type": "WebPage",
+      "name": "Hotel Vista Mar",
+      "url": "https://jcarlossalgado.com/portfolio/hotel-vista-mar"
+    }
+  ]
+};
 ---
 
-<Layout metadata={metadata}>
+<Layout metadata={metadata} schema={portfolioSchema}>
   <!-- Hero Widget ******************* -->
   <Hero>
     <Fragment slot="title">

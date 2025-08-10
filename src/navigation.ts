@@ -1,4 +1,4 @@
-import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
+import { getPermalink, getBlogPermalink } from './utils/permalinks';
 
 export const headerData = {
   links: [
@@ -28,6 +28,14 @@ export const headerData = {
         {
           text: 'Project Management',
           href: getPermalink('/servicios/project-management'),
+        },
+        {
+          text: 'Transformación Digital',
+          href: getPermalink('/servicios/transformacion-digital'),
+        },
+        {
+          text: 'Consultoría Estratégica',
+          href: getPermalink('/servicios/consultoria-estrategica'),
         },
         {
           text: 'Todos los Servicios',
@@ -60,7 +68,8 @@ export const footerData = {
         { text: 'SEO para Hoteles', href: getPermalink('/servicios/seo-hotelero') },
         { text: 'Optimización de Conversión', href: getPermalink('/servicios/optimizacion-conversion') },
         { text: 'Project Management', href: getPermalink('/servicios/project-management') },
-        { text: 'Todos los Servicios', href: getPermalink('/servicios') },
+        { text: 'Transformación Digital', href: getPermalink('/servicios/transformacion-digital') },
+        { text: 'Consultoría Estratégica', href: getPermalink('/servicios/consultoria-estrategica') },
       ],
     },
     {

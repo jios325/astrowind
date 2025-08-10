@@ -1,0 +1,277 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Consultoría Estratégica Hotelera 2025 - J. Carlos Salgado',
+  description: 'Consultoría estratégica especializada para hoteles con análisis basado en IA, optimización de revenue, gestión de riesgos y planificación estratégica para maximizar rentabilidad.',
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Consultoría Estratégica Hotelera",
+  "name": "Consultoría Estratégica para Transformación Hotelera",
+  "description": "Análisis estratégico integral con IA para hoteles, optimización de revenue, gestión de riesgos y planificación de crecimiento",
+  "provider": {
+    "@type": "Person",
+    "name": "J. Carlos Salgado",
+    "url": "https://jcarlossalgado.com"
+  },
+  "url": "https://jcarlossalgado.com/servicios/consultoria-estrategica",
+  "areaServed": "Internacional"
+};
+---
+
+<Layout metadata={metadata} schema={serviceSchema}>
+  <!-- Hero Widget ******************* -->
+  <Hero>
+    <Fragment slot="title">
+      Consultoría Estratégica <span class="text-accent dark:text-white highlight">Hotelera con IA</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="font-semibold">Asesoramiento estratégico de alto nivel</span> para propietarios hoteleros, directivos y inversionistas que buscan maximizar rentabilidad, optimizar operaciones y tomar decisiones informadas basadas en análisis predictivo con IA.
+    </Fragment>
+  </Hero>
+
+  <!-- Stats Widget ****************** -->
+  <Stats
+    stats={[
+      { title: 'RevPAR Mejora', amount: '+42%' },
+      { title: 'ROI Proyectos', amount: '480%' },
+      { title: 'Reducción Riesgos', amount: '65%' },
+      { title: 'Hoteles Asesorados', amount: '50+' },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+  <Content
+    isReversed
+    tagline="Consultoría 2025"
+    title="Estrategias que Transforman Resultados Financieros"
+    items={[
+      {
+        title: 'Análisis Predictivo con IA',
+        description:
+          'Uso de Claude 3.5 y algoritmos avanzados para analizar patrones de mercado, predecir demanda, identificar oportunidades de revenue y evaluar riesgos de inversión con precisión estadística superior al 85%.',
+      },
+      {
+        title: 'Revenue Optimization Integral',
+        description:
+          'Estrategias holísticas que van más allá del revenue management tradicional: optimización de channel mix, pricing estratégico, upselling inteligente y maximización del lifetime value del huésped.',
+      },
+      {
+        title: 'Gestión de Riesgos Proactiva',
+        description:
+          'Identificación temprana de riesgos operacionales, financieros y de mercado usando análisis de big data, con desarrollo de planes de contingencia específicos para minimizar impacto en rentabilidad.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Strategic Consulting Dashboard',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Decisiones Estratégicas Basadas en Datos
+      </h3>
+      <p>
+        En un mercado hotelero donde las decisiones correctas pueden generar millones en revenue adicional, combino 12 años de experiencia sectorial con análisis de IA para proporcionar insights accionables que transforman tu negocio.
+      </p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-indigo-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Features Widget *************** -->
+  <Features
+    id="servicios-consultoria"
+    tagline="Servicios de Consultoría"
+    title="Asesoramiento Estratégico Integral"
+    subtitle="Experiencia sectorial combinada con análisis de vanguardia para decisiones que impulsan crecimiento"
+    items={[
+      {
+        title: 'Planificación Estratégica 360°',
+        description:
+          'Desarrollo de planes estratégicos quinquenales con análisis SWOT potenciado por IA, roadmaps de crecimiento, diversificación de ingresos y posicionamiento competitivo diferencial en tu mercado.',
+        icon: 'tabler:target',
+      },
+      {
+        title: 'Due Diligence Tecnológico',
+        description:
+          'Evaluación exhaustiva de inversiones hoteleras: análisis de viabilidad, proyecciones financieras basadas en big data, evaluación de riesgos y recomendaciones para optimizar ROI de nuevas adquisiciones.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Optimización de Channel Mix',
+        description:
+          'Análisis de canales de distribución, negociación con OTAs, estrategias de reservas directas y desarrollo de pricing strategies que maximizan revenue mientras reducen costos de distribución.',
+        icon: 'tabler:chart-line',
+      },
+      {
+        title: 'Restructuración Operativa',
+        description:
+          'Análisis de eficiencia operacional, rediseño de procesos, implementación de KPIs específicos y desarrollo de estructuras organizacionales que optimizan productividad y reducen costos.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Desarrollo de Mercados',
+        description:
+          'Estrategias de expansión geográfica, análisis de mercados emergentes, identificación de segmentos no explotados y desarrollo de propuestas de valor diferenciadas para nuevas oportunidades.',
+        icon: 'tabler:world',
+      },
+      {
+        title: 'Consultoría en Crisis',
+        description:
+          'Planes de contingencia para situaciones adversas, reestructuraciones financieras, pivot estratégicos y recuperación acelerada post-crisis basada en experiencia demostrada en el sector.',
+        icon: 'tabler:shield',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+  <Content
+    tagline="Metodología Exclusiva"
+    title="Framework de Consultoría Basado en IA y Experiencia"
+    items={[
+      {
+        title: 'Análisis Multi-Dimensional',
+        description:
+          'Evaluación simultánea de performance financiero, operacional, competitivo y de mercado usando herramientas de IA que procesan miles de variables para identificar oportunidades ocultas.',
+      },
+      {
+        title: 'Benchmarking Dinámico',
+        description:
+          'Comparación continua con competitors usando web scraping ético, análisis de sentiment de reviews y monitoring de pricing para mantener ventajas competitivas sostenibles.',
+      },
+      {
+        title: 'Recomendaciones Accionables',
+        description:
+          'Cada insight se convierte en un plan de acción específico con timelines, recursos requeridos, ROI esperado y métricas de seguimiento para garantizar implementación exitosa.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2126&q=80',
+      alt: 'Business Strategy Analysis',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Insights que Generan Resultados Medibles
+      </h3>
+      <p>
+        Mi metodología combina analysis cuantitativo riguroso con comprensión profunda del sector hotelero para entregar recomendaciones que no solo son estratégicamente sólidas, sino prácticamente implementables.
+      </p>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+  <Steps
+    title="Proceso de Consultoría Estratégica"
+    items={[
+      {
+        title: 'Fase 1: <span class="font-medium">Discovery Profundo</span>',
+        description:
+          'Análisis exhaustivo de tu operación: revisión financiera detallada, assessment operacional, benchmarking competitivo y entrevistas con stakeholders clave para entender desafíos y oportunidades.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Fase 2: <span class="font-medium">Análisis de Datos Avanzado</span>',
+        description:
+          'Procesamiento de data histórica con IA, análisis de tendencias de mercado, modelado predictivo de demanda y evaluación de escenarios múltiples para identificar estrategias óptimas.',
+        icon: 'tabler:chart-dots',
+      },
+      {
+        title: 'Fase 3: <span class="font-medium">Desarrollo Estratégico</span>',
+        description:
+          'Creación de estrategias personalizadas: plan de crecimiento, roadmap de implementación, estructura de KPIs y definición de iniciativas prioritarias con impacto inmediato y sostenible.',
+        icon: 'tabler:bulb',
+      },
+      {
+        title: 'Fase 4: <span class="font-medium">Presentación Ejecutiva</span>',
+        description:
+          'Entrega de recomendaciones con business case detallado, proyecciones financieras, análisis de riesgos y plan de implementación priorizado con timeline y recursos específicos.',
+        icon: 'tabler:chart-bar',
+      },
+      {
+        title: 'Fase 5: <span class="font-medium">Soporte en Implementación</span>',
+        description:
+          'Acompañamiento durante primeros meses de implementación, ajustes basados en resultados iniciales, mentoring del equipo directivo y monitoreo de KPIs para asegurar éxito sostenible.',
+        icon: 'tabler:user-check',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Strategic Consulting Process',
+    }}
+  />
+
+  <!-- FAQs Widget ******************* -->
+  <FAQs
+    title="Preguntas Frecuentes sobre Consultoría Estratégica"
+    subtitle="Respuestas a las consultas más comunes sobre asesoramiento hotelero estratégico"
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: '¿Cuándo es el momento adecuado para contratar consultoría estratégica?',
+        description:
+          'Ideal en momentos de: performance estancado, nuevas inversiones/expansiones, crisis operacional, cambios de mercado significativos, o cuando necesitas perspectiva externa objetiva para decisiones críticas que impactarán el futuro del negocio.',
+      },
+      {
+        title: '¿Qué diferencia tu consultoría de otras firmas generales?',
+        description:
+          'Especialización exclusiva en hospitalidad por 12 años, uso de IA para análisis predictivo, conocimiento profundo de sistemas hoteleros (PMS, revenue management), experiencia hands-on en implementaciones y track record demostrado en optimización de RevPAR.',
+      },
+      {
+        title: '¿Cómo garantizas que las recomendaciones sean implementables?',
+        description:
+          'Cada recomendación incluye: análisis de feasibility, recursos requeridos específicos, timeline realista, ROI proyectado, plan de change management y soporte durante implementación inicial para asegurar adopción exitosa.',
+      },
+      {
+        title: '¿Trabajas con hoteles independientes o solo cadenas?',
+        description:
+          'Ambos. Tengo experiencia con propiedades independientes (10-100 habitaciones), boutique hotels, resorts, y cadenas regionales. Adapto metodología y recomendaciones según tamaño, complejidad y recursos disponibles de cada cliente.',
+      },
+      {
+        title: '¿Cuál es el ROI típico de una consultoría estratégica?',
+        description:
+          'Basado en casos previos: incremento promedio 15-40% en RevPAR, reducción 20-35% en costos operativos y ROI de 300-800% sobre inversión en consultoría en 18 meses. Resultados varían según situación inicial y nivel de implementación.',
+      },
+      {
+        title: '¿Ofreces seguimiento post-consultoría?',
+        description:
+          'Sí. Incluyo 3 meses de follow-up con revisiones mensuales de KPIs, ajustes de estrategia basados en resultados reales, y soporte para resolución de desafíos de implementación. También ofrezco retainers anuales para consultoría continua.',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Consulta Estratégica Gratuita',
+        href: '/contacto',
+        icon: 'tabler:brain',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      ¿Listo para transformar tu estrategia hotelera?
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Conversemos sobre los desafíos específicos de tu hotel y cómo una consultoría estratégica puede multiplicar tu rentabilidad y competitividad en el mercado.
+    </Fragment>
+  </CallToAction>
+</Layout>
